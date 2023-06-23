@@ -1,34 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Comprar varios productos" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-06-23T15:13:55" hostname="DESKTOP-1MH7BUO" time="50.05">
+<testsuite name="Comprar varios productos" tests="1" skipped="0" failures="1" errors="0" timestamp="2023-06-23T16:46:42" hostname="DESKTOP-1MH7BUO" time="49.07">
   <properties/>
-  <testcase name="compra de varios productos" classname="Comprar varios productos" time="50.05"/>
-  <system-out><![CDATA[[1, 3, 4, 5, 7]
-[3, 2, 3, 3, 2]
-5
-Colchón SPRING Sencillo (100 x 190 cm) Classic Resortado Semifirme
-$ 509.990
-Se aniade 0 de 3
-Se aniade 1 de 3
-Colchón EXITO Sencillo (100 x 190 cm) MP100 Espumado Suave
-$ 314.991
-Se aniade 0 de 2
-Colchón SPRING Sencillo (100 x 190 cm) Classic Resortado Semifirme
-Colchón EXITO Sencillo (100 x 190 cm) MP100 Espumado Suave
-[Colchón SPRING Sencillo (100 x 190 cm) Classic Resortado Semifirme, Colchón EXITO Sencillo (100 x 190 cm) MP100 Espumado Suave]
+  <testcase name="compra de varios productos" classname="Comprar varios productos" time="49.07">
+    <failure message="java.lang.AssertionError: &#10;Expected: &lt;[Colchón SPRING Sencillo (100 x 190 cm) Classic Resortado Semifirme, Colchon+ Almohada SPRING Sencillo (100 x 190 cm) EXDREAM Resortado Semifirme]&gt;&#10;     but: was &lt;[1, 5, 7, 11, 13]&gt;&#13;&#10;&#10;Expected: &lt;[2, 3]&gt;&#10;     but: was &lt;[2, 3, 1, 2, 1]&gt;" type="java.lang.AssertionError">java.lang.AssertionError: 
+Expected: &lt;[Colchón SPRING Sencillo (100 x 190 cm) Classic Resortado Semifirme, Colchon+ Almohada SPRING Sencillo (100 x 190 cm) EXDREAM Resortado Semifirme]&gt;
+     but: was &lt;[1, 5, 7, 11, 13]&gt;
+
+Expected: &lt;[2, 3]&gt;
+     but: was &lt;[2, 3, 1, 2, 1]&gt;
+	at net.serenitybdd.screenplay.ErrorTally.throwSummaryExceptionFrom(ErrorTally.java:36)
+	at net.serenitybdd.screenplay.ErrorTally.reportAnyErrors(ErrorTally.java:30)
+	at net.serenitybdd.screenplay.Actor.should(Actor.java:316)
+	at com.choucair.stepdefinitions.CompraProductosStepDefinition.visualizoTodaLaInformacionDeLaCompra(CompraProductosStepDefinition.java:90)
+	at ✽.visualiza toda la informacion de la compra(file:///C:/Users/Rasta/Desktop/Prueba%20Choucair/RetoTecnico/src/test/resources/features/compraExito.feature:11)
+</failure>
+  </testcase>
+  <system-out><![CDATA[[2, 3, 1, 2, 1]
+[Colchón SPRING Sencillo (100 x 190 cm) Classic Resortado Semifirme, Colchon+ Almohada SPRING Sencillo (100 x 190 cm) EXDREAM Resortado Semifirme]
+[1019980, 2189970]
+3209950
+[Colchón SPRING Sencillo (100 x 190 cm) Classic Resortado Semifirme, Colchon+ Almohada SPRING Sencillo (100 x 190 cm) EXDREAM Resortado Semifirme]
+[2, 3]
+[1019980, 2189970]
+3209950
 ]]></system-out>
-  <system-err><![CDATA[Starting ChromeDriver 114.0.5735.90 (386bc09e8f4f2e025eddae123f36f6263096ae49-refs/branch-heads/5735@{#1052}) on port 23355
+  <system-err><![CDATA[Starting ChromeDriver 114.0.5735.90 (386bc09e8f4f2e025eddae123f36f6263096ae49-refs/branch-heads/5735@{#1052}) on port 37044
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-jun. 23, 2023 10:13:56 A. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+jun. 23, 2023 11:46:43 A. M. org.openqa.selenium.remote.ProtocolHandshake createSession
 INFORMACIÓN: Detected dialect: W3C
-jun. 23, 2023 10:13:56 A. M. org.openqa.selenium.remote.DesiredCapabilities chrome
+jun. 23, 2023 11:46:43 A. M. org.openqa.selenium.remote.DesiredCapabilities chrome
 INFORMACIÓN: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
-Starting ChromeDriver 114.0.5735.90 (386bc09e8f4f2e025eddae123f36f6263096ae49-refs/branch-heads/5735@{#1052}) on port 20610
+Starting ChromeDriver 114.0.5735.90 (386bc09e8f4f2e025eddae123f36f6263096ae49-refs/branch-heads/5735@{#1052}) on port 39852
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-jun. 23, 2023 10:13:58 A. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+jun. 23, 2023 11:46:45 A. M. org.openqa.selenium.remote.ProtocolHandshake createSession
 INFORMACIÓN: Detected dialect: W3C
 ]]></system-err>
 </testsuite>

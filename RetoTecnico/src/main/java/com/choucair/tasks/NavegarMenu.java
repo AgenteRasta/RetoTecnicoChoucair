@@ -46,7 +46,7 @@ public class NavegarMenu implements Task {
     }
 
 
-    public static NavegarMenu navegarMenu(){
+    public static NavegarMenu navegarMenu(String cate,String subcate){
         return new NavegarMenu();
     }
 }

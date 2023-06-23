@@ -29,7 +29,7 @@
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">0</div>
+<div class="counter">1</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">50.050s</div>
+<div class="counter">49.070s</div>
 <p>duration</p>
 </div>
 </td>
@@ -50,8 +50,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox success" id="successRate">
-<div class="percent">100%</div>
+<div class="infoBox failures" id="successRate">
+<div class="percent">0%</div>
 <p>successful</p>
 </div>
 </td>
@@ -61,16 +61,40 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Tests</a>
+<a href="#tab0">Failed tests</a>
 </li>
 <li>
-<a href="#tab1">Standard output</a>
+<a href="#tab1">Tests</a>
 </li>
 <li>
-<a href="#tab2">Standard error</a>
+<a href="#tab2">Standard output</a>
+</li>
+<li>
+<a href="#tab3">Standard error</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="compra de varios productos"></a>
+<h3 class="failures">compra de varios productos</h3>
+<span class="code">
+<pre>java.lang.AssertionError: 
+Expected: &lt;[Colchón SPRING Sencillo (100 x 190 cm) Classic Resortado Semifirme, Colchon+ Almohada SPRING Sencillo (100 x 190 cm) EXDREAM Resortado Semifirme]&gt;
+     but: was &lt;[1, 5, 7, 11, 13]&gt;
+
+Expected: &lt;[2, 3]&gt;
+     but: was &lt;[2, 3, 1, 2, 1]&gt;
+	at net.serenitybdd.screenplay.ErrorTally.throwSummaryExceptionFrom(ErrorTally.java:36)
+	at net.serenitybdd.screenplay.ErrorTally.reportAnyErrors(ErrorTally.java:30)
+	at net.serenitybdd.screenplay.Actor.should(Actor.java:316)
+	at com.choucair.stepdefinitions.CompraProductosStepDefinition.visualizoTodaLaInformacionDeLaCompra(CompraProductosStepDefinition.java:90)
+	at ✽.visualiza toda la informacion de la compra(file:///C:/Users/Rasta/Desktop/Prueba%20Choucair/RetoTecnico/src/test/resources/features/compraExito.feature:11)
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
@@ -81,47 +105,42 @@
 </tr>
 </thead>
 <tr>
-<td class="success">compra de varios productos</td>
-<td class="success">50.050s</td>
-<td class="success">passed</td>
+<td class="failures">compra de varios productos</td>
+<td class="failures">49.070s</td>
+<td class="failures">failed</td>
 </tr>
 </table>
 </div>
-<div id="tab1" class="tab">
+<div id="tab2" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>[1, 3, 4, 5, 7]
-[3, 2, 3, 3, 2]
-5
-Colchón SPRING Sencillo (100 x 190 cm) Classic Resortado Semifirme
-$ 509.990
-Se aniade 0 de 3
-Se aniade 1 de 3
-Colchón EXITO Sencillo (100 x 190 cm) MP100 Espumado Suave
-$ 314.991
-Se aniade 0 de 2
-Colchón SPRING Sencillo (100 x 190 cm) Classic Resortado Semifirme
-Colchón EXITO Sencillo (100 x 190 cm) MP100 Espumado Suave
-[Colchón SPRING Sencillo (100 x 190 cm) Classic Resortado Semifirme, Colchón EXITO Sencillo (100 x 190 cm) MP100 Espumado Suave]
+<pre>[2, 3, 1, 2, 1]
+[Colchón SPRING Sencillo (100 x 190 cm) Classic Resortado Semifirme, Colchon+ Almohada SPRING Sencillo (100 x 190 cm) EXDREAM Resortado Semifirme]
+[1019980, 2189970]
+3209950
+[Colchón SPRING Sencillo (100 x 190 cm) Classic Resortado Semifirme, Colchon+ Almohada SPRING Sencillo (100 x 190 cm) EXDREAM Resortado Semifirme]
+[2, 3]
+[1019980, 2189970]
+3209950
 </pre>
 </span>
 </div>
-<div id="tab2" class="tab">
+<div id="tab3" class="tab">
 <h2>Standard error</h2>
 <span class="code">
-<pre>Starting ChromeDriver 114.0.5735.90 (386bc09e8f4f2e025eddae123f36f6263096ae49-refs/branch-heads/5735@{#1052}) on port 23355
+<pre>Starting ChromeDriver 114.0.5735.90 (386bc09e8f4f2e025eddae123f36f6263096ae49-refs/branch-heads/5735@{#1052}) on port 37044
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-jun. 23, 2023 10:13:56 A. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+jun. 23, 2023 11:46:43 A. M. org.openqa.selenium.remote.ProtocolHandshake createSession
 INFORMACIÓN: Detected dialect: W3C
-jun. 23, 2023 10:13:56 A. M. org.openqa.selenium.remote.DesiredCapabilities chrome
+jun. 23, 2023 11:46:43 A. M. org.openqa.selenium.remote.DesiredCapabilities chrome
 INFORMACIÓN: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
-Starting ChromeDriver 114.0.5735.90 (386bc09e8f4f2e025eddae123f36f6263096ae49-refs/branch-heads/5735@{#1052}) on port 20610
+Starting ChromeDriver 114.0.5735.90 (386bc09e8f4f2e025eddae123f36f6263096ae49-refs/branch-heads/5735@{#1052}) on port 39852
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-jun. 23, 2023 10:13:58 A. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+jun. 23, 2023 11:46:45 A. M. org.openqa.selenium.remote.ProtocolHandshake createSession
 INFORMACIÓN: Detected dialect: W3C
 </pre>
 </span>
@@ -134,7 +153,7 @@ INFORMACIÓN: Detected dialect: W3C
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.5.1</a> at 23/06/2023, 10:14:47 a. m.</p>
+<a href="http://www.gradle.org">Gradle 7.5.1</a> at 23/06/2023, 11:47:34 a. m.</p>
 </div>
 </div>
 </body>

@@ -18,9 +18,9 @@ public class PaginaCarrito extends PageObject {
             the("")
             .located(By.xpath("//button[normalize-space()='Confirmar']"));
 
-    public static final Target NOMBRE_PRODUCTO_CARRITO=Target.
+    public static final Target TOTAL_COMPRA=Target.
             the("")
-            .located(By.xpath("(//*[@class='exito-checkout-io-0-x-itemCartContent'])[1]/descendant::div[5]"));
+            .located(By.xpath("//span[@class='exito-checkout-io-0-x-paymentButtonTextBold']"));
 /*
     public static final Target CONFIRMAR_CORREO1=Target.
             the("")

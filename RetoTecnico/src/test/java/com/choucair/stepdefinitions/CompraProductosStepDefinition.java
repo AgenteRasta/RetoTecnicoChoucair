@@ -2,20 +2,23 @@ package com.choucair.stepdefinitions;
 
 import com.choucair.setup.Configuracion;
 import com.choucair.tasks.AbrirPaginaInicial;
+import com.choucair.tasks.AgregarProductos;
+import com.choucair.tasks.Carrito;
 import com.choucair.tasks.NavegarMenu;
 import com.choucair.ui.Menu;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.junit.jupiter.api.Assertions;
-
 import java.util.logging.Logger;
 
+import static com.choucair.questions.TotalCompra.totalCompra;
 import static com.choucair.tasks.AgregarProductos.agregarProductos;
+import static com.choucair.tasks.AgregarProductos.totalCompra;
 import static com.choucair.tasks.Carrito.carrito;
 import static com.choucair.tasks.NavegarMenu.navegarMenu;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
-
+import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
+import static org.hamcrest.CoreMatchers.equalTo;
 public class CompraProductosStepDefinition extends Configuracion {
 
     public static String prueba;
@@ -39,7 +42,7 @@ public class CompraProductosStepDefinition extends Configuracion {
         Menu.subcat=subcategoria;
         try {
             theActorInTheSpotlight().attemptsTo(
-                    navegarMenu()
+                    navegarMenu(categoria,subcategoria)
             );
         }catch (Exception e){
             LOGGER.warning(e.getMessage());
@@ -77,6 +80,21 @@ public class CompraProductosStepDefinition extends Configuracion {
     @Then("visualiza toda la informacion de la compra")
     public void visualizoTodaLaInformacionDeLaCompra() {
 
-        quitarDriver();
+        try {
+            theActorInTheSpotlight().should(
+                    seeThat(totalCompra(), equalTo(totalCompra)),
+                    seeThat("Se obtienen los productos",
+                            prod-> AgregarProductos.productos,equalTo(Carrito.nombresCarrito)),
+                    seeThat("Las cantidades de los productos son",
+                            cant-> AgregarProductos.cantidades,equalTo(Carrito.cantidadesCarrito)),
+                    seeThat("El total de cada producto es",
+                            totalU-> AgregarProductos.precios, equalTo(Carrito.preciosCarrito))
+            );
+        }catch (Exception e){
+            LOGGER.warning(e.getMessage());
+            quitarDriver();
+
+        }
     }
+
 }

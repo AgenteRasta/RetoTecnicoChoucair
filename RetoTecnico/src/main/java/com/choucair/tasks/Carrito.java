@@ -1,5 +1,6 @@
 package com.choucair.tasks;
 
+import com.choucair.util.ObtenerNumero;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
@@ -13,11 +14,15 @@ import java.util.List;
 import static com.choucair.ui.PaginaCarrito.*;
 import static com.choucair.ui.PaginaProductos.NOMBRE_PRODUCTO;
 import static com.choucair.ui.PaginaProductos.PRECIO_PRODUCTO;
+import static com.choucair.util.ObtenerNumero.obtenerEnteros;
 
 
 public class Carrito implements Task {
-    List<String> nombresCarrito = new ArrayList<>();
-    List<String> preciosCarrito = new ArrayList<>();
+    public static List<String> nombresCarrito = new ArrayList<>();
+    public static List<Integer> preciosCarrito = new ArrayList<>();
+    public static List<Integer> cantidadesCarrito = new ArrayList<>();
+
+    public static int totalCompraCarrito;
 
     @Override
     public <T extends Actor> void performAs(T actor) {
@@ -27,15 +32,19 @@ public class Carrito implements Task {
                 Click.on(CONFIRMAR_CORREO)
         );
         for(int i=1;i<=2;i++){
-            System.out.println(Target.the("").
-                    located(By.xpath("(//*[@class='exito-checkout-io-0-x-itemCartContent'])["+i+"]/descendant::div[5]")).resolveFor(actor).getText());
-            //System.out.println(PRECIO_PRODUCTO.resolveFor(actor).getText());
             nombresCarrito.add(Target.the("").
                     located(By.xpath("(//*[@class='exito-checkout-io-0-x-itemCartContent'])["+i+"]/descendant::div[5]")).resolveFor(actor).getText());
-            //precios.add(PRECIO_PRODUCTO.resolveFor(actor).getText());
+            String cantidadAux=(Target.the("").
+                    located(By.xpath("(//*[@class='exito-checkout-io-0-x-itemCartContent'])["+i+"]/descendant::div[13]")).resolveFor(actor).getText());
+            cantidadesCarrito.add(obtenerEnteros(cantidadAux));
+            preciosCarrito.add(obtenerEnteros(Target.the("").
+                    located(By.xpath("(//*[@class='exito-checkout-io-0-x-itemCartContent'])["+i+"]/descendant::div[8]")).resolveFor(actor).getText()));
         }
+        totalCompraCarrito=obtenerEnteros(TOTAL_COMPRA.resolveFor(actor).getText());
         System.out.println(nombresCarrito);
-
+        System.out.println(cantidadesCarrito);
+        System.out.println(preciosCarrito);
+        System.out.println(totalCompraCarrito);
         try {
             Thread.sleep(10000);
         } catch (InterruptedException e) {
