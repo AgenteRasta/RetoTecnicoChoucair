@@ -8,13 +8,9 @@ import io.restassured.response.Response;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.junit.jupiter.api.Assertions;
-
-import java.util.List;
 import java.util.logging.Logger;
-
 import static com.choucair.questions.ReturnResponse.returnResponse;
 import static com.choucair.tasks.DoDelete.doDelete;
-import static com.choucair.tasks.DoGet.doGet;
 import static com.choucair.utils.ReqresResources.*;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.rest.questions.ResponseConsequence.seeThatResponse;
@@ -22,17 +18,12 @@ import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.notNullValue;
 
 public class DelEmpleadoStepDefinition extends ApiSetUp {
-    public static Logger LOGGER = Logger.getLogger(String.valueOf(PostEmpleadoStepDefinition.class));
-
+    public static Logger LOGGER = Logger.getLogger(String.valueOf(DelEmpleadoStepDefinition.class));
     int codigoRespuesta;
     int idAux;
-    JSONObject empleadoJson = null;
     JSONObject resBody = null;
-    JSONObject data = null;
-    JSONObject empleadoRespuesta = null;
     Response actualResponse;
     JSONParser parser = new JSONParser();
-    List<String> lines;
     @Given("que estoy apuntando con un endpoint a la api delete de empleado de restApiExample")
     public void queEstoyApuntandoConUnEndpointALaApiDeleteDeEmpleadoDeRestApiExample() {
         try{
@@ -88,7 +79,8 @@ public class DelEmpleadoStepDefinition extends ApiSetUp {
                             msj->resBody.get("message").toString(),equalTo(mensaje))
             );
         }catch (Exception e){
-
+            LOGGER.info("Fallo en los asserts");
+            Assertions.fail();
         }
     }
 }
