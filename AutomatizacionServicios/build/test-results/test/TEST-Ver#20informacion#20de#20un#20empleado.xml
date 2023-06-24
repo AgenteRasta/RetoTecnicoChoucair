@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Ver informacion de un empleado" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-06-24T00:49:52" hostname="DESKTOP-1MH7BUO" time="3.152">
+  <properties/>
+  <testcase name="Ver informacion de un empleado" classname="Ver informacion de un empleado" time="3.152"/>
+  <system-out><![CDATA[Request method:	GET
+Request URI:	https://dummy.restapiexample.com/api/v1/employee/1
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Date: Sat, 24 Jun 2023 00:49:55 GMT
+Server: nginx/1.21.6
+Content-Type: application/json
+Content-Length: 152
+Cache-Control: no-cache, private
+X-RateLimit-Limit: 60
+X-RateLimit-Remaining: 58
+Cache-Control: max-age=21600
+Expires: Sat, 24 Jun 2023 06:49:55 GMT
+Vary: Accept-Encoding
+Content-Encoding: gzip
+host-header: c2hhcmVkLmJsdWVob3N0LmNvbQ==
+X-Endurance-Cache-Level: 2
+X-nginx-cache: WordPress
+X-Server-Cache: true
+X-Proxy-Cache: MISS
+
+{
+    "status": "success",
+    "data": {
+        "id": 1,
+        "employee_name": "Tiger Nixon",
+        "employee_salary": 320800,
+        "employee_age": 61,
+        "profile_image": ""
+    },
+    "message": "Successfully! Record has been fetched."
+}
+data {"profile_image":"","employee_name":"Tiger Nixon","employee_salary":320800,"id":1,"employee_age":61}
+data nombre Tiger Nixon
+Empleado txt {"profile_image":"","employee_name":"Tiger Nixon","employee_salary":320800,"id":1,"employee_age":61}
+Empleado response {"data":{"profile_image":"","employee_name":"Tiger Nixon","employee_salary":320800,"id":1,"employee_age":61},"message":"Successfully! Record has been fetched.","status":"success"}
+Nombre empleado txt Tiger Nixon
+Successfully! Record has been fetched.
+PRUEBA Successfully! Record has been fetched.
+]]></system-out>
+  <system-err><![CDATA[jun. 23, 2023 7:49:52 P. M. com.choucair.stepdefinitions.GetEmpleadoStepDefinition queEstoyApuntandoConUnEndpointALaApiGetDeEmpleadoDeRestApiExample
+INFORMACIÓN: Inicio de la automatizacion
+jun. 23, 2023 7:49:55 P. M. com.choucair.stepdefinitions.GetEmpleadoStepDefinition reciboUnDeRespuesta
+INFORMACIÓN: Inician los asserts
+]]></system-err>
+</testsuite>
