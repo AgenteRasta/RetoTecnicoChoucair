@@ -26,7 +26,6 @@ public class GetEmpleadoStepDefinition extends ApiSetUp {
     public static Logger LOGGER = Logger.getLogger(String.valueOf(GetEmpleadoStepDefinition.class));
 
     int codigoRespuesta;
-
     int idIndex;
     JSONObject empleadoJson = null;
     JSONObject resBody = null;
@@ -34,7 +33,6 @@ public class GetEmpleadoStepDefinition extends ApiSetUp {
     Response actualResponse;
     JSONParser parser = new JSONParser();
     List<String> lines;
-    JSONArray jsonArray = null;
 
 
     @Given("que estoy apuntando con un endpoint a la api get de empleado de restApiExample")

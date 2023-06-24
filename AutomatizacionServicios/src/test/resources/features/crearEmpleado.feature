@@ -4,10 +4,10 @@ Feature: Crear un empleado
   para registrar toda la informacion acerca de un empleado
 
   Scenario Outline: Crear empleado
-    Given que estoy apuntando con un endpoint a la api get de empleado de restApiExample
-    When envio la peticion get con el <id> de un empleado
-    Then recibo un <codigo> de respuesta
-    And un <mensaje> de confirmacion junto con la informacion
+    Given que estoy apuntando con un endpoint a la api post de empleado de restApiExample
+    When envio la peticion post con la informacion del empleado segun su <index>
+    Then recibo el <codigo> de respuesta
+    And un <mensaje> de confirmacion junto con la informacion del usuario creado
     Examples:
-      | id | codigo | mensaje                                  |
-      | 1  | 200    | "Successfully! Record has been fetched." |
+      | index | codigo | mensaje                                |
+      | 1     | 200    | "Successfully! Record has been added." |
