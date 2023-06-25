@@ -24,7 +24,7 @@ public class AndroidDriverr {
             caps.setCapability("browserstack.user", browserstackUser);
             caps.setCapability("browserstack.key", browserstackKey);
 
-            caps.setCapability("app", "bs://fd4934459161783eecb94c813a926241cde38244");
+            caps.setCapability("app", "bs://210348e93c56c7d1203603cf8e0d717b698f6d61");
 
             // Specify device and os_version for testing
             caps.setCapability("device", "Xiaomi Redmi Note 11");

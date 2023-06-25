@@ -10,5 +10,5 @@ Feature: Registro login y compra
     And agrego un producto al carrito
     Then puedo observar el producto en el carrito
     Examples:
-      | nombre    | apellido  | cedula     | dia  | mes  | anio   | celular   | correo              |
-      | "Prueba1" | "Prueba1" | "12345678" | "01" | "01" | "1990" | "3265988" | "prueba1@gmail.com" |
+      | nombre    | apellido  | cedula     | dia  | mes  | anio   | celular   | correo                   |
+      | "Prueba1" | "Prueba1" | "12345678" | "01" | "01" | "1990" | "3265988" | "estiven.tr96@gmail.com" |
