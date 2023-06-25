@@ -11,4 +11,5 @@ Feature: Comprar varios productos
     Then visualiza toda la informacion de la compra
     Examples:
       | categoria    | subcategoria          | correo             |
+      | "Dormitorio" | "Cabeceros"           | "prueba@gmail.com" |
       | "Dormitorio" | "Colchones sencillos" | "prueba@gmail.com" |

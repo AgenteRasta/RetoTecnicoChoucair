@@ -23,7 +23,7 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">1</div>
+<div class="counter">2</div>
 <p>tests</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">49.070s</div>
+<div class="counter">1m52.92s</div>
 <p>duration</p>
 </div>
 </td>
@@ -51,7 +51,7 @@
 </td>
 <td>
 <div class="infoBox failures" id="successRate">
-<div class="percent">0%</div>
+<div class="percent">50%</div>
 <p>successful</p>
 </div>
 </td>
@@ -80,15 +80,12 @@
 <h3 class="failures">compra de varios productos</h3>
 <span class="code">
 <pre>java.lang.AssertionError: 
-Expected: &lt;[Colchón SPRING Sencillo (100 x 190 cm) Classic Resortado Semifirme, Colchon+ Almohada SPRING Sencillo (100 x 190 cm) EXDREAM Resortado Semifirme]&gt;
-     but: was &lt;[1, 5, 7, 11, 13]&gt;
-
-Expected: &lt;[2, 3]&gt;
-     but: was &lt;[2, 3, 1, 2, 1]&gt;
+Expected: &lt;8357585&gt;
+     but: was &lt;8357587&gt;
 	at net.serenitybdd.screenplay.ErrorTally.throwSummaryExceptionFrom(ErrorTally.java:36)
 	at net.serenitybdd.screenplay.ErrorTally.reportAnyErrors(ErrorTally.java:30)
 	at net.serenitybdd.screenplay.Actor.should(Actor.java:316)
-	at com.choucair.stepdefinitions.CompraProductosStepDefinition.visualizoTodaLaInformacionDeLaCompra(CompraProductosStepDefinition.java:90)
+	at com.choucair.stepdefinitions.CompraProductosStepDefinition.visualizoTodaLaInformacionDeLaCompra(CompraProductosStepDefinition.java:104)
 	at ✽.visualiza toda la informacion de la compra(file:///C:/Users/Rasta/Desktop/Prueba%20Choucair/RetoTecnico/src/test/resources/features/compraExito.feature:11)
 </pre>
 </span>
@@ -105,8 +102,13 @@ Expected: &lt;[2, 3]&gt;
 </tr>
 </thead>
 <tr>
+<td class="success">compra de varios productos</td>
+<td class="success">19.655s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
 <td class="failures">compra de varios productos</td>
-<td class="failures">49.070s</td>
+<td class="failures">1m33.26s</td>
 <td class="failures">failed</td>
 </tr>
 </table>
@@ -114,33 +116,95 @@ Expected: &lt;[2, 3]&gt;
 <div id="tab2" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>[2, 3, 1, 2, 1]
-[Colchón SPRING Sencillo (100 x 190 cm) Classic Resortado Semifirme, Colchon+ Almohada SPRING Sencillo (100 x 190 cm) EXDREAM Resortado Semifirme]
-[1019980, 2189970]
-3209950
-[Colchón SPRING Sencillo (100 x 190 cm) Classic Resortado Semifirme, Colchon+ Almohada SPRING Sencillo (100 x 190 cm) EXDREAM Resortado Semifirme]
-[2, 3]
-[1019980, 2189970]
-3209950
+<pre>[16, 18, 5, 12, 14]
+[6, 5, 2, 5, 4]
+[]
+[]
+[2, 4, 5, 5, 6]
+[]
+[]
+[]
+0
+[4, 6, 8, 9, 11]
+[2, 4, 3, 2, 4]
+UA:1
+UP:2
+UA:1
+UP:2
+UA:2
+UP:3
+UA:3
+UP:4
+UA:1
+UP:2
+UA:2
+UP:3
+UA:1
+UP:2
+UA:1
+UP:2
+UA:2
+UP:3
+UA:3
+UP:4
+[2, 4, 3, 2, 4]
+[Colchón EXITO Sencillo (100 x 190 cm) MP100 Espumado Suave, Colchon ROMANCE RELAX Sencillo (100 x 190 cm) COL SICILIA 100x190x24 Espumado Semisuave, Combo Colchón FANTASIA Sencillo (100 x 190 cm) 5102400210001 Resortado Semifirme, Colchon Nature Confort Sencillo 100 X 190 Prodescanso, Colchón FANTASIA Sencillo (100 x 190 cm) 04151010010001 Resortado Semifirme]
+[629982, 2111980, 2459079, 719800, 2436744]
+8357585
+[Colchón EXITO Sencillo (100 x 190 cm) MP100 Espumado Suave, Colchon ROMANCE RELAX Sencillo (100 x 190 cm) COL SICILIA 100x190x24 Espumado Semisuave, Combo Colchón FANTASIA Sencillo (100 x 190 cm) 5102400210001 Resortado Semifirme, Colchón FANTASIA Sencillo (100 x 190 cm) 04151010010001 Resortado Semifirme, Colchon Nature Confort Sencillo 100 X 190 Prodescanso]
+[2, 4, 3, 4, 2]
+[629982, 2111980, 2459079, 2436744, 719800]
+8357587
+[Colchon Nature Confort Sencillo 100 X 190 Prodescanso, Colchon ROMANCE RELAX Sencillo (100 x 190 cm) COL SICILIA 100x190x24 Espumado Semisuave, Colchón EXITO Sencillo (100 x 190 cm) MP100 Espumado Suave, Colchón FANTASIA Sencillo (100 x 190 cm) 04151010010001 Resortado Semifirme, Combo Colchón FANTASIA Sencillo (100 x 190 cm) 5102400210001 Resortado Semifirme]
+[Colchon Nature Confort Sencillo 100 X 190 Prodescanso, Colchon ROMANCE RELAX Sencillo (100 x 190 cm) COL SICILIA 100x190x24 Espumado Semisuave, Colchón EXITO Sencillo (100 x 190 cm) MP100 Espumado Suave, Colchón FANTASIA Sencillo (100 x 190 cm) 04151010010001 Resortado Semifirme, Combo Colchón FANTASIA Sencillo (100 x 190 cm) 5102400210001 Resortado Semifirme]
+[2, 2, 3, 4, 4]
+[2, 2, 3, 4, 4]
+[629982, 719800, 2111980, 2436744, 2459079]
+[629982, 719800, 2111980, 2436744, 2459079]
+8357585
 </pre>
 </span>
 </div>
 <div id="tab3" class="tab">
 <h2>Standard error</h2>
 <span class="code">
-<pre>Starting ChromeDriver 114.0.5735.90 (386bc09e8f4f2e025eddae123f36f6263096ae49-refs/branch-heads/5735@{#1052}) on port 37044
+<pre>Starting ChromeDriver 114.0.5735.90 (386bc09e8f4f2e025eddae123f36f6263096ae49-refs/branch-heads/5735@{#1052}) on port 9494
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-jun. 23, 2023 11:46:43 A. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+jun. 24, 2023 11:55:30 P. M. org.openqa.selenium.remote.ProtocolHandshake createSession
 INFORMACIÓN: Detected dialect: W3C
-jun. 23, 2023 11:46:43 A. M. org.openqa.selenium.remote.DesiredCapabilities chrome
+jun. 24, 2023 11:55:30 P. M. org.openqa.selenium.remote.DesiredCapabilities chrome
 INFORMACIÓN: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
-Starting ChromeDriver 114.0.5735.90 (386bc09e8f4f2e025eddae123f36f6263096ae49-refs/branch-heads/5735@{#1052}) on port 39852
+Starting ChromeDriver 114.0.5735.90 (386bc09e8f4f2e025eddae123f36f6263096ae49-refs/branch-heads/5735@{#1052}) on port 36573
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-jun. 23, 2023 11:46:45 A. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+jun. 24, 2023 11:55:31 P. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+INFORMACIÓN: Detected dialect: W3C
+jun. 24, 2023 11:55:47 P. M. com.choucair.stepdefinitions.CompraProductosStepDefinition aniadeCincoProductosAlCarritoConSusRespectivasCantidades
+ADVERTENCIA: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[16]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]&quot;}
+  (Session info: chrome=114.0.5735.134)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-1MH7BUO', ip: '172.22.176.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.18'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.134, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\Rasta\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:49505}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: ignore, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3c2ff9061550f4ab593a1c8ac84c766b
+*** Element info: {Using=xpath, value=//body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[16]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]}
+Starting ChromeDriver 114.0.5735.90 (386bc09e8f4f2e025eddae123f36f6263096ae49-refs/branch-heads/5735@{#1052}) on port 20824
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+jun. 24, 2023 11:55:48 P. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+INFORMACIÓN: Detected dialect: W3C
+jun. 24, 2023 11:55:48 P. M. org.openqa.selenium.remote.DesiredCapabilities chrome
+INFORMACIÓN: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
+Starting ChromeDriver 114.0.5735.90 (386bc09e8f4f2e025eddae123f36f6263096ae49-refs/branch-heads/5735@{#1052}) on port 15217
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+jun. 24, 2023 11:55:49 P. M. org.openqa.selenium.remote.ProtocolHandshake createSession
 INFORMACIÓN: Detected dialect: W3C
 </pre>
 </span>
@@ -153,7 +217,7 @@ INFORMACIÓN: Detected dialect: W3C
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.5.1</a> at 23/06/2023, 11:47:34 a. m.</p>
+<a href="http://www.gradle.org">Gradle 7.5.1</a> at 24/06/2023, 11:57:31 p. m.</p>
 </div>
 </div>
 </body>

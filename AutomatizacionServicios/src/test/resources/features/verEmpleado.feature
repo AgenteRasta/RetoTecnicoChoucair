@@ -11,3 +11,5 @@ Feature: Ver informacion de un empleado
     Examples:
       | id | codigo | mensaje                                  |
       | 1  | 200    | "Successfully! Record has been fetched." |
+      | 2  | 200    | "Successfully! Record has been fetched." |
+      | 3  | 200    | "Successfully! Record has been fetched." |

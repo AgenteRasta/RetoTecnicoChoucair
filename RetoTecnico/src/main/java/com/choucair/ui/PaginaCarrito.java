@@ -21,10 +21,13 @@ public class PaginaCarrito extends PageObject {
     public static final Target TOTAL_COMPRA=Target.
             the("")
             .located(By.xpath("//span[@class='exito-checkout-io-0-x-paymentButtonTextBold']"));
-/*
-    public static final Target CONFIRMAR_CORREO1=Target.
-            the("")
-            .located(By.xpath("//button[normalize-space()='Confirmar1']"));*/
 
+    public static final Target BAJAR_CARRITO=Target.
+            the("")
+            .located(By.xpath("//div[@class='exito-checkout-io-0-x-containerDonationInfoDataTitle']"));
+
+    public static final Target DESCUENTO=Target.
+            the("Obtener el descuento")
+            .located(By.xpath("//*[@class='exito-checkout-io-0-x-summaryDiscount']/descendant::span[2]"));
 
 }

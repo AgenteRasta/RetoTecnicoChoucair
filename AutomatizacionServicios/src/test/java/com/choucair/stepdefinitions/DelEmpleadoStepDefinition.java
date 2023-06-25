@@ -68,8 +68,6 @@ public class DelEmpleadoStepDefinition extends ApiSetUp {
     public void unDeConfirmacionJuntoConLaRespuestaDelServicio(String mensaje) {
         try {
             resBody=(JSONObject) parser.parse(actualResponse.getBody().asString());
-            System.out.println(resBody.get("data").toString());
-            System.out.println(idAux);
             actor.should(
                     seeThat("Retorna la informacion",
                             info-> actualResponse,notNullValue()),

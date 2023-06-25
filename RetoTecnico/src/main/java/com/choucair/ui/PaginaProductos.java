@@ -26,5 +26,15 @@ public class PaginaProductos extends PageObject {
     public static final Target PRECIO_PRODUCTO=Target.
             the("")
             .located(By.cssSelector("div[class='w-100 center pt2 pb5'] div[class='exito-vtex-components-4-x-selling-price flex items-center '] span[class='exito-vtex-components-4-x-currencyContainer']"));
+    public static final Target CERRAR_REGISTRO=Target.
+            the("")
+            .located(By.xpath("//span[@class='exito-geolocation-3-x-cursorPointer']//*[name()='svg']"));
 
+    public static final Target UNIDADES_COMPRA=Target.
+            the("Saber cuentas unidades van al carrito")
+            .located(By.xpath("//div[contains(@class,'exito-vtex-components-4-x-stepperContainerQty')]"));
+
+    public static final Target UNIDADES=Target.
+            the("")
+            .located(By.xpath("//div[@class='pr5 mw6-ns lh-copy']"));
 }

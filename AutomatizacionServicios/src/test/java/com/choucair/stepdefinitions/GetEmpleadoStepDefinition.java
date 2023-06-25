@@ -78,6 +78,7 @@ public class GetEmpleadoStepDefinition extends ApiSetUp {
     @Then("un {string} de confirmacion junto con la informacion")
     public void unDeConfirmacionJuntoConLaInformacion(String mensaje) {
         try{
+            Thread.sleep(50000);
             lines= LeerTxt.readTextFile("DatosPruebaGet.txt");
             String jsonString=lines.get(idIndex-1);
             empleadoJson=(JSONObject) parser.parse(jsonString);

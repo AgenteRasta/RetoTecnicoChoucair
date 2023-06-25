@@ -5,10 +5,11 @@ import com.choucair.tasks.AbrirPaginaInicial;
 import com.choucair.tasks.AgregarProductos;
 import com.choucair.tasks.Carrito;
 import com.choucair.tasks.NavegarMenu;
-import com.choucair.ui.Menu;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+
+import java.util.Collections;
 import java.util.logging.Logger;
 
 import static com.choucair.questions.TotalCompra.totalCompra;
@@ -21,12 +22,18 @@ import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static org.hamcrest.CoreMatchers.equalTo;
 public class CompraProductosStepDefinition extends Configuracion {
 
-    public static String prueba;
-
     public static java.util.logging.Logger LOGGER = Logger.getLogger(String.valueOf(CompraProductosStepDefinition.class));
     @Given("que el usuario esta en la pagina del exito")
     public void queElUsuarioEstaEnLaPaginaDelExito() {
+        AgregarProductos.nombres.clear();
+        AgregarProductos.cantidades.clear();
+        AgregarProductos.precios.clear();
+        Carrito.nombresCarrito.clear();
+        Carrito.cantidadesCarrito.clear();
+        Carrito.preciosCarrito.clear();
+        totalCompra=0;
         configurarNavegador();
+
         try {
             theActorInTheSpotlight().wasAbleTo(
                     new AbrirPaginaInicial()
@@ -38,11 +45,11 @@ public class CompraProductosStepDefinition extends Configuracion {
 
     @When("selecciona una {string} y una {string}")
     public void seleccionaUnaYUna(String categoria, String subcategoria) {
-        Menu.cat=categoria;
-        Menu.subcat=subcategoria;
+        NavegarMenu.cate=categoria;
+        NavegarMenu.subcate=subcategoria;
         try {
             theActorInTheSpotlight().attemptsTo(
-                    navegarMenu(categoria,subcategoria)
+                    navegarMenu()
             );
         }catch (Exception e){
             LOGGER.warning(e.getMessage());
@@ -66,6 +73,7 @@ public class CompraProductosStepDefinition extends Configuracion {
 
     @When("entra al carrito de compras y registra un {string}")
     public void entroAlCarritoDeComprasYRegistroUn(String correo) {
+        Carrito.correo=correo;
         try {
             theActorInTheSpotlight().attemptsTo(
                     carrito()
@@ -79,22 +87,36 @@ public class CompraProductosStepDefinition extends Configuracion {
 
     @Then("visualiza toda la informacion de la compra")
     public void visualizoTodaLaInformacionDeLaCompra() {
-
+        Collections.sort(AgregarProductos.nombres);
+        Collections.sort(Carrito.nombresCarrito);
+        Collections.sort(AgregarProductos.cantidades);
+        Collections.sort(Carrito.cantidadesCarrito);
+        Collections.sort(AgregarProductos.precios);
+        Collections.sort(Carrito.preciosCarrito);
+        System.out.println(AgregarProductos.nombres);
+        System.out.println(Carrito.nombresCarrito);
+        System.out.println(AgregarProductos.cantidades);
+        System.out.println(Carrito.cantidadesCarrito);
+        System.out.println(AgregarProductos.precios);
+        System.out.println(Carrito.preciosCarrito);
+        System.out.println(totalCompra);
         try {
             theActorInTheSpotlight().should(
                     seeThat(totalCompra(), equalTo(totalCompra)),
                     seeThat("Se obtienen los productos",
-                            prod-> AgregarProductos.productos,equalTo(Carrito.nombresCarrito)),
+                            prod-> AgregarProductos.nombres,equalTo(Carrito.nombresCarrito)),
                     seeThat("Las cantidades de los productos son",
                             cant-> AgregarProductos.cantidades,equalTo(Carrito.cantidadesCarrito)),
                     seeThat("El total de cada producto es",
                             totalU-> AgregarProductos.precios, equalTo(Carrito.preciosCarrito))
             );
+            quitarDriver();
         }catch (Exception e){
             LOGGER.warning(e.getMessage());
             quitarDriver();
 
         }
+
     }
 
 }

@@ -1,14 +1,34 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="1" name="Comprar varios productos" skipped="0" tests="1" time="48.88" timestamp="2023-06-23 11:46:42"><testcase name="compra de varios productos"><failure message="&#10;Expected: &lt;[Colchón SPRING Sencillo (100 x 190 cm) Classic Resortado Semifirme, Colchon+ Almohada SPRING Sencillo (100 x 190 cm) EXDREAM Resortado Semifirme]&gt;&#10;     but: was &lt;[1, 5, 7, 11, 13]&gt;&#13;&#10;&#10;Expected: &lt;[2, 3]&gt;&#10;     but: was &lt;[2, 3, 1, 2, 1]&gt;" type="java.lang.AssertionError">
-Expected: &lt;[Colchón SPRING Sencillo (100 x 190 cm) Classic Resortado Semifirme, Colchon+ Almohada SPRING Sencillo (100 x 190 cm) EXDREAM Resortado Semifirme]&gt;
-     but: was &lt;[1, 5, 7, 11, 13]&gt;&#13;
-
-Expected: &lt;[2, 3]&gt;
-     but: was &lt;[2, 3, 1, 2, 1]&gt;</failure><system-err>
-Expected: &lt;[Colchón SPRING Sencillo (100 x 190 cm) Classic Resortado Semifirme, Colchon+ Almohada SPRING Sencillo (100 x 190 cm) EXDREAM Resortado Semifirme]&gt;
-     but: was &lt;[1, 5, 7, 11, 13]&gt;&#13;
-
-Expected: &lt;[2, 3]&gt;
-     but: was &lt;[2, 3, 1, 2, 1]&gt;&#13;
-com.choucair.stepdefinitions.CompraProductosStepDefinition.visualizoTodaLaInformacionDeLaCompra(CompraProductosStepDefinition.java:90)&#13;
-✽.visualiza toda la informacion de la compra(file:///C:/Users/Rasta/Desktop/Prueba%20Choucair/RetoTecnico/src/test/resources/features/compraExito.feature:11)&#13;
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="1" failures="1" name="Comprar varios productos" skipped="0" tests="2" time="112.77" timestamp="2023-06-24 11:55:28"><testcase name="compra de varios productos"><error message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[16]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]&quot;}&#10;  (Session info: chrome=114.0.5735.134)&#10;For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'DESKTOP-1MH7BUO', ip: '172.22.176.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.18'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.134, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\Rasta\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:49505}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: ignore, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 3c2ff9061550f4ab593a1c8ac84c766b&#10;*** Element info: {Using=xpath, value=//body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[16]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]}" type="org.openqa.selenium.NoSuchElementException">no such element: Unable to locate element: {"method":"xpath","selector":"//body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[16]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]"}
+  (Session info: chrome=114.0.5735.134)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-1MH7BUO', ip: '172.22.176.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.18'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.134, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\Rasta\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:49505}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: ignore, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3c2ff9061550f4ab593a1c8ac84c766b
+*** Element info: {Using=xpath, value=//body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[16]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]}</error><system-err>no such element: Unable to locate element: {"method":"xpath","selector":"//body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[16]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]"}
+  (Session info: chrome=114.0.5735.134)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-1MH7BUO', ip: '172.22.176.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.18'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.134, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\Rasta\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:49505}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: ignore, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3c2ff9061550f4ab593a1c8ac84c766b
+*** Element info: {Using=xpath, value=//body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[16]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]}&#13;
+com.choucair.tasks.AgregarProductos.performAs(AgregarProductos.java:40)&#13;
+com.choucair.stepdefinitions.CompraProductosStepDefinition.aniadeCincoProductosAlCarritoConSusRespectivasCantidades(CompraProductosStepDefinition.java:64)&#13;
+io.cucumber.java.Invoker.invoke(Invoker.java:27)&#13;
+io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:27)&#13;
+io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)&#13;
+io.cucumber.core.runner.TestStep.executeStep(TestStep.java:64)&#13;
+io.cucumber.core.runner.TestStep.run(TestStep.java:49)&#13;
+io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:46)&#13;
+io.cucumber.core.runner.TestCase.run(TestCase.java:51)&#13;
+io.cucumber.core.runner.Runner.runPickle(Runner.java:67)&#13;
+io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:83)&#13;
+io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:24)&#13;
+io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:227)&#13;
+io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:54)&#13;
+worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)&#13;
+worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)&#13;
 </system-err></testcase></testsuite>

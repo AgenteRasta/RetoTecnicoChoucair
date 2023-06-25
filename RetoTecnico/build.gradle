@@ -22,7 +22,13 @@ buildscript {
         classpath("org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:3.0")
     }
 }
-
+sonarqube {
+    properties {
+        property "sonar.java.binaries", "src/main"
+        property "sonar.exclusions", "*/*Generated.java, */Data.java"
+        property "sonar.coverage.jacoco.xmlReportPaths", "${buildDir}/jacoco/test/jacocoTestReport.xml"
+    }
+}
 ext {
     junitVersion = '5.7.2'
     serenityVersion = '2.2.9'
