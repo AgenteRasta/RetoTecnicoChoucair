@@ -36,8 +36,7 @@ ext {
     apachePoiVersion = '3.17'
 }
 dependencies {
-    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: junitVersion
-    testRuntimeOnly group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: junitVersion
+
     implementation group: 'net.serenity-bdd', name: 'serenity-core', version: serenityVersion
     implementation group: 'net.serenity-bdd', name: 'serenity-junit', version: serenityVersion
     implementation group: 'net.serenity-bdd', name: 'serenity-screenplay', version: serenityVersion
@@ -47,7 +46,6 @@ dependencies {
     implementation group: 'net.serenity-bdd', name: 'serenity-screenplay-rest', version: serenityVersion
     implementation group: 'net.serenity-bdd', name: 'serenity-cucumber5', version: serenityCucumberVersion
     implementation group: 'log4j', name: 'log4j', version: '1.2.17'
-    implementation group: 'com.sikulix', name: 'sikulixapi', version: '2.0.4'
     implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.11.3'
     implementation group: 'com.fasterxml.jackson.datatype', name: 'jackson-datatype-jsr310', version: '2.11.3'
     implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.13.0'

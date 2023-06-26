@@ -1,1 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Comprar varios productos" skipped="0" tests="2" time="245.67" timestamp="2023-06-25 11:47:17"><testcase name="compra de varios productos"/></testsuite>
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="2" name="Comprar varios productos" skipped="0" tests="3" time="489.92" timestamp="2023-06-26 01:26:27"><testcase name="compra de varios productos"><failure message="&#10;Expected: &lt;5832498&gt;&#10;     but: was &lt;5832495&gt;" type="java.lang.AssertionError">
+Expected: &lt;5832498&gt;
+     but: was &lt;5832495&gt;</failure><system-err>
+Expected: &lt;5832498&gt;
+     but: was &lt;5832495&gt;&#13;
+com.choucair.stepdefinitions.CompraProductosStepDefinition.visualizoTodaLaInformacionDeLaCompra(CompraProductosStepDefinition.java:105)&#13;
+✽.visualiza toda la informacion de la compra(file:///C:/Users/Rasta/Desktop/Prueba%20Choucair/RetoTecnico/src/test/resources/features/compraExito.feature:11)&#13;
+</system-err></testcase></testsuite>
