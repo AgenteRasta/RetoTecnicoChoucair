@@ -9,5 +9,7 @@ Feature: Actualizar un empleado
     Then recibo el <codigo> de respuesta statuscode
     And un <mensaje> de confirmacion junto con la informacion del usuario actualizado
     Examples:
-      | index |id| codigo | mensaje                                  |
-      | 1     | 1 | 200    | "Successfully! Record has been updated." |
+      | index | id | codigo | mensaje                                  |
+      | 1     | 1  | 200    | "Successfully! Record has been updated." |
+      | 2     | 2  | 200    | "Successfully! Record has been updated." |
+      | 3     | 3  | 200    | "Successfully! Record has been updated." |

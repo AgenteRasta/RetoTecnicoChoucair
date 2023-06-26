@@ -20,11 +20,10 @@ import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.notNullValue;
 
 public class PutEmpleadoStepDefinition extends ApiSetUp {
-    public static Logger LOGGER = Logger.getLogger(String.valueOf(PostEmpleadoStepDefinition.class));
+    public static Logger LOGGER = Logger.getLogger(String.valueOf(PutEmpleadoStepDefinition.class));
     int codigoRespuesta;
     JSONObject empleadoJson = null;
     JSONObject resBody = null;
-    JSONObject data = null;
     JSONObject empleadoRespuesta = null;
     Response actualResponse;
     JSONParser parser = new JSONParser();
@@ -33,6 +32,7 @@ public class PutEmpleadoStepDefinition extends ApiSetUp {
     @Given("que estoy apuntando con un endpoint a la api put de empleado de restApiExample")
     public void queEstoyApuntandoConUnEndpointALaApiPutDeEmpleadoDeRestApiExample() {
         try{
+            waitForMilliseconds(60000);
             setUp(API_BASE_URL.getValue());
             LOGGER.info("Inicio de la automatizacion");
         }catch (Exception e){
@@ -93,19 +93,7 @@ public class PutEmpleadoStepDefinition extends ApiSetUp {
                 LOGGER.warning(e.getMessage());
                 Assertions.fail();
             }
-        }/*else if(codigoRespuesta==404){
-            try{
-                LOGGER.info("Se revisa la respuesta de los codigos 400");
-                actor.should(
-                        seeThat("Retorna informacion",
-                                info-> actualResponse.getBody().asString(),equalTo(mensaje))
-                );
-
-            }catch (Exception e){
-                LOGGER.warning(e.getMessage());
-                Assertions.fail();
-            }
-        }*/
+        }
         LOGGER.info("FIN DE LA AUTOMATIZACION");
     }
 }

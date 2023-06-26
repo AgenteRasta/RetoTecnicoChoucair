@@ -30,7 +30,12 @@ public class AgregarProductos implements Task {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
-
+        if(CERRAR_REGISTRO.resolveFor(actor).isVisible()){
+            System.out.println("ES VISIBLE FUNCIONA");
+            actor.attemptsTo(
+                    Click.on(CERRAR_REGISTRO)
+            );
+        }
         productos=generateRandomNumbers(16);
         cantidades=generateRandomNumbersR(9);
         System.out.println(productos);
@@ -46,10 +51,8 @@ public class AgregarProductos implements Task {
                     Click.on(By.xpath("//body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/" +
                             "div["+productos.get(i)+"]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]")),
                     Click.on(AGREGAR_PRODUCTO)
-
             );
             nombres.add(NOMBRE_PRODUCTO.resolveFor(actor).getText());
-            precios.add(obtenerEnteros(PRECIO_PRODUCTO.resolveFor(actor).getText())*cantidades.get(i));
             precioProducto=obtenerEnteros(PRECIO_PRODUCTO.resolveFor(actor).getText());
             if(cantidades.get(i)>=2){
                 for (int j=0;j<cantidades.get(i)-1;j++){
@@ -65,6 +68,7 @@ public class AgregarProductos implements Task {
                         cantidades.set(i,pUni-1);
                         break;
                     }
+
                     actor.attemptsTo(
                             Click.on(CONTINUAR_COMPRA),
                             WaitUntil.the(CONTINUAR_COMPRA, isNotVisible()).forNoMoreThan(10).seconds(),
@@ -73,6 +77,7 @@ public class AgregarProductos implements Task {
                     );
                 }
             }
+            precios.add(precioProducto*cantidades.get(i));
             totalCompra=totalCompra+(precioProducto*cantidades.get(i));
             actor.attemptsTo(
 

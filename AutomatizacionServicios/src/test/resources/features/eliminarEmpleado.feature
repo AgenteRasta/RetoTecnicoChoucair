@@ -9,5 +9,7 @@ Feature: Eliminar un empleado
     Then puedo observar el <codigo> de respuesta
     And un <mensaje> de confirmacion junto con la respuesta del servicio
     Examples:
-      | id | codigo | mensaje                                 |
-      | 1  | 200    | "Successfully! Record has been deleted" |
+      | id  | codigo | mensaje                                 |
+      | 1   | 200    | "Successfully! Record has been deleted" |
+      | 2   | 200    | "Successfully! Record has been deleted" |
+      | 100 | 200    | "Successfully! Record has been deleted" |

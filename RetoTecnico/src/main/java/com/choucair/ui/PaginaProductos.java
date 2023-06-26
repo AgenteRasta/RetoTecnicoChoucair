@@ -33,6 +33,8 @@ public class PaginaProductos extends PageObject {
     public static final Target UNIDADES_COMPRA=Target.
             the("Saber cuentas unidades van al carrito")
             .located(By.xpath("//div[contains(@class,'exito-vtex-components-4-x-stepperContainerQty')]"));
+//span[@class='exito-geolocation-3-x-cursorPointer']
+
 
     public static final Target UNIDADES=Target.
             the("")
@@ -40,5 +42,5 @@ public class PaginaProductos extends PageObject {
 
     public static final Target ESPERA_SCROLL=Target.
             the("")
-            .located(By.xpath("(//*[@class='exito-product-details-3-x-exitoCustomBenefits fw1 ma0 ml1 '])[1]"));
+            .located(By.xpath("(//*[@class='flex items-center exito-vtex-components-4-x-soldByText fw1 ma0 ml1'])[1]"));
 }

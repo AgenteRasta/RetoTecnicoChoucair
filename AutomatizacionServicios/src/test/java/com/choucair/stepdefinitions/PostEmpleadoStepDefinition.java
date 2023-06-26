@@ -24,7 +24,6 @@ public class PostEmpleadoStepDefinition extends ApiSetUp {
     public static Logger LOGGER = Logger.getLogger(String.valueOf(PostEmpleadoStepDefinition.class));
 
     int codigoRespuesta;
-    int idIndex;
     JSONObject empleadoJson = null;
     JSONObject resBody = null;
     JSONObject data = null;
@@ -35,6 +34,7 @@ public class PostEmpleadoStepDefinition extends ApiSetUp {
     @Given("que estoy apuntando con un endpoint a la api post de empleado de restApiExample")
     public void queEstoyApuntandoConUnEndpointALaApiPostDeEmpleadoDeRestApiExample() {
         try{
+            waitForMilliseconds(60000);
             setUp(API_BASE_URL.getValue());
             LOGGER.info("Inicio de la automatizacion");
         }catch (Exception e){
@@ -99,19 +99,7 @@ public class PostEmpleadoStepDefinition extends ApiSetUp {
                 LOGGER.warning(e.getMessage());
                 Assertions.fail();
             }
-        }/*else if(codigoRespuesta==404){
-            try{
-                LOGGER.info("Se revisa la respuesta de los codigos 400");
-                actor.should(
-                        seeThat("Retorna informacion",
-                                info-> actualResponse.getBody().asString(),equalTo(mensaje))
-                );
-
-            }catch (Exception e){
-                LOGGER.warning(e.getMessage());
-                Assertions.fail();
-            }
-        }*/
+        }
         LOGGER.info("FIN DE LA AUTOMATIZACION");
     }
 }

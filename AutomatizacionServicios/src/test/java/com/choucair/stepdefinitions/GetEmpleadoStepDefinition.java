@@ -6,7 +6,6 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.restassured.response.Response;
-import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.junit.jupiter.api.Assertions;
@@ -38,6 +37,7 @@ public class GetEmpleadoStepDefinition extends ApiSetUp {
     @Given("que estoy apuntando con un endpoint a la api get de empleado de restApiExample")
     public void queEstoyApuntandoConUnEndpointALaApiGetDeEmpleadoDeRestApiExample() {
         try{
+            waitForMilliseconds(60000);
             setUp(API_BASE_URL.getValue());
             LOGGER.info("Inicio de la automatizacion");
         }catch (Exception e){
@@ -78,7 +78,6 @@ public class GetEmpleadoStepDefinition extends ApiSetUp {
     @Then("un {string} de confirmacion junto con la informacion")
     public void unDeConfirmacionJuntoConLaInformacion(String mensaje) {
         try{
-            Thread.sleep(50000);
             lines= LeerTxt.readTextFile("DatosPruebaGet.txt");
             String jsonString=lines.get(idIndex-1);
             empleadoJson=(JSONObject) parser.parse(jsonString);
@@ -101,5 +100,6 @@ public class GetEmpleadoStepDefinition extends ApiSetUp {
         }catch (Exception e){
             Assertions.fail();
         }
+
     }
 }

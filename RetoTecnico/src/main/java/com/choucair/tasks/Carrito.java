@@ -30,7 +30,7 @@ public class Carrito implements Task {
     public <T extends Actor> void performAs(T actor) {
         totalCompraCarrito=0;
         actor.attemptsTo(
-                WaitUntil.the(CARRITO, isClickable()).forNoMoreThan(10).seconds(),
+                WaitUntil.the(CARRITO, isClickable()).forNoMoreThan(15).seconds(),
                 Click.on(CARRITO),
                 Enter.theValue(correo).into(CAMPO_CORREO),
                 Click.on(CONFIRMAR_CORREO)

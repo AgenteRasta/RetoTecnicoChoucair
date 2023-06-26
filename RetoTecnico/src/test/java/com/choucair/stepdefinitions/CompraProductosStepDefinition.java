@@ -40,6 +40,7 @@ public class CompraProductosStepDefinition extends Configuracion {
             );
         }catch (Exception e){
             LOGGER.warning(e.getMessage());
+            quitarDriver();
         }
     }
 

@@ -27,6 +27,7 @@ public class DelEmpleadoStepDefinition extends ApiSetUp {
     @Given("que estoy apuntando con un endpoint a la api delete de empleado de restApiExample")
     public void queEstoyApuntandoConUnEndpointALaApiDeleteDeEmpleadoDeRestApiExample() {
         try{
+            waitForMilliseconds(60000);
             setUp(API_BASE_URL.getValue());
             LOGGER.info("Inicio de la automatizacion");
         }catch (Exception e){

@@ -10,6 +10,8 @@ Feature: Comprar varios productos
     And entra al carrito de compras y registra un <correo>
     Then visualiza toda la informacion de la compra
     Examples:
-      | categoria    | subcategoria          | correo             |
-      | "Dormitorio" | "Cabeceros"           | "prueba@gmail.com" |
-      | "Dormitorio" | "Colchones sencillos" | "prueba@gmail.com" |
+      | categoria         | subcategoria          | correo             |
+      | "Dormitorio"      | "Cabeceros"           | "prueba@gmail.com" |
+      | "Hogar y muebles" | "Escritorios"         | "prueba@gmail.com" |
+      | "Dormitorio"      | "Colchones sencillos" | "prueba@gmail.com" |
+

@@ -11,3 +11,5 @@ Feature: Crear un empleado
     Examples:
       | index | codigo | mensaje                                |
       | 1     | 200    | "Successfully! Record has been added." |
+      | 2     | 200    | "Successfully! Record has been added." |
+      | 3     | 200    | "Successfully! Record has been added." |

@@ -4,19 +4,29 @@
   <system-out><![CDATA[
 ?[31mFailed scenarios:?[0m
 ?[31mfile:///C:/Users/Rasta/Desktop/Prueba%20Choucair/RetoTecnico/src/test/resources/features/compraExito.feature:15?[0m# compra de varios productos
+?[31mfile:///C:/Users/Rasta/Desktop/Prueba%20Choucair/RetoTecnico/src/test/resources/features/compraExito.feature:16?[0m# compra de varios productos
 
-2 Scenarios (?[31m1 failed?[0m, ?[32m1 passed?[0m)
-10 Steps (?[31m1 failed?[0m, ?[32m9 passed?[0m)
-1m53,167s
+3 Scenarios (?[31m2 failed?[0m, ?[32m1 passed?[0m)
+15 Steps (?[31m2 failed?[0m, ?[32m13 passed?[0m)
+8m10,319s
 
 
 java.lang.AssertionError: 
-Expected: <8357585>
-     but: was <8357587>
+Expected: <5832498>
+     but: was <5832495>
 	at net.serenitybdd.screenplay.ErrorTally.throwSummaryExceptionFrom(ErrorTally.java:36)
 	at net.serenitybdd.screenplay.ErrorTally.reportAnyErrors(ErrorTally.java:30)
 	at net.serenitybdd.screenplay.Actor.should(Actor.java:316)
-	at com.choucair.stepdefinitions.CompraProductosStepDefinition.visualizoTodaLaInformacionDeLaCompra(CompraProductosStepDefinition.java:104)
+	at com.choucair.stepdefinitions.CompraProductosStepDefinition.visualizoTodaLaInformacionDeLaCompra(CompraProductosStepDefinition.java:105)
+	at ?.visualiza toda la informacion de la compra(file:///C:/Users/Rasta/Desktop/Prueba%20Choucair/RetoTecnico/src/test/resources/features/compraExito.feature:11)
+
+java.lang.AssertionError: 
+Expected: <17626682>
+     but: was <17626683>
+	at net.serenitybdd.screenplay.ErrorTally.throwSummaryExceptionFrom(ErrorTally.java:36)
+	at net.serenitybdd.screenplay.ErrorTally.reportAnyErrors(ErrorTally.java:30)
+	at net.serenitybdd.screenplay.Actor.should(Actor.java:316)
+	at com.choucair.stepdefinitions.CompraProductosStepDefinition.visualizoTodaLaInformacionDeLaCompra(CompraProductosStepDefinition.java:105)
 	at ?.visualiza toda la informacion de la compra(file:///C:/Users/Rasta/Desktop/Prueba%20Choucair/RetoTecnico/src/test/resources/features/compraExito.feature:11)
 
 
@@ -24,8 +34,5 @@ Expected: <8357585>
   <system-err><![CDATA[SLF4J: No SLF4J providers were found.
 SLF4J: Defaulting to no-operation (NOP) logger implementation
 SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
-SLF4J: Class path contains SLF4J bindings targeting slf4j-api versions 1.7.x or earlier.
-SLF4J: Ignoring binding found at [jar:file:/C:/Users/Rasta/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-nop/1.7.28/e427e2f69d0a8508994e0a754a44d5212fa38b56/slf4j-nop-1.7.28.jar!/org/slf4j/impl/StaticLoggerBinder.class]
-SLF4J: See https://www.slf4j.org/codes.html#ignoredBindings for an explanation.
 ]]></system-err>
 </testsuite>
