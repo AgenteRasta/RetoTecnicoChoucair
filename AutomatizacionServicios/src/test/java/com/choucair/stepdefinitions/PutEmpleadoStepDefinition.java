@@ -94,6 +94,7 @@ public class PutEmpleadoStepDefinition extends ApiSetUp {
                 Assertions.fail();
             }
         }
+
         LOGGER.info("FIN DE LA AUTOMATIZACION");
     }
 }
