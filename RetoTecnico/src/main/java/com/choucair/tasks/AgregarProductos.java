@@ -31,7 +31,7 @@ public class AgregarProductos implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
 
-        productos=generateRandomNumbers(20);
+        productos=generateRandomNumbers(16);
         cantidades=generateRandomNumbersR(9);
         System.out.println(productos);
         System.out.println(cantidades);
@@ -40,6 +40,7 @@ public class AgregarProductos implements Task {
             actor.attemptsTo(
                     Scroll.to(INICIO),
                     WaitUntil.the(INICIO, isVisible()).forNoMoreThan(10).seconds(),
+                    WaitUntil.the(ESPERA_SCROLL, isVisible()).forNoMoreThan(10).seconds(),
                     Scroll.to(By.xpath("//body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/" +
                             "div["+productos.get(i)+"]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]")),
                     Click.on(By.xpath("//body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/" +
@@ -75,7 +76,8 @@ public class AgregarProductos implements Task {
             totalCompra=totalCompra+(precioProducto*cantidades.get(i));
             actor.attemptsTo(
 
-                    Click.on(CONTINUAR_COMPRA)
+                    Click.on(CONTINUAR_COMPRA),
+                    WaitUntil.the(ADD_PRODUCTO, isNotVisible()).forNoMoreThan(10).seconds()
             );
         }
         System.out.println(cantidades);

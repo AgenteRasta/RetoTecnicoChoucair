@@ -42,8 +42,8 @@ public class Carrito implements Task {
                         Scroll.to(BAJAR_CARRITO)
                 );
             }
-            nombresCarrito.add(Target.the("").
-                    located(By.xpath("(//*[@class='exito-checkout-io-0-x-itemCartContent'])["+i+"]/descendant::div[5]")).resolveFor(actor).getText());
+            nombresCarrito.add(Target.the("Obtiene el nombre de los productos del carrito").
+                    located(By.xpath(String.format(NOMBRE_CARRITO,String.valueOf(i)))).resolveFor(actor).getText());
             String cantidadAux=(Target.the("").
                     located(By.xpath("(//*[@class='exito-checkout-io-0-x-itemCartContent'])["+i+"]/descendant::div[13]")).resolveFor(actor).getText());
             cantidadesCarrito.add(obtenerEnteros(cantidadAux));
@@ -55,11 +55,6 @@ public class Carrito implements Task {
         System.out.println(cantidadesCarrito);
         System.out.println(preciosCarrito);
         System.out.println(totalCompraCarrito);
-        try {
-            Thread.sleep(10000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
     }
 
     public static Carrito carrito(){

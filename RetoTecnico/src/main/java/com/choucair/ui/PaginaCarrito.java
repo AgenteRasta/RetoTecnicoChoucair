@@ -6,6 +6,8 @@ import org.openqa.selenium.By;
 
 public class PaginaCarrito extends PageObject {
 
+    public static String NOMBRE_CARRITO="(//*[@class='exito-checkout-io-0-x-itemCartContent'])[%s]/descendant::div[5]";
+
     public static final Target CARRITO=Target.
             the("Ir al carrito")
             .located(By.xpath("//a[contains(@class,'exito-header-3-x-minicartLink')]//*[name()='svg']"));
@@ -29,5 +31,6 @@ public class PaginaCarrito extends PageObject {
     public static final Target DESCUENTO=Target.
             the("Obtener el descuento")
             .located(By.xpath("//*[@class='exito-checkout-io-0-x-summaryDiscount']/descendant::span[2]"));
+
 
 }

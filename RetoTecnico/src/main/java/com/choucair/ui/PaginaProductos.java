@@ -37,4 +37,8 @@ public class PaginaProductos extends PageObject {
     public static final Target UNIDADES=Target.
             the("")
             .located(By.xpath("//div[@class='pr5 mw6-ns lh-copy']"));
+
+    public static final Target ESPERA_SCROLL=Target.
+            the("")
+            .located(By.xpath("(//*[@class='exito-product-details-3-x-exitoCustomBenefits fw1 ma0 ml1 '])[1]"));
 }
