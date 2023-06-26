@@ -32,6 +32,7 @@ public class PutEmpleadoStepDefinition extends ApiSetUp {
     @Given("que estoy apuntando con un endpoint a la api put de empleado de restApiExample")
     public void queEstoyApuntandoConUnEndpointALaApiPutDeEmpleadoDeRestApiExample() {
         try{
+
             waitForMilliseconds(60000);
             setUp(API_BASE_URL.getValue());
             LOGGER.info("Inicio de la automatizacion");
