@@ -6,6 +6,11 @@ import org.openqa.selenium.By;
 
 public class PaginaProductos extends PageObject {
 
+    public static final String BUSCAR_PRODUCTO="//body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/" +
+            "div[%s]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]";
+
+    public static final String CLICK_PRODUCTO="//body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/" +
+            "div[%s]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]";
     public static final Target AGREGAR_PRODUCTO = Target.
             the("Agrega un producto")
             .located(By.xpath("//*[@class='exito-vtex-components-4-x-mainBuyButton']"));
@@ -33,12 +38,6 @@ public class PaginaProductos extends PageObject {
     public static final Target UNIDADES_COMPRA=Target.
             the("Saber cuentas unidades van al carrito")
             .located(By.xpath("//div[contains(@class,'exito-vtex-components-4-x-stepperContainerQty')]"));
-//span[@class='exito-geolocation-3-x-cursorPointer']
-
-
-    public static final Target UNIDADES=Target.
-            the("")
-            .located(By.xpath("//div[@class='pr5 mw6-ns lh-copy']"));
 
     public static final Target ESPERA_SCROLL=Target.
             the("")

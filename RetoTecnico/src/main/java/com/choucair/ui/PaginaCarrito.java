@@ -28,9 +28,9 @@ public class PaginaCarrito extends PageObject {
             the("")
             .located(By.xpath("//div[@class='exito-checkout-io-0-x-containerDonationInfoDataTitle']"));
 
-    public static final Target DESCUENTO=Target.
-            the("Obtener el descuento")
-            .located(By.xpath("//*[@class='exito-checkout-io-0-x-summaryDiscount']/descendant::span[2]"));
+    public static final String CANTIDADES_CARRITO="(//*[@class='exito-checkout-io-0-x-itemCartContent'])[%s]/descendant::div[13]";
+    public static final String PRECIOS_CARRITO="(//*[@class='exito-checkout-io-0-x-itemCartContent'])[%s]/descendant::div[8]";
+
 
 
 }

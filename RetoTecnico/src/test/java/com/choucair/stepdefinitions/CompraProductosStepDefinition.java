@@ -11,7 +11,6 @@ import io.cucumber.java.en.When;
 
 import java.util.Collections;
 import java.util.logging.Logger;
-
 import static com.choucair.questions.TotalCompra.totalCompra;
 import static com.choucair.tasks.AgregarProductos.agregarProductos;
 import static com.choucair.tasks.AgregarProductos.totalCompra;
@@ -88,20 +87,14 @@ public class CompraProductosStepDefinition extends Configuracion {
 
     @Then("visualiza toda la informacion de la compra")
     public void visualizoTodaLaInformacionDeLaCompra() {
-        Collections.sort(AgregarProductos.nombres);
-        Collections.sort(Carrito.nombresCarrito);
-        Collections.sort(AgregarProductos.cantidades);
-        Collections.sort(Carrito.cantidadesCarrito);
-        Collections.sort(AgregarProductos.precios);
-        Collections.sort(Carrito.preciosCarrito);
-        System.out.println(AgregarProductos.nombres);
-        System.out.println(Carrito.nombresCarrito);
-        System.out.println(AgregarProductos.cantidades);
-        System.out.println(Carrito.cantidadesCarrito);
-        System.out.println(AgregarProductos.precios);
-        System.out.println(Carrito.preciosCarrito);
-        System.out.println(totalCompra);
         try {
+            Collections.sort(AgregarProductos.nombres);
+            Collections.sort(Carrito.nombresCarrito);
+            Collections.sort(AgregarProductos.cantidades);
+            Collections.sort(Carrito.cantidadesCarrito);
+            Collections.sort(AgregarProductos.precios);
+            Collections.sort(Carrito.preciosCarrito);
+
             theActorInTheSpotlight().should(
                     seeThat(totalCompra(), equalTo(totalCompra)),
                     seeThat("Se obtienen los productos",
@@ -117,7 +110,7 @@ public class CompraProductosStepDefinition extends Configuracion {
             quitarDriver();
 
         }
-
+    quitarDriver();
     }
 
 }

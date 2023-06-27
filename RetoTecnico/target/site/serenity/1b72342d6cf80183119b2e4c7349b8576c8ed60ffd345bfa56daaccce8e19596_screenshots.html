@@ -1,0 +1,769 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.20/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.20/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.20/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.20/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.20/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle"></span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="2050b1aa9d97e670c02640971f22c16bc4527855395605d23ccb457fb5346e25.html">Comprar Varios Productos</a></span>
+                > <span class="truncate-60"><a
+                    href="1b72342d6cf80183119b2e4c7349b8576c8ed60ffd345bfa56daaccce8e19596.html">compra de varios productos </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 26-06-2023 19:09</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Comprar Varios Productos </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                yo como usuario que ingresa a la pagina del exito<br />
+quiero elegir un categoria y subcategoria<br />
+para comprar varios productos y cantidades
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-times-circle failure-icon fa-2x' title='FAILURE'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="failing-color">compra de varios productos
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Given que el usuario esta en la pagina del exito<br>When selecciona una &lt;categoria&gt; y una &lt;subcategoria&gt;<br>And aniade cinco productos al carrito con sus respectivas cantidades<br>And entra al carrito de compras y registra un &lt;correo&gt;<br>Then visualiza toda la informacion de la compra</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+            <div class="screenshotFailure panel panel-danger">
+
+    <div style="display:block">
+        <div class="table">
+            <div class="row">
+                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
+                    <span class="error-message error-message-title">Assertion error: Expected: ([Escritorio Axis Wengue Marfil, Escritorio Connie, Blanco, Dise&ntilde;o Moderno Con Dos Entrepa&ntilde;os, Escritorio Gamer Max Ancho: 150 cm Alto: 88 Profundidad: 52 Color: Wengue Neo, Escritorio en madera Lannister Escritorio Lannister Ancho: 110 Cm Alto: 85 Cm Profundo: 48 Cm Color: Duna, Escritorio &iexcl;Wow! Rovere Blanco]) but: was ([Escritorio Axis Wengue Marfil, Escritorio Connie, Blanco, Dise&ntilde;o Moderno Con Dos Entrepa&ntilde;os, Escritorio Gamer Max, Escritorio en madera Lannister, Escritorio &iexcl;Wow! Rovere Blanco])</span>
+                </div>
+                <div class="col-sm-2">
+                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-overall""
+                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="far fa-eye"></i> More details</a>
+                </div>
+             </div>
+        </div>
+    <div>
+
+    <!-- Details Section -->
+    <div class="row stacktrace-details">
+      <div class="col">
+        <div class="collapse multi-collapse" id="stacktraceModal-overall">
+            <div class="card">
+                <div class="card-header">
+                    <h4>java.lang.AssertionError </h4>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <pre>com.choucair.stepdefinitions.CompraProductosStepDefinition.visualizoTodaLaInformacionDeLaCompra(CompraProductosStepDefinition.java:98)<br />✽.visualiza toda la informacion de la compra(file:///C:/Users/Rasta/Desktop/Prueba%20Choucair/RetoTecnico/src/test/resources/features/compraExito.feature:11)<br /></pre>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+                <div class="panel-body">
+                    <a href="pagesource15293933534936121662.html.txt" target="_blank" class="btn btn-info">HTML Source</a>
+                </div>
+            </div>
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="4a90f7ec9dcf9eeb6629103d68bb8755db9e9889c8ffbcc2d7c48012892798a1.png" title=" Example: {categoria=&quot;Dormitorio&quot;, subcategoria=&quot;Cabeceros&quot;, correo=&quot;prueba@gmail.com&quot;}" width="1858"/>
+                <img src="4a90f7ec9dcf9eeb6629103d68bb8755db9e9889c8ffbcc2d7c48012892798a1.png" title=" Given que el usuario esta en la pagina del exito" width="1858"/>
+                <img src="4a90f7ec9dcf9eeb6629103d68bb8755db9e9889c8ffbcc2d7c48012892798a1.png" title=" Estiven abrir pagina inicial" width="1858"/>
+                <img src="4a90f7ec9dcf9eeb6629103d68bb8755db9e9889c8ffbcc2d7c48012892798a1.png" title=" Estiven opens the Pagina inicial" width="1858"/>
+                <img src="3ddc3da105891f5fae83a05b24abb99c962939cd1f77a2a8593dcfddcb13f331.png" title=" Estiven opens the Pagina inicial (completed)" width="1858"/>
+                <img src="3ddc3da105891f5fae83a05b24abb99c962939cd1f77a2a8593dcfddcb13f331.png" title=" Estiven clicks on Desplegar menu" width="1858"/>
+                <img src="807eec405acd4136014ea1ebeaba5a07220cd1aa8c660c32226b5c0c55a271b5.png" title=" Estiven clicks on Desplegar menu (completed)" width="1858"/>
+                <img src="807eec405acd4136014ea1ebeaba5a07220cd1aa8c660c32226b5c0c55a271b5.png" title=" Estiven abrir pagina inicial (completed)" width="1858"/>
+                <img src="807eec405acd4136014ea1ebeaba5a07220cd1aa8c660c32226b5c0c55a271b5.png" title=" Given que el usuario esta en la pagina del exito (completed)" width="1858"/>
+                <img src="807eec405acd4136014ea1ebeaba5a07220cd1aa8c660c32226b5c0c55a271b5.png" title=" When selecciona una &quot;Dormitorio&quot; y una &quot;Cabeceros&quot;" width="1858"/>
+                <img src="807eec405acd4136014ea1ebeaba5a07220cd1aa8c660c32226b5c0c55a271b5.png" title=" Estiven navegar menu" width="1858"/>
+                <img src="958d752f348e14b6caea4c09cbac19805d9e341cc69d18174bbd0e885fc68537.png" title=" Estiven clicks on [By.id: undefined-nivel2-Dormitorio]" width="1858"/>
+                <img src="1e019a1a13fbb8d94765b8c41112eae92718eadf8ab2a3c888a266eeea8aba66.png" title=" Estiven clicks on [By.id: undefined-nivel2-Dormitorio] (completed)" width="1858"/>
+                <img src="1e019a1a13fbb8d94765b8c41112eae92718eadf8ab2a3c888a266eeea8aba66.png" title=" Estiven clicks on [By.xpath: //*[text()='Cabeceros']]" width="1858"/>
+                <img src="64f355fe3a75a756b0ec38dd63e9405233531972c7de2c019387a723ca8fe4d5.png" title=" Estiven clicks on [By.xpath: //*[text()='Cabeceros']] (completed)" width="1858"/>
+                <img src="64f355fe3a75a756b0ec38dd63e9405233531972c7de2c019387a723ca8fe4d5.png" title=" Estiven navegar menu (completed)" width="1858"/>
+                <img src="64f355fe3a75a756b0ec38dd63e9405233531972c7de2c019387a723ca8fe4d5.png" title=" When selecciona una &quot;Dormitorio&quot; y una &quot;Cabeceros&quot; (completed)" width="1858"/>
+                <img src="64f355fe3a75a756b0ec38dd63e9405233531972c7de2c019387a723ca8fe4d5.png" title=" And aniade cinco productos al carrito con sus respectivas cantidades" width="1858"/>
+                <img src="64f355fe3a75a756b0ec38dd63e9405233531972c7de2c019387a723ca8fe4d5.png" title=" Estiven agregar productos" width="1858"/>
+                <img src="e05d251380e2db9123a9192cf179a058db524347069f793a0d49eafcc0d8ae86.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[3]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]]" width="1858"/>
+                <img src="aa86c862ebd6f38779ac1ea0797dc41e03efc6453d79f1b4ca4a1e84e7efb6a0.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[3]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]] (completed)" width="1858"/>
+                <img src="aa86c862ebd6f38779ac1ea0797dc41e03efc6453d79f1b4ca4a1e84e7efb6a0.png" title=" Estiven clicks on Agrega un producto" width="1858"/>
+                <img src="4c920230d4e2b63c2ced44213494fd400b464a9174c0b349ac2aacf5dc2d0b1e.png" title=" Estiven clicks on Agrega un producto (completed)" width="1858"/>
+                <img src="4c920230d4e2b63c2ced44213494fd400b464a9174c0b349ac2aacf5dc2d0b1e.png" title=" Estiven clicks on Suma una cantidad de un producto" width="1858"/>
+                <img src="f28be6a89e5fcf2e81fbb96c98570690429fd92e88e3271528960abf8e41d449.png" title=" Estiven clicks on Suma una cantidad de un producto (completed)" width="1858"/>
+                <img src="f28be6a89e5fcf2e81fbb96c98570690429fd92e88e3271528960abf8e41d449.png" title=" Estiven clicks on Seguir comprando" width="1858"/>
+                <img src="f28be6a89e5fcf2e81fbb96c98570690429fd92e88e3271528960abf8e41d449.png" title=" Estiven clicks on Seguir comprando (completed)" width="1858"/>
+                <img src="11a50e9dc1a3cf6dd16aa21fbe36ba6bdffe3a400f9b89a041169a13073721aa.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[3]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]]" width="1858"/>
+                <img src="d3227a3ddd25e83de8107427fc84ff3b47e770ca7c23523a137cf9a746887cc1.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[3]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]] (completed)" width="1858"/>
+                <img src="d3227a3ddd25e83de8107427fc84ff3b47e770ca7c23523a137cf9a746887cc1.png" title=" Estiven clicks on Seguir comprando" width="1858"/>
+                <img src="0d643c0e518e809fa8712860e2ec9539f38c52f92aaa8c0a9f9ada8bd39013de.png" title=" Estiven clicks on Seguir comprando (completed)" width="1858"/>
+                <img src="cc4595ae8fb822398397c3c6391014924bf3b1a7b315ef750d0f49dc091b9347.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[7]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]]" width="1858"/>
+                <img src="08e7b7f7ad1da6e95e8823f3048eca7bf2d9b41032dd9f65878f0bdd14a6ade9.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[7]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]] (completed)" width="1858"/>
+                <img src="08e7b7f7ad1da6e95e8823f3048eca7bf2d9b41032dd9f65878f0bdd14a6ade9.png" title=" Estiven clicks on Agrega un producto" width="1858"/>
+                <img src="7845067981d4a7d420e67394a06d629aea5f37f1621c603732b722cb83bd81b8.png" title=" Estiven clicks on Agrega un producto (completed)" width="1858"/>
+                <img src="7845067981d4a7d420e67394a06d629aea5f37f1621c603732b722cb83bd81b8.png" title=" Estiven clicks on Suma una cantidad de un producto" width="1858"/>
+                <img src="fe3950af467bae4091d23a4b595876da0798b23fb6b2a3eba304ebf67f59bd20.png" title=" Estiven clicks on Suma una cantidad de un producto (completed)" width="1858"/>
+                <img src="fe3950af467bae4091d23a4b595876da0798b23fb6b2a3eba304ebf67f59bd20.png" title=" Estiven clicks on Seguir comprando" width="1858"/>
+                <img src="fe3950af467bae4091d23a4b595876da0798b23fb6b2a3eba304ebf67f59bd20.png" title=" Estiven clicks on Seguir comprando (completed)" width="1858"/>
+                <img src="30d14d070e6859648a6f6c3fe9377bf330081eb1c60593e8caa8ac42a3b7dc7d.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[7]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]]" width="1858"/>
+                <img src="ad9dd08a843d5036cf662d7ebb63cfc5405bf4601ec220ad0f012d451efde5db.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[7]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]] (completed)" width="1858"/>
+                <img src="ad9dd08a843d5036cf662d7ebb63cfc5405bf4601ec220ad0f012d451efde5db.png" title=" Estiven clicks on Suma una cantidad de un producto" width="1858"/>
+                <img src="4cb486b985635d21b9b811844eb4dddec2c5d76e9932c12264b6769234b1f62f.png" title=" Estiven clicks on Suma una cantidad de un producto (completed)" width="1858"/>
+                <img src="4cb486b985635d21b9b811844eb4dddec2c5d76e9932c12264b6769234b1f62f.png" title=" Estiven clicks on Seguir comprando" width="1858"/>
+                <img src="4cb486b985635d21b9b811844eb4dddec2c5d76e9932c12264b6769234b1f62f.png" title=" Estiven clicks on Seguir comprando (completed)" width="1858"/>
+                <img src="bebb79cffd06bc3f6ebf6636c7a45e542d1835347418e8ce0515e5680bd9bf14.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[7]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]]" width="1858"/>
+                <img src="8b4a6834a2b624de98fc4d0d4b6b52bbbe2c3460c07e651b2aab4b05b9537a4b.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[7]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]] (completed)" width="1858"/>
+                <img src="8b4a6834a2b624de98fc4d0d4b6b52bbbe2c3460c07e651b2aab4b05b9537a4b.png" title=" Estiven clicks on Suma una cantidad de un producto" width="1858"/>
+                <img src="1bf8291c9eb1404c685d49da137f9a20370f293532c3ac5b8cd43517d6e13d03.png" title=" Estiven clicks on Suma una cantidad de un producto (completed)" width="1858"/>
+                <img src="1bf8291c9eb1404c685d49da137f9a20370f293532c3ac5b8cd43517d6e13d03.png" title=" Estiven clicks on Seguir comprando" width="1858"/>
+                <img src="1bf8291c9eb1404c685d49da137f9a20370f293532c3ac5b8cd43517d6e13d03.png" title=" Estiven clicks on Seguir comprando (completed)" width="1858"/>
+                <img src="8a4cda80c8ba29273f6f1464bed4fc2cd4e73d1b902fd438bbc1bd67fa4b8c89.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[7]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]]" width="1858"/>
+                <img src="0cdb957bf318b67ade493c1f5c58533d554707d1e2b230c486c844db9112f94e.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[7]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]] (completed)" width="1858"/>
+                <img src="0cdb957bf318b67ade493c1f5c58533d554707d1e2b230c486c844db9112f94e.png" title=" Estiven clicks on Suma una cantidad de un producto" width="1858"/>
+                <img src="a16efb9875dd615b65f565c2be0f44a5a9283d6207887c50c5879a0c9c1ff1a7.png" title=" Estiven clicks on Suma una cantidad de un producto (completed)" width="1858"/>
+                <img src="a16efb9875dd615b65f565c2be0f44a5a9283d6207887c50c5879a0c9c1ff1a7.png" title=" Estiven clicks on Seguir comprando" width="1858"/>
+                <img src="a16efb9875dd615b65f565c2be0f44a5a9283d6207887c50c5879a0c9c1ff1a7.png" title=" Estiven clicks on Seguir comprando (completed)" width="1858"/>
+                <img src="a4763bf9b3a9c66317630a7d6a9caad7cf831994aa1937b3d07c94e102f829f2.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[7]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]]" width="1858"/>
+                <img src="2431dabbb86e084b946807987d973ac4b05b2e60f2f7c1e52dcab81bac2ebc97.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[7]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]] (completed)" width="1858"/>
+                <img src="2431dabbb86e084b946807987d973ac4b05b2e60f2f7c1e52dcab81bac2ebc97.png" title=" Estiven clicks on Suma una cantidad de un producto" width="1858"/>
+                <img src="c5c49903552410dc3f5bf71b345c64ba0396da23fcbd5587fb96bc88ded1e842.png" title=" Estiven clicks on Suma una cantidad de un producto (completed)" width="1858"/>
+                <img src="c5c49903552410dc3f5bf71b345c64ba0396da23fcbd5587fb96bc88ded1e842.png" title=" Estiven clicks on Seguir comprando" width="1858"/>
+                <img src="c5c49903552410dc3f5bf71b345c64ba0396da23fcbd5587fb96bc88ded1e842.png" title=" Estiven clicks on Seguir comprando (completed)" width="1858"/>
+                <img src="9f158f7cc9c13ab648c84ec18c4b4903fbc815691c5c355d0147ed15f69c2571.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[7]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]]" width="1858"/>
+                <img src="892a8b2acbb1ce21d76097839534bdcf1f85b5787cc5e84c212592ba6a2c0cc8.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[7]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]] (completed)" width="1858"/>
+                <img src="892a8b2acbb1ce21d76097839534bdcf1f85b5787cc5e84c212592ba6a2c0cc8.png" title=" Estiven clicks on Suma una cantidad de un producto" width="1858"/>
+                <img src="4ea5c0a79378676b22e9fb1d4dffd4117f7d97e612fb635eded0b23acd737e65.png" title=" Estiven clicks on Suma una cantidad de un producto (completed)" width="1858"/>
+                <img src="4ea5c0a79378676b22e9fb1d4dffd4117f7d97e612fb635eded0b23acd737e65.png" title=" Estiven clicks on Seguir comprando" width="1858"/>
+                <img src="4ea5c0a79378676b22e9fb1d4dffd4117f7d97e612fb635eded0b23acd737e65.png" title=" Estiven clicks on Seguir comprando (completed)" width="1858"/>
+                <img src="cdfef1cdb7e2af5d8ecc38a2de6a28ae436d3bcbc41d207034f40624f5b3998d.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[7]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]]" width="1858"/>
+                <img src="569b67826d14c60ce3fa7d807b96d207c2e23440e9b30d235d49d05ccd7ac84a.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[7]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]] (completed)" width="1858"/>
+                <img src="569b67826d14c60ce3fa7d807b96d207c2e23440e9b30d235d49d05ccd7ac84a.png" title=" Estiven clicks on Suma una cantidad de un producto" width="1858"/>
+                <img src="89248005f115da5e02c1615fc5a29286a8d8a5a6034137476edbe838037aa1c2.png" title=" Estiven clicks on Suma una cantidad de un producto (completed)" width="1858"/>
+                <img src="89248005f115da5e02c1615fc5a29286a8d8a5a6034137476edbe838037aa1c2.png" title=" Estiven clicks on Seguir comprando" width="1858"/>
+                <img src="89248005f115da5e02c1615fc5a29286a8d8a5a6034137476edbe838037aa1c2.png" title=" Estiven clicks on Seguir comprando (completed)" width="1858"/>
+                <img src="d840e5558dddca8282302fae4c7651945bd32f7a04188aa92158ef44322f85df.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[7]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]]" width="1858"/>
+                <img src="3f55c13f60d91bff0f69e76c13faa36482f8b39f77e7eafb81144bc11eb3d35e.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[7]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]] (completed)" width="1858"/>
+                <img src="3f55c13f60d91bff0f69e76c13faa36482f8b39f77e7eafb81144bc11eb3d35e.png" title=" Estiven clicks on Seguir comprando" width="1858"/>
+                <img src="89248005f115da5e02c1615fc5a29286a8d8a5a6034137476edbe838037aa1c2.png" title=" Estiven clicks on Seguir comprando (completed)" width="1858"/>
+                <img src="a97537f4483c5792b3403c01e5a7f76f7c9139f4e01cdb2951bc9e1b75c16c7a.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[10]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]]" width="1858"/>
+                <img src="e717b226afe93906e8d338fb1838ad12fd579182c67554388c588f001968bc0d.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[10]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]] (completed)" width="1858"/>
+                <img src="e717b226afe93906e8d338fb1838ad12fd579182c67554388c588f001968bc0d.png" title=" Estiven clicks on Agrega un producto" width="1858"/>
+                <img src="5c1f78f21dec54ed06e62698d4403eb565c7d59b1e743a78ada86d0744f153d1.png" title=" Estiven clicks on Agrega un producto (completed)" width="1858"/>
+                <img src="5c1f78f21dec54ed06e62698d4403eb565c7d59b1e743a78ada86d0744f153d1.png" title=" Estiven clicks on Suma una cantidad de un producto" width="1858"/>
+                <img src="f96060574854f983c3fd1be36483f80bbf17dd2f754380ed219fb78270e0ad71.png" title=" Estiven clicks on Suma una cantidad de un producto (completed)" width="1858"/>
+                <img src="f96060574854f983c3fd1be36483f80bbf17dd2f754380ed219fb78270e0ad71.png" title=" Estiven clicks on Seguir comprando" width="1858"/>
+                <img src="f96060574854f983c3fd1be36483f80bbf17dd2f754380ed219fb78270e0ad71.png" title=" Estiven clicks on Seguir comprando (completed)" width="1858"/>
+                <img src="9649baa31f29d598f27ace779d253044d8b09c89d15ba8b5b47e288ff4d1b1d7.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[10]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]]" width="1858"/>
+                <img src="07aa4e3dbd76ddfcd9a84f2c9a5e2f873263defc78924a3a666782c724af66b0.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[10]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]] (completed)" width="1858"/>
+                <img src="07aa4e3dbd76ddfcd9a84f2c9a5e2f873263defc78924a3a666782c724af66b0.png" title=" Estiven clicks on Suma una cantidad de un producto" width="1858"/>
+                <img src="8efac604772c6ff5c73558a6bd0cfd881f3835ea6656170ed1c82809ca1e9fd5.png" title=" Estiven clicks on Suma una cantidad de un producto (completed)" width="1858"/>
+                <img src="8efac604772c6ff5c73558a6bd0cfd881f3835ea6656170ed1c82809ca1e9fd5.png" title=" Estiven clicks on Seguir comprando" width="1858"/>
+                <img src="8efac604772c6ff5c73558a6bd0cfd881f3835ea6656170ed1c82809ca1e9fd5.png" title=" Estiven clicks on Seguir comprando (completed)" width="1858"/>
+                <img src="6d59b1117b0596f0fc16fa62be45c8efe2d876b80ab6b449323182242f0ab43e.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[10]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]]" width="1858"/>
+                <img src="a0e50abda5078dbada6d27e9950d6675b0bff4620c37178ef23dc9828b283288.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[10]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]] (completed)" width="1858"/>
+                <img src="a0e50abda5078dbada6d27e9950d6675b0bff4620c37178ef23dc9828b283288.png" title=" Estiven clicks on Suma una cantidad de un producto" width="1858"/>
+                <img src="ba641873079afdb205154c917133254eb280d7a4469f09e69830e0b8129cc90b.png" title=" Estiven clicks on Suma una cantidad de un producto (completed)" width="1858"/>
+                <img src="ba641873079afdb205154c917133254eb280d7a4469f09e69830e0b8129cc90b.png" title=" Estiven clicks on Seguir comprando" width="1858"/>
+                <img src="ba641873079afdb205154c917133254eb280d7a4469f09e69830e0b8129cc90b.png" title=" Estiven clicks on Seguir comprando (completed)" width="1858"/>
+                <img src="35e653a785f570d89ff9cf770b647483ecdb4850326cb87935d8f6ee2d6dd0dd.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[10]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]]" width="1858"/>
+                <img src="0b34319cb302360b91b9654a7cf63f4dbb250e260ed08baee0e51b92762b120b.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[10]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]] (completed)" width="1858"/>
+                <img src="0b34319cb302360b91b9654a7cf63f4dbb250e260ed08baee0e51b92762b120b.png" title=" Estiven clicks on Suma una cantidad de un producto" width="1858"/>
+                <img src="e5abacb470318c9eb9aefa0659e28c8980f97ccc3cb4024d913d9f28437652a2.png" title=" Estiven clicks on Suma una cantidad de un producto (completed)" width="1858"/>
+                <img src="e5abacb470318c9eb9aefa0659e28c8980f97ccc3cb4024d913d9f28437652a2.png" title=" Estiven clicks on Seguir comprando" width="1858"/>
+                <img src="e5abacb470318c9eb9aefa0659e28c8980f97ccc3cb4024d913d9f28437652a2.png" title=" Estiven clicks on Seguir comprando (completed)" width="1858"/>
+                <img src="c6c730e6057442875470d9e558c42237fd54a139bfb208f8e90d80ed3dee2fda.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[10]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]]" width="1858"/>
+                <img src="bb07f4f30d37b9e893b393b5a21b8d15f72daf7ecc9dc975c852e37447223c28.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[10]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]] (completed)" width="1858"/>
+                <img src="bb07f4f30d37b9e893b393b5a21b8d15f72daf7ecc9dc975c852e37447223c28.png" title=" Estiven clicks on Suma una cantidad de un producto" width="1858"/>
+                <img src="baf6459a917ea0d67d5f1e0d7fa2d1c5aaa8d2f1976a4644f16def7819b19478.png" title=" Estiven clicks on Suma una cantidad de un producto (completed)" width="1858"/>
+                <img src="baf6459a917ea0d67d5f1e0d7fa2d1c5aaa8d2f1976a4644f16def7819b19478.png" title=" Estiven clicks on Seguir comprando" width="1858"/>
+                <img src="baf6459a917ea0d67d5f1e0d7fa2d1c5aaa8d2f1976a4644f16def7819b19478.png" title=" Estiven clicks on Seguir comprando (completed)" width="1858"/>
+                <img src="b3f64fda685def1c5ed1d194d180b6077e6d15209997fe155ea5e9d8ecc6492f.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[10]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]]" width="1858"/>
+                <img src="054ce8817b8225a3f1791a846aeb1ab52dff6e35ee362155f6c52ebc71d665b7.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[10]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]] (completed)" width="1858"/>
+                <img src="054ce8817b8225a3f1791a846aeb1ab52dff6e35ee362155f6c52ebc71d665b7.png" title=" Estiven clicks on Suma una cantidad de un producto" width="1858"/>
+                <img src="1239845d334279bf5dcc6ff2893f7a55b10cb716f517cf2da522d83ddc8f225d.png" title=" Estiven clicks on Suma una cantidad de un producto (completed)" width="1858"/>
+                <img src="1239845d334279bf5dcc6ff2893f7a55b10cb716f517cf2da522d83ddc8f225d.png" title=" Estiven clicks on Seguir comprando" width="1858"/>
+                <img src="1239845d334279bf5dcc6ff2893f7a55b10cb716f517cf2da522d83ddc8f225d.png" title=" Estiven clicks on Seguir comprando (completed)" width="1858"/>
+                <img src="a57d9c6c2abda3d5365da5ee6c8f758e43580b020da8d7bc5c1966eb97298a64.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[10]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]]" width="1858"/>
+                <img src="9f9f1c1087c3682407f2bdf0217f41a3fb191b70e02bac35b4d084691d0bc80f.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[10]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]] (completed)" width="1858"/>
+                <img src="9f9f1c1087c3682407f2bdf0217f41a3fb191b70e02bac35b4d084691d0bc80f.png" title=" Estiven clicks on Suma una cantidad de un producto" width="1858"/>
+                <img src="1ca311afabfa20d93aa6ec266911b252643c2fb069fff38f7ee2ac99f8b2434a.png" title=" Estiven clicks on Suma una cantidad de un producto (completed)" width="1858"/>
+                <img src="1ca311afabfa20d93aa6ec266911b252643c2fb069fff38f7ee2ac99f8b2434a.png" title=" Estiven clicks on Seguir comprando" width="1858"/>
+                <img src="1ca311afabfa20d93aa6ec266911b252643c2fb069fff38f7ee2ac99f8b2434a.png" title=" Estiven clicks on Seguir comprando (completed)" width="1858"/>
+                <img src="1a39e7932fd7c4983acce0d3febabccce334e97e5765dae9010e4634e22f9797.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[10]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]]" width="1858"/>
+                <img src="047309497cc430379b7ea947a0609a2c5d0c9dbb4e4359ea6abd70526dbed88a.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[10]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]] (completed)" width="1858"/>
+                <img src="047309497cc430379b7ea947a0609a2c5d0c9dbb4e4359ea6abd70526dbed88a.png" title=" Estiven clicks on Seguir comprando" width="1858"/>
+                <img src="1ca311afabfa20d93aa6ec266911b252643c2fb069fff38f7ee2ac99f8b2434a.png" title=" Estiven clicks on Seguir comprando (completed)" width="1858"/>
+                <img src="2aa7277b233396d30b7c9015fb6d599ab3399fb7fab54a9b657a703edc6afbf7.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[11]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]]" width="1858"/>
+                <img src="97c11bbee7971d30c2f6042257ac979c6911003f7696e1e422878c0b4e19e3ac.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[11]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]] (completed)" width="1858"/>
+                <img src="97c11bbee7971d30c2f6042257ac979c6911003f7696e1e422878c0b4e19e3ac.png" title=" Estiven clicks on Agrega un producto" width="1858"/>
+                <img src="b072d7b72a34139f3a83f9f4f54e32f2d5e2011dea6f54785452dd9df8353a59.png" title=" Estiven clicks on Agrega un producto (completed)" width="1858"/>
+                <img src="b072d7b72a34139f3a83f9f4f54e32f2d5e2011dea6f54785452dd9df8353a59.png" title=" Estiven clicks on Suma una cantidad de un producto" width="1858"/>
+                <img src="2263a9401f8f748c919be5bb51657517ef9d3c5bf7e9a37e8158ca5ae1e52bdc.png" title=" Estiven clicks on Suma una cantidad de un producto (completed)" width="1858"/>
+                <img src="2263a9401f8f748c919be5bb51657517ef9d3c5bf7e9a37e8158ca5ae1e52bdc.png" title=" Estiven clicks on Seguir comprando" width="1858"/>
+                <img src="2263a9401f8f748c919be5bb51657517ef9d3c5bf7e9a37e8158ca5ae1e52bdc.png" title=" Estiven clicks on Seguir comprando (completed)" width="1858"/>
+                <img src="e8eea2aab2b488df82f6f737f4ed5377b4daa7670159ccac85355aeab2c8766a.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[11]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]]" width="1858"/>
+                <img src="b68f4c24b320f97bc6920ad469d84cc434bc6fcb84d7f2b9914163325166253b.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[11]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]] (completed)" width="1858"/>
+                <img src="b68f4c24b320f97bc6920ad469d84cc434bc6fcb84d7f2b9914163325166253b.png" title=" Estiven clicks on Seguir comprando" width="1858"/>
+                <img src="f0de3e40f14ffa4c843d2f32a04a983d94f0a90005e9abb7b81e5d3817a50550.png" title=" Estiven clicks on Seguir comprando (completed)" width="1858"/>
+                <img src="188e9725a0b0db3046151b7742c376106bbba98ca09866f27bdaae4d9d51032d.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[13]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]]" width="1858"/>
+                <img src="6b115afd6df6109cfd8118ae56cc24a8f4f4ddc0a80af4f0f0418df07d317a01.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[13]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]] (completed)" width="1858"/>
+                <img src="6b115afd6df6109cfd8118ae56cc24a8f4f4ddc0a80af4f0f0418df07d317a01.png" title=" Estiven clicks on Agrega un producto" width="1858"/>
+                <img src="0455eccf4c757567bd5e4c52a7a373b5f121dcd3a802705b8f34f8980091a58f.png" title=" Estiven clicks on Agrega un producto (completed)" width="1858"/>
+                <img src="0455eccf4c757567bd5e4c52a7a373b5f121dcd3a802705b8f34f8980091a58f.png" title=" Estiven clicks on Suma una cantidad de un producto" width="1858"/>
+                <img src="8cb3979c932a00eb148a6fd12d4033c9f762b16c620986be62e0f0f037b736a6.png" title=" Estiven clicks on Suma una cantidad de un producto (completed)" width="1858"/>
+                <img src="8cb3979c932a00eb148a6fd12d4033c9f762b16c620986be62e0f0f037b736a6.png" title=" Estiven clicks on Seguir comprando" width="1858"/>
+                <img src="8cb3979c932a00eb148a6fd12d4033c9f762b16c620986be62e0f0f037b736a6.png" title=" Estiven clicks on Seguir comprando (completed)" width="1858"/>
+                <img src="2347a63e6099a8c233a287d8c3594abd7bae07e946854e8ab411d1218fac7766.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[13]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]]" width="1858"/>
+                <img src="746fbb266fdfdcec9802ec8e2d7cdfa1683a14a65ef26269ea668735f38fa9b9.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[13]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]] (completed)" width="1858"/>
+                <img src="746fbb266fdfdcec9802ec8e2d7cdfa1683a14a65ef26269ea668735f38fa9b9.png" title=" Estiven clicks on Seguir comprando" width="1858"/>
+                <img src="6647b0e3ddb27ca7de35566e5894ad11d2e20a155cf437847724600c81472611.png" title=" Estiven clicks on Seguir comprando (completed)" width="1858"/>
+                <img src="f75b86cace7925de24ee64f22e4e91f255fb2dcc70b494076085750fa884d3f3.png" title=" Estiven agregar productos (completed)" width="1858"/>
+                <img src="f75b86cace7925de24ee64f22e4e91f255fb2dcc70b494076085750fa884d3f3.png" title=" And aniade cinco productos al carrito con sus respectivas cantidades (completed)" width="1858"/>
+                <img src="f75b86cace7925de24ee64f22e4e91f255fb2dcc70b494076085750fa884d3f3.png" title=" And entra al carrito de compras y registra un &quot;prueba@gmail.com&quot;" width="1858"/>
+                <img src="f75b86cace7925de24ee64f22e4e91f255fb2dcc70b494076085750fa884d3f3.png" title=" Estiven carrito" width="1858"/>
+                <img src="ade3f846fe483019c07914ce0018e24feda283b52c10b752dd274e0aff3108df.png" title=" Estiven clicks on Ir al carrito" width="1858"/>
+                <img src="c8913ebf807dfda536f6ed1ad35a0eaff15b5b41e665c92d6082669150dc7b51.png" title=" Estiven clicks on Ir al carrito (completed)" width="1858"/>
+                <img src="c8913ebf807dfda536f6ed1ad35a0eaff15b5b41e665c92d6082669150dc7b51.png" title=" Estiven enters 'prueba@gmail.com' into Campo del correo electronico" width="1858"/>
+                <img src="ddf8f89de7698d54d7c5f06cc01eb0a2fcba1e4abaa9bc37e484e798d7b0b166.png" title=" Estiven enters 'prueba@gmail.com' into Campo del correo electronico (completed)" width="1858"/>
+                <img src="ddf8f89de7698d54d7c5f06cc01eb0a2fcba1e4abaa9bc37e484e798d7b0b166.png" title=" Estiven clicks on " width="1858"/>
+                <img src="8eddcc523825520e6f07cd57879c595a4df75ec57ca5f46db67b1c1999ed7581.png" title=" Estiven clicks on  (completed)" width="1858"/>
+                <img src="07a2583733359bc5d2da9d6158a51f38c404c334ad67eb6eb047f4517a645e8a.png" title=" Estiven carrito (completed)" width="1858"/>
+                <img src="07a2583733359bc5d2da9d6158a51f38c404c334ad67eb6eb047f4517a645e8a.png" title=" And entra al carrito de compras y registra un &quot;prueba@gmail.com&quot; (completed)" width="1858"/>
+                <img src="07a2583733359bc5d2da9d6158a51f38c404c334ad67eb6eb047f4517a645e8a.png" title=" Then visualiza toda la informacion de la compra" width="1858"/>
+                <img src="07a2583733359bc5d2da9d6158a51f38c404c334ad67eb6eb047f4517a645e8a.png" title=" Then total compra should be (6603000)" width="1858"/>
+                <img src="07a2583733359bc5d2da9d6158a51f38c404c334ad67eb6eb047f4517a645e8a.png" title=" Then total compra should be (6603000) (completed)" width="1858"/>
+                <img src="07a2583733359bc5d2da9d6158a51f38c404c334ad67eb6eb047f4517a645e8a.png" title=" Then Se obtienen los productos should be ([Cabecero Doble Linea Vertical Dormipuff, Cabecero Entero Pegassi Cama Doble 140 X 120 Blanco, Cabecero Industrial Caramelo Para Cama De 140 X 190, Cabecero Industrial Entrepa&amp;ntilde;o Caramelo Para Cama 160 X 190, Cabecero Tapizado Base Cama Queen Rombos Plateado])" width="1858"/>
+                <img src="07a2583733359bc5d2da9d6158a51f38c404c334ad67eb6eb047f4517a645e8a.png" title=" Then Se obtienen los productos should be ([Cabecero Doble Linea Vertical Dormipuff, Cabecero Entero Pegassi Cama Doble 140 X 120 Blanco, Cabecero Industrial Caramelo Para Cama De 140 X 190, Cabecero Industrial Entrepa&amp;ntilde;o Caramelo Para Cama 160 X 190, Cabecero Tapizado Base Cama Queen Rombos Plateado]) (completed)" width="1858"/>
+                <img src="07a2583733359bc5d2da9d6158a51f38c404c334ad67eb6eb047f4517a645e8a.png" title=" Then Las cantidades de los productos son should be ([2, 2, 2, 8, 8])" width="1858"/>
+                <img src="07a2583733359bc5d2da9d6158a51f38c404c334ad67eb6eb047f4517a645e8a.png" title=" Then Las cantidades de los productos son should be ([2, 2, 2, 8, 8]) (completed)" width="1858"/>
+                <img src="07a2583733359bc5d2da9d6158a51f38c404c334ad67eb6eb047f4517a645e8a.png" title=" Then El total de cada producto es should be ([478000, 699800, 1002000, 1784000, 2639200])" width="1858"/>
+                <img src="07a2583733359bc5d2da9d6158a51f38c404c334ad67eb6eb047f4517a645e8a.png" title=" Then El total de cada producto es should be ([478000, 699800, 1002000, 1784000, 2639200]) (completed)" width="1858"/>
+                <img src="07a2583733359bc5d2da9d6158a51f38c404c334ad67eb6eb047f4517a645e8a.png" title=" Then visualiza toda la informacion de la compra (completed)" width="1858"/>
+                <img src="07a2583733359bc5d2da9d6158a51f38c404c334ad67eb6eb047f4517a645e8a.png" title=" Example: {categoria=&quot;Dormitorio&quot;, subcategoria=&quot;Cabeceros&quot;, correo=&quot;prueba@gmail.com&quot;} (completed)" width="1858"/>
+                <img src="4a90f7ec9dcf9eeb6629103d68bb8755db9e9889c8ffbcc2d7c48012892798a1.png" title=" Example: {categoria=&quot;Hogar y muebles&quot;, subcategoria=&quot;Escritorios&quot;, correo=&quot;prueba@gmail.com&quot;}" width="1858"/>
+                <img src="4a90f7ec9dcf9eeb6629103d68bb8755db9e9889c8ffbcc2d7c48012892798a1.png" title=" Given que el usuario esta en la pagina del exito" width="1858"/>
+                <img src="4a90f7ec9dcf9eeb6629103d68bb8755db9e9889c8ffbcc2d7c48012892798a1.png" title=" Estiven abrir pagina inicial" width="1858"/>
+                <img src="4a90f7ec9dcf9eeb6629103d68bb8755db9e9889c8ffbcc2d7c48012892798a1.png" title=" Estiven opens the Pagina inicial" width="1858"/>
+                <img src="e8a83e6e26da15b5ad8b8b0c9126b66517de4a3dad6d29a9fad537f1eb670e5c.png" title=" Estiven opens the Pagina inicial (completed)" width="1858"/>
+                <img src="e8a83e6e26da15b5ad8b8b0c9126b66517de4a3dad6d29a9fad537f1eb670e5c.png" title=" Estiven clicks on Desplegar menu" width="1858"/>
+                <img src="3a4f4df74290ebe317fe6bfef2d2a7c2cc9fbf94d3ac2603df14ed8c5f7c8e9c.png" title=" Estiven clicks on Desplegar menu (completed)" width="1858"/>
+                <img src="3a4f4df74290ebe317fe6bfef2d2a7c2cc9fbf94d3ac2603df14ed8c5f7c8e9c.png" title=" Estiven abrir pagina inicial (completed)" width="1858"/>
+                <img src="3a4f4df74290ebe317fe6bfef2d2a7c2cc9fbf94d3ac2603df14ed8c5f7c8e9c.png" title=" Given que el usuario esta en la pagina del exito (completed)" width="1858"/>
+                <img src="3a4f4df74290ebe317fe6bfef2d2a7c2cc9fbf94d3ac2603df14ed8c5f7c8e9c.png" title=" When selecciona una &quot;Hogar y muebles&quot; y una &quot;Escritorios&quot;" width="1858"/>
+                <img src="3a4f4df74290ebe317fe6bfef2d2a7c2cc9fbf94d3ac2603df14ed8c5f7c8e9c.png" title=" Estiven navegar menu" width="1858"/>
+                <img src="3a4f4df74290ebe317fe6bfef2d2a7c2cc9fbf94d3ac2603df14ed8c5f7c8e9c.png" title=" Estiven clicks on [By.id: undefined-nivel2-Hogar y muebles]" width="1858"/>
+                <img src="7f567687ad3f2ba1caee68b82f564b639d6c2cf5d17d96480f5874a6e551655d.png" title=" Estiven clicks on [By.id: undefined-nivel2-Hogar y muebles] (completed)" width="1858"/>
+                <img src="7f567687ad3f2ba1caee68b82f564b639d6c2cf5d17d96480f5874a6e551655d.png" title=" Estiven clicks on [By.xpath: //*[text()='Escritorios']]" width="1858"/>
+                <img src="8221145e058c34d8ea2795d732bd5a3786208baf94ddc2ad22e85b7ca716142f.png" title=" Estiven clicks on [By.xpath: //*[text()='Escritorios']] (completed)" width="1858"/>
+                <img src="8221145e058c34d8ea2795d732bd5a3786208baf94ddc2ad22e85b7ca716142f.png" title=" Estiven navegar menu (completed)" width="1858"/>
+                <img src="8221145e058c34d8ea2795d732bd5a3786208baf94ddc2ad22e85b7ca716142f.png" title=" When selecciona una &quot;Hogar y muebles&quot; y una &quot;Escritorios&quot; (completed)" width="1858"/>
+                <img src="8221145e058c34d8ea2795d732bd5a3786208baf94ddc2ad22e85b7ca716142f.png" title=" And aniade cinco productos al carrito con sus respectivas cantidades" width="1858"/>
+                <img src="8221145e058c34d8ea2795d732bd5a3786208baf94ddc2ad22e85b7ca716142f.png" title=" Estiven agregar productos" width="1858"/>
+                <img src="8d8195912e7c8a116553965e169c741bda4ad9683593e8d63594b8055adb951a.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[2]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]]" width="1858"/>
+                <img src="5718a841d7de2d018038cdc1cb17677e40c23db43c96ac7bc42803e9eb4dc39d.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[2]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]] (completed)" width="1858"/>
+                <img src="5718a841d7de2d018038cdc1cb17677e40c23db43c96ac7bc42803e9eb4dc39d.png" title=" Estiven clicks on Agrega un producto" width="1858"/>
+                <img src="2c8d9e2896cea1a6cebb1fa29d8a376eb62e06f27c9cdb028d4f43b00b98a5de.png" title=" Estiven clicks on Agrega un producto (completed)" width="1858"/>
+                <img src="2c8d9e2896cea1a6cebb1fa29d8a376eb62e06f27c9cdb028d4f43b00b98a5de.png" title=" Estiven clicks on Suma una cantidad de un producto" width="1858"/>
+                <img src="d1bc3f1d6a9cd69888cc9c15b30a57fec6ea9508c4d7884e40471fe2ddac0130.png" title=" Estiven clicks on Suma una cantidad de un producto (completed)" width="1858"/>
+                <img src="d1bc3f1d6a9cd69888cc9c15b30a57fec6ea9508c4d7884e40471fe2ddac0130.png" title=" Estiven clicks on Seguir comprando" width="1858"/>
+                <img src="d1bc3f1d6a9cd69888cc9c15b30a57fec6ea9508c4d7884e40471fe2ddac0130.png" title=" Estiven clicks on Seguir comprando (completed)" width="1858"/>
+                <img src="e86b9baad11b812f0e828590d61de2685bbe08421ca2fe2ebe39d98a612d0956.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[2]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]]" width="1858"/>
+                <img src="41f4376a8989a207dfaacc95555d786157a46c0a42b9b64062f6a1d38bcf5f84.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[2]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]] (completed)" width="1858"/>
+                <img src="41f4376a8989a207dfaacc95555d786157a46c0a42b9b64062f6a1d38bcf5f84.png" title=" Estiven clicks on Suma una cantidad de un producto" width="1858"/>
+                <img src="d09efcee76f181db77cdf8da2bda1de113b6993b3daa23a6a0aaf1ea6c6d0cf1.png" title=" Estiven clicks on Suma una cantidad de un producto (completed)" width="1858"/>
+                <img src="d09efcee76f181db77cdf8da2bda1de113b6993b3daa23a6a0aaf1ea6c6d0cf1.png" title=" Estiven clicks on Seguir comprando" width="1858"/>
+                <img src="d09efcee76f181db77cdf8da2bda1de113b6993b3daa23a6a0aaf1ea6c6d0cf1.png" title=" Estiven clicks on Seguir comprando (completed)" width="1858"/>
+                <img src="ef61a919f6747fcf240b199d42a1f6ac1af748ae090cce149a4588e7653ab68a.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[2]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]]" width="1858"/>
+                <img src="b5f037e9c7c406ade1974484cc8cb5e3fe27dd51863d5dec41bd364800130b1a.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[2]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]] (completed)" width="1858"/>
+                <img src="b5f037e9c7c406ade1974484cc8cb5e3fe27dd51863d5dec41bd364800130b1a.png" title=" Estiven clicks on Suma una cantidad de un producto" width="1858"/>
+                <img src="cc0d9d6fa625c90dca9cda2b472ea9845675e6b1b667b0792027db4e48833e45.png" title=" Estiven clicks on Suma una cantidad de un producto (completed)" width="1858"/>
+                <img src="cc0d9d6fa625c90dca9cda2b472ea9845675e6b1b667b0792027db4e48833e45.png" title=" Estiven clicks on Seguir comprando" width="1858"/>
+                <img src="cc0d9d6fa625c90dca9cda2b472ea9845675e6b1b667b0792027db4e48833e45.png" title=" Estiven clicks on Seguir comprando (completed)" width="1858"/>
+                <img src="6574f4f02382494ac6743fe6bd620b3058768c9dcfe63d7113d32c19b748df64.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[2]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]]" width="1858"/>
+                <img src="5609e9f7f0ba3c68189126a4d5d01c588f822da33e425d9c9ab5cb898d7a0c1c.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[2]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]] (completed)" width="1858"/>
+                <img src="5609e9f7f0ba3c68189126a4d5d01c588f822da33e425d9c9ab5cb898d7a0c1c.png" title=" Estiven clicks on Seguir comprando" width="1858"/>
+                <img src="cc0d9d6fa625c90dca9cda2b472ea9845675e6b1b667b0792027db4e48833e45.png" title=" Estiven clicks on Seguir comprando (completed)" width="1858"/>
+                <img src="b61a805e371e80cc53c8ba383123d2bb8d03f69d2cacb9ac2257df8d3e38aff0.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[4]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]]" width="1858"/>
+                <img src="2761c7e4469fa48020ab4b166a586a61d1634047a0bfe27588b2d0cc5735c1d2.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[4]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]] (completed)" width="1858"/>
+                <img src="2761c7e4469fa48020ab4b166a586a61d1634047a0bfe27588b2d0cc5735c1d2.png" title=" Estiven clicks on Agrega un producto" width="1858"/>
+                <img src="206ce548d9bbd3252a4a4f4076097fa54cd0fe0754b7e632cb126081df38a6e3.png" title=" Estiven clicks on Agrega un producto (completed)" width="1858"/>
+                <img src="206ce548d9bbd3252a4a4f4076097fa54cd0fe0754b7e632cb126081df38a6e3.png" title=" Estiven clicks on Suma una cantidad de un producto" width="1858"/>
+                <img src="823de0e0e25cacaf6e21fb367c8911c70ea021421e3936eb04d799bc8c8445f9.png" title=" Estiven clicks on Suma una cantidad de un producto (completed)" width="1858"/>
+                <img src="823de0e0e25cacaf6e21fb367c8911c70ea021421e3936eb04d799bc8c8445f9.png" title=" Estiven clicks on Seguir comprando" width="1858"/>
+                <img src="823de0e0e25cacaf6e21fb367c8911c70ea021421e3936eb04d799bc8c8445f9.png" title=" Estiven clicks on Seguir comprando (completed)" width="1858"/>
+                <img src="eab8357f2db520c752bb86836df7880acf241566feddbdb21681bdcc935a6c03.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[4]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]]" width="1858"/>
+                <img src="0575e80da0016593597b65825a84876960e9661d03d57a7d8740ec8c9e758972.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[4]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]] (completed)" width="1858"/>
+                <img src="0575e80da0016593597b65825a84876960e9661d03d57a7d8740ec8c9e758972.png" title=" Estiven clicks on Seguir comprando" width="1858"/>
+                <img src="934eb45f86f1e3ec3f1dc3c7f22bc8ba400858e14ebdc65b3784f9278f2ba5ee.png" title=" Estiven clicks on Seguir comprando (completed)" width="1858"/>
+                <img src="74ff33cc4dc6609641446bf54e04ddeda32acd85d2e7d9cfc4490e1b38cce203.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[10]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]]" width="1858"/>
+                <img src="fd9ac289496dd3ded6393fd1d3184d06008f9dcc3e3b92751a762dbcbb44078e.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[10]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]] (completed)" width="1858"/>
+                <img src="fd9ac289496dd3ded6393fd1d3184d06008f9dcc3e3b92751a762dbcbb44078e.png" title=" Estiven clicks on Agrega un producto" width="1858"/>
+                <img src="6eb1db096095e88b13fa6fe7aaa08ba2ee8d15bae704f1125868d8909dfd632d.png" title=" Estiven clicks on Agrega un producto (completed)" width="1858"/>
+                <img src="6eb1db096095e88b13fa6fe7aaa08ba2ee8d15bae704f1125868d8909dfd632d.png" title=" Estiven clicks on Suma una cantidad de un producto" width="1858"/>
+                <img src="b770fa26ff6d732d9cf1e01b0081e6b20e4e32de73ec0641ebe08a9d211382e1.png" title=" Estiven clicks on Suma una cantidad de un producto (completed)" width="1858"/>
+                <img src="b770fa26ff6d732d9cf1e01b0081e6b20e4e32de73ec0641ebe08a9d211382e1.png" title=" Estiven clicks on Seguir comprando" width="1858"/>
+                <img src="b770fa26ff6d732d9cf1e01b0081e6b20e4e32de73ec0641ebe08a9d211382e1.png" title=" Estiven clicks on Seguir comprando (completed)" width="1858"/>
+                <img src="bfc4f6d913409c8b881c7120acaaf4a0397b24f244a2bab34b380e20bf258c27.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[10]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]]" width="1858"/>
+                <img src="f2a5d906d51bfd226930d5afd57db9095ad37e230a42d0afbe6a48e1c70c506c.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[10]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]] (completed)" width="1858"/>
+                <img src="f2a5d906d51bfd226930d5afd57db9095ad37e230a42d0afbe6a48e1c70c506c.png" title=" Estiven clicks on Suma una cantidad de un producto" width="1858"/>
+                <img src="bb32ed7607f096c4732361f9716a6a406bb4b77c8d75f40c26e64690b1ac29c7.png" title=" Estiven clicks on Suma una cantidad de un producto (completed)" width="1858"/>
+                <img src="bb32ed7607f096c4732361f9716a6a406bb4b77c8d75f40c26e64690b1ac29c7.png" title=" Estiven clicks on Seguir comprando" width="1858"/>
+                <img src="bb32ed7607f096c4732361f9716a6a406bb4b77c8d75f40c26e64690b1ac29c7.png" title=" Estiven clicks on Seguir comprando (completed)" width="1858"/>
+                <img src="200d629417af4efc1f5a3c9ad1f742d077f2bbc15e6a1e5833dc794e1c32a3b6.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[10]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]]" width="1858"/>
+                <img src="27492cd60cf52a761adc67f7c85fd4b703d8b499ef39beebb59b9d28588ac3c5.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[10]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]] (completed)" width="1858"/>
+                <img src="27492cd60cf52a761adc67f7c85fd4b703d8b499ef39beebb59b9d28588ac3c5.png" title=" Estiven clicks on Suma una cantidad de un producto" width="1858"/>
+                <img src="92b06da159b3a1e4ff5684ee25c19220153ef445dba567ad85c945ea561e4b10.png" title=" Estiven clicks on Suma una cantidad de un producto (completed)" width="1858"/>
+                <img src="92b06da159b3a1e4ff5684ee25c19220153ef445dba567ad85c945ea561e4b10.png" title=" Estiven clicks on Seguir comprando" width="1858"/>
+                <img src="92b06da159b3a1e4ff5684ee25c19220153ef445dba567ad85c945ea561e4b10.png" title=" Estiven clicks on Seguir comprando (completed)" width="1858"/>
+                <img src="7490159d50be69c16afdc5ef2bbb51aab262ade813b9545853f72296d870deb0.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[10]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]]" width="1858"/>
+                <img src="02c331c4a964b45a4a4ca07aacff046bae298812f117b1d905da08ee5644b6b5.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[10]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]] (completed)" width="1858"/>
+                <img src="02c331c4a964b45a4a4ca07aacff046bae298812f117b1d905da08ee5644b6b5.png" title=" Estiven clicks on Suma una cantidad de un producto" width="1858"/>
+                <img src="3d5e21922d6ea2f6539167a123a9d37cc2ec420126899a3bc350d4dae8373994.png" title=" Estiven clicks on Suma una cantidad de un producto (completed)" width="1858"/>
+                <img src="3d5e21922d6ea2f6539167a123a9d37cc2ec420126899a3bc350d4dae8373994.png" title=" Estiven clicks on Seguir comprando" width="1858"/>
+                <img src="3d5e21922d6ea2f6539167a123a9d37cc2ec420126899a3bc350d4dae8373994.png" title=" Estiven clicks on Seguir comprando (completed)" width="1858"/>
+                <img src="94462f40c3b115fd7739d0060ffd19a6309a5982c4617d8b630c1abd3b9c120b.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[10]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]]" width="1858"/>
+                <img src="4c2be085117be0257dfde4b766cd2ca671e473b60e3e11925447857863ac21a2.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[10]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]] (completed)" width="1858"/>
+                <img src="4c2be085117be0257dfde4b766cd2ca671e473b60e3e11925447857863ac21a2.png" title=" Estiven clicks on Seguir comprando" width="1858"/>
+                <img src="3d5e21922d6ea2f6539167a123a9d37cc2ec420126899a3bc350d4dae8373994.png" title=" Estiven clicks on Seguir comprando (completed)" width="1858"/>
+                <img src="037ea6ef713809b292c543d336b9c3b74825c8e1e2cf2a580b84d23c4921fa08.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[12]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]]" width="1858"/>
+                <img src="2068f4e291af0014a06fe976531cddc4ad9378e1f672ae9772b80ac17cc64032.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[12]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]] (completed)" width="1858"/>
+                <img src="2068f4e291af0014a06fe976531cddc4ad9378e1f672ae9772b80ac17cc64032.png" title=" Estiven clicks on Agrega un producto" width="1858"/>
+                <img src="45369f0273e3d0668cadfbe9fe902852ccbaddd1947391008d17dd12781ce880.png" title=" Estiven clicks on Agrega un producto (completed)" width="1858"/>
+                <img src="bf10cc576b341d17c27520653f5e1dba5ca9e806ac600d31194ea67c16846155.png" title=" Estiven clicks on Suma una cantidad de un producto" width="1858"/>
+                <img src="a9769f371a5a88a123525a58acf3440bb355073aa079ee1ea6e51b30cc3f5b4b.png" title=" Estiven clicks on Suma una cantidad de un producto (completed)" width="1858"/>
+                <img src="a9769f371a5a88a123525a58acf3440bb355073aa079ee1ea6e51b30cc3f5b4b.png" title=" Estiven clicks on Seguir comprando" width="1858"/>
+                <img src="a9769f371a5a88a123525a58acf3440bb355073aa079ee1ea6e51b30cc3f5b4b.png" title=" Estiven clicks on Seguir comprando (completed)" width="1858"/>
+                <img src="993d173abf5c8fe4926aefc8be9d8e1a338032e57542a585adf869238866ed6a.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[12]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]]" width="1858"/>
+                <img src="30c4e1016ae42b27878326370f95ce2a3a467bda6644bd569ae6cc993f65add9.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[12]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]] (completed)" width="1858"/>
+                <img src="30c4e1016ae42b27878326370f95ce2a3a467bda6644bd569ae6cc993f65add9.png" title=" Estiven clicks on Suma una cantidad de un producto" width="1858"/>
+                <img src="468146267aa54a436ac3e8df0200dcc328c1f6e332391e6ffff3fcdf2ca8142e.png" title=" Estiven clicks on Suma una cantidad de un producto (completed)" width="1858"/>
+                <img src="468146267aa54a436ac3e8df0200dcc328c1f6e332391e6ffff3fcdf2ca8142e.png" title=" Estiven clicks on Seguir comprando" width="1858"/>
+                <img src="468146267aa54a436ac3e8df0200dcc328c1f6e332391e6ffff3fcdf2ca8142e.png" title=" Estiven clicks on Seguir comprando (completed)" width="1858"/>
+                <img src="41704979303c3b2f9d8e9b68157949a028a5298553743757709cc543ddf3908a.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[12]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]]" width="1858"/>
+                <img src="a6fdec409aed19d8a438260e6c17c8be35500e33a0ffb181f0f10ffd68e0909c.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[12]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]] (completed)" width="1858"/>
+                <img src="a6fdec409aed19d8a438260e6c17c8be35500e33a0ffb181f0f10ffd68e0909c.png" title=" Estiven clicks on Suma una cantidad de un producto" width="1858"/>
+                <img src="52865dbc09c61a65ac18516739a562843cb85ac968c1050cdd25c6d5aa785795.png" title=" Estiven clicks on Suma una cantidad de un producto (completed)" width="1858"/>
+                <img src="52865dbc09c61a65ac18516739a562843cb85ac968c1050cdd25c6d5aa785795.png" title=" Estiven clicks on Seguir comprando" width="1858"/>
+                <img src="52865dbc09c61a65ac18516739a562843cb85ac968c1050cdd25c6d5aa785795.png" title=" Estiven clicks on Seguir comprando (completed)" width="1858"/>
+                <img src="17eb5c93c44feff17226c0f26b8a20b73db46caf4ccc001dcd7254a94445b446.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[12]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]]" width="1858"/>
+                <img src="8db54e5b17c662a186af5a24c4bc2923f9015ebf26c4899c7efc09868932e752.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[12]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]] (completed)" width="1858"/>
+                <img src="8db54e5b17c662a186af5a24c4bc2923f9015ebf26c4899c7efc09868932e752.png" title=" Estiven clicks on Suma una cantidad de un producto" width="1858"/>
+                <img src="3c9ffec6db6cc0fe5c761b77fffacc88f59e44e0615917a5e960e9bd0db740e1.png" title=" Estiven clicks on Suma una cantidad de un producto (completed)" width="1858"/>
+                <img src="3c9ffec6db6cc0fe5c761b77fffacc88f59e44e0615917a5e960e9bd0db740e1.png" title=" Estiven clicks on Seguir comprando" width="1858"/>
+                <img src="3c9ffec6db6cc0fe5c761b77fffacc88f59e44e0615917a5e960e9bd0db740e1.png" title=" Estiven clicks on Seguir comprando (completed)" width="1858"/>
+                <img src="aa2298e56e42b3eb0c5c6070c403ac72f7a561f0136ea53610326cddc8191a84.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[12]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]]" width="1858"/>
+                <img src="59835ea317aa33681b85539c15950d3774910cbd10ec8049f453cded561d5608.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[12]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]] (completed)" width="1858"/>
+                <img src="59835ea317aa33681b85539c15950d3774910cbd10ec8049f453cded561d5608.png" title=" Estiven clicks on Suma una cantidad de un producto" width="1858"/>
+                <img src="be8107daf63c58a0bda157cf9c40e1ac1156e6ff6880524f316aaa7ae68f56fb.png" title=" Estiven clicks on Suma una cantidad de un producto (completed)" width="1858"/>
+                <img src="be8107daf63c58a0bda157cf9c40e1ac1156e6ff6880524f316aaa7ae68f56fb.png" title=" Estiven clicks on Seguir comprando" width="1858"/>
+                <img src="be8107daf63c58a0bda157cf9c40e1ac1156e6ff6880524f316aaa7ae68f56fb.png" title=" Estiven clicks on Seguir comprando (completed)" width="1858"/>
+                <img src="16076fe5bb8abca6ab0d6e4865e50fe3dcf6e9b55f603f597bc993ea4c03f602.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[12]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]]" width="1858"/>
+                <img src="748752978b0697398759f54e89e203065148fc722cda8fbbed9f73e63ad45b59.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[12]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]] (completed)" width="1858"/>
+                <img src="748752978b0697398759f54e89e203065148fc722cda8fbbed9f73e63ad45b59.png" title=" Estiven clicks on Seguir comprando" width="1858"/>
+                <img src="be8107daf63c58a0bda157cf9c40e1ac1156e6ff6880524f316aaa7ae68f56fb.png" title=" Estiven clicks on Seguir comprando (completed)" width="1858"/>
+                <img src="a73fc5c6ddfb3536d8add680ab32b4c4b9492788c94a6abb2b435c2df24f47e6.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[15]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]]" width="1858"/>
+                <img src="c0c72767d1de59f7803b41b62be7fff9f373480a4061de4e5ef5d111a0161550.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[15]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]] (completed)" width="1858"/>
+                <img src="c0c72767d1de59f7803b41b62be7fff9f373480a4061de4e5ef5d111a0161550.png" title=" Estiven clicks on Agrega un producto" width="1858"/>
+                <img src="722aed2d9f82c34a66f9dfb2aa79150cce45734e922268bdabfebcceb4af2cb1.png" title=" Estiven clicks on Agrega un producto (completed)" width="1858"/>
+                <img src="61f99ef18311814b5ae52d5fbaa71cd528b68278f0c63caa78505ef94d0d4ee6.png" title=" Estiven clicks on Suma una cantidad de un producto" width="1858"/>
+                <img src="b22369cad43afbdb7f03ff2eb010b7f746904a00f0af792d83816f7a8182d426.png" title=" Estiven clicks on Suma una cantidad de un producto (completed)" width="1858"/>
+                <img src="b22369cad43afbdb7f03ff2eb010b7f746904a00f0af792d83816f7a8182d426.png" title=" Estiven clicks on Seguir comprando" width="1858"/>
+                <img src="b22369cad43afbdb7f03ff2eb010b7f746904a00f0af792d83816f7a8182d426.png" title=" Estiven clicks on Seguir comprando (completed)" width="1858"/>
+                <img src="5e7bcc75ab01f80f497ec296e093f6e01b57c8393ff1936c1a967dc748cde066.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[15]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]]" width="1858"/>
+                <img src="8b414c5752343e8a96babb9ff1c4b76293d338e30b98d3c0d7a3325f6dc262e8.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[15]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]] (completed)" width="1858"/>
+                <img src="8b414c5752343e8a96babb9ff1c4b76293d338e30b98d3c0d7a3325f6dc262e8.png" title=" Estiven clicks on Suma una cantidad de un producto" width="1858"/>
+                <img src="502cd3b5ec3cb0a0449d3e8d86dc6605c5aefaec37854abfea49f077b5843d31.png" title=" Estiven clicks on Suma una cantidad de un producto (completed)" width="1858"/>
+                <img src="502cd3b5ec3cb0a0449d3e8d86dc6605c5aefaec37854abfea49f077b5843d31.png" title=" Estiven clicks on Seguir comprando" width="1858"/>
+                <img src="502cd3b5ec3cb0a0449d3e8d86dc6605c5aefaec37854abfea49f077b5843d31.png" title=" Estiven clicks on Seguir comprando (completed)" width="1858"/>
+                <img src="950578658795eaa485374d9420f08f7319013ad9621eb9b477e13c77fad99495.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[15]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]]" width="1858"/>
+                <img src="7d935e96c19aa0de92ad9ea36dfab54e1bc5cb6aa2173e7473aef7170e6e4f66.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[15]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]] (completed)" width="1858"/>
+                <img src="7d935e96c19aa0de92ad9ea36dfab54e1bc5cb6aa2173e7473aef7170e6e4f66.png" title=" Estiven clicks on Suma una cantidad de un producto" width="1858"/>
+                <img src="4480cddc1ac1418b790add8e0ad5da09f76bf100645d3e3abddcc2b54aa9f8de.png" title=" Estiven clicks on Suma una cantidad de un producto (completed)" width="1858"/>
+                <img src="4480cddc1ac1418b790add8e0ad5da09f76bf100645d3e3abddcc2b54aa9f8de.png" title=" Estiven clicks on Seguir comprando" width="1858"/>
+                <img src="4480cddc1ac1418b790add8e0ad5da09f76bf100645d3e3abddcc2b54aa9f8de.png" title=" Estiven clicks on Seguir comprando (completed)" width="1858"/>
+                <img src="e1e1350660b92311a27765cc295c192ab479c17b9481b87dc8a141bdee752968.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[15]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]]" width="1858"/>
+                <img src="a52a45e04fb2bc8a18a2e7c703eb128464621df4a8667afe8f56e72bad4b10ab.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[15]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]] (completed)" width="1858"/>
+                <img src="a52a45e04fb2bc8a18a2e7c703eb128464621df4a8667afe8f56e72bad4b10ab.png" title=" Estiven clicks on Suma una cantidad de un producto" width="1858"/>
+                <img src="8c146a34e61e362219c69bb5855f0ddd2946565f361def11f988c88785a5cd33.png" title=" Estiven clicks on Suma una cantidad de un producto (completed)" width="1858"/>
+                <img src="8c146a34e61e362219c69bb5855f0ddd2946565f361def11f988c88785a5cd33.png" title=" Estiven clicks on Seguir comprando" width="1858"/>
+                <img src="8c146a34e61e362219c69bb5855f0ddd2946565f361def11f988c88785a5cd33.png" title=" Estiven clicks on Seguir comprando (completed)" width="1858"/>
+                <img src="bc32f418a6656a666dbdba1be0154e91465b6f14c9e7a8ab17b2791da4adbc10.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[15]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]]" width="1858"/>
+                <img src="da4eec0fbcfdae325d78c90f50e212dcab04300154d74e19badbd8272650a572.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[15]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]] (completed)" width="1858"/>
+                <img src="da4eec0fbcfdae325d78c90f50e212dcab04300154d74e19badbd8272650a572.png" title=" Estiven clicks on Seguir comprando" width="1858"/>
+                <img src="8c146a34e61e362219c69bb5855f0ddd2946565f361def11f988c88785a5cd33.png" title=" Estiven clicks on Seguir comprando (completed)" width="1858"/>
+                <img src="d8520ed963add173946cab8d7a0046188519d56bd43d1617f488d225948882fc.png" title=" Estiven agregar productos (completed)" width="1858"/>
+                <img src="d8520ed963add173946cab8d7a0046188519d56bd43d1617f488d225948882fc.png" title=" And aniade cinco productos al carrito con sus respectivas cantidades (completed)" width="1858"/>
+                <img src="d8520ed963add173946cab8d7a0046188519d56bd43d1617f488d225948882fc.png" title=" And entra al carrito de compras y registra un &quot;prueba@gmail.com&quot;" width="1858"/>
+                <img src="d8520ed963add173946cab8d7a0046188519d56bd43d1617f488d225948882fc.png" title=" Estiven carrito" width="1858"/>
+                <img src="bf769fc45f6b5aaf0077535fac1b89edfd674fd1ea0ab7a3b2a0b86b22b3e276.png" title=" Estiven clicks on Ir al carrito" width="1858"/>
+                <img src="8c722681ec01a657029c41e856dd0d2788ef82d50bcdd310083e6b97284ef6f8.png" title=" Estiven clicks on Ir al carrito (completed)" width="1858"/>
+                <img src="8c722681ec01a657029c41e856dd0d2788ef82d50bcdd310083e6b97284ef6f8.png" title=" Estiven enters 'prueba@gmail.com' into Campo del correo electronico" width="1858"/>
+                <img src="2112ef60a00328b4393fb99fe695cf2e4b5306c0493b4fb5f8e5a284ca03c654.png" title=" Estiven enters 'prueba@gmail.com' into Campo del correo electronico (completed)" width="1858"/>
+                <img src="2112ef60a00328b4393fb99fe695cf2e4b5306c0493b4fb5f8e5a284ca03c654.png" title=" Estiven clicks on " width="1858"/>
+                <img src="ec3788977727b1a8493eedeec862037463017889be6e701e8a18681af5365b09.png" title=" Estiven clicks on  (completed)" width="1858"/>
+                <img src="34947e4d4b43c300f4b92642da079526b1b205f8496c02c1ba6edc3e0771da04.png" title=" Estiven carrito (completed)" width="1858"/>
+                <img src="34947e4d4b43c300f4b92642da079526b1b205f8496c02c1ba6edc3e0771da04.png" title=" And entra al carrito de compras y registra un &quot;prueba@gmail.com&quot; (completed)" width="1858"/>
+                <img src="34947e4d4b43c300f4b92642da079526b1b205f8496c02c1ba6edc3e0771da04.png" title=" Then visualiza toda la informacion de la compra" width="1858"/>
+                <img src="34947e4d4b43c300f4b92642da079526b1b205f8496c02c1ba6edc3e0771da04.png" title=" Then total compra should be (6667800)" width="1858"/>
+                <img src="34947e4d4b43c300f4b92642da079526b1b205f8496c02c1ba6edc3e0771da04.png" title=" Then total compra should be (6667800) (completed)" width="1858"/>
+                <img src="34947e4d4b43c300f4b92642da079526b1b205f8496c02c1ba6edc3e0771da04.png" title=" Then Se obtienen los productos should be ([Escritorio Axis Wengue Marfil, Escritorio Connie, Blanco, Dise&amp;ntilde;o Moderno Con Dos Entrepa&amp;ntilde;os, Escritorio Gamer Max Ancho: 150 cm Alto: 88 Profundidad: 52 Color: Wengue Neo, Escritorio en madera Lannister Escritorio Lannister Ancho: 110 Cm Alto: 85 Cm Profundo: 48 Cm Color: Duna, Escritorio &amp;iexcl;Wow! Rovere Blanco])" width="1858"/>
+                <img src="34947e4d4b43c300f4b92642da079526b1b205f8496c02c1ba6edc3e0771da04.png" title=" Then Se obtienen los productos should be ([Escritorio Axis Wengue Marfil, Escritorio Connie, Blanco, Dise&amp;ntilde;o Moderno Con Dos Entrepa&amp;ntilde;os, Escritorio Gamer Max Ancho: 150 cm Alto: 88 Profundidad: 52 Color: Wengue Neo, Escritorio en madera Lannister Escritorio Lannister Ancho: 110 Cm Alto: 85 Cm Profundo: 48 Cm Color: Duna, Escritorio &amp;iexcl;Wow! Rovere Blanco]) (completed)" width="1858"/>
+                <img src="53ee7e4d5a06648d42312338576ff5db20372ab9d45df6c8996732eb68eebd97.png" title=" Then Las cantidades de los productos son should be ([2, 4, 5, 5, 6])" width="1858"/>
+                <img src="53ee7e4d5a06648d42312338576ff5db20372ab9d45df6c8996732eb68eebd97.png" title=" Then Las cantidades de los productos son should be ([2, 4, 5, 5, 6]) (completed)" width="1858"/>
+                <img src="53ee7e4d5a06648d42312338576ff5db20372ab9d45df6c8996732eb68eebd97.png" title=" Then El total de cada producto es should be ([419800, 903600, 1249500, 1749500, 2345400])" width="1858"/>
+                <img src="53ee7e4d5a06648d42312338576ff5db20372ab9d45df6c8996732eb68eebd97.png" title=" Then El total de cada producto es should be ([419800, 903600, 1249500, 1749500, 2345400]) (completed)" width="1858"/>
+                <img src="4a90f7ec9dcf9eeb6629103d68bb8755db9e9889c8ffbcc2d7c48012892798a1.png" title=" Example: {categoria=&quot;Dormitorio&quot;, subcategoria=&quot;Colchones sencillos&quot;, correo=&quot;prueba@gmail.com&quot;}" width="1858"/>
+                <img src="4a90f7ec9dcf9eeb6629103d68bb8755db9e9889c8ffbcc2d7c48012892798a1.png" title=" Given que el usuario esta en la pagina del exito" width="1858"/>
+                <img src="4a90f7ec9dcf9eeb6629103d68bb8755db9e9889c8ffbcc2d7c48012892798a1.png" title=" Estiven abrir pagina inicial" width="1858"/>
+                <img src="4a90f7ec9dcf9eeb6629103d68bb8755db9e9889c8ffbcc2d7c48012892798a1.png" title=" Estiven opens the Pagina inicial" width="1858"/>
+                <img src="c3562dadf2dbc3cf3661a5b9b1e6a35204314fab5f6a439cefe918ebdfce5fff.png" title=" Estiven opens the Pagina inicial (completed)" width="1858"/>
+                <img src="c3562dadf2dbc3cf3661a5b9b1e6a35204314fab5f6a439cefe918ebdfce5fff.png" title=" Estiven clicks on Desplegar menu" width="1858"/>
+                <img src="141900c87859171d17aa6e19c6b4f5d51d8b61acb3c2539c3df70328c27225aa.png" title=" Estiven clicks on Desplegar menu (completed)" width="1858"/>
+                <img src="141900c87859171d17aa6e19c6b4f5d51d8b61acb3c2539c3df70328c27225aa.png" title=" Estiven abrir pagina inicial (completed)" width="1858"/>
+                <img src="141900c87859171d17aa6e19c6b4f5d51d8b61acb3c2539c3df70328c27225aa.png" title=" Given que el usuario esta en la pagina del exito (completed)" width="1858"/>
+                <img src="141900c87859171d17aa6e19c6b4f5d51d8b61acb3c2539c3df70328c27225aa.png" title=" When selecciona una &quot;Dormitorio&quot; y una &quot;Colchones sencillos&quot;" width="1858"/>
+                <img src="141900c87859171d17aa6e19c6b4f5d51d8b61acb3c2539c3df70328c27225aa.png" title=" Estiven navegar menu" width="1858"/>
+                <img src="141900c87859171d17aa6e19c6b4f5d51d8b61acb3c2539c3df70328c27225aa.png" title=" Estiven clicks on [By.id: undefined-nivel2-Dormitorio]" width="1858"/>
+                <img src="9d8d0efde469b0e8a32f73b3514ea78338221b005a1212cf77b28a5b95b72950.png" title=" Estiven clicks on [By.id: undefined-nivel2-Dormitorio] (completed)" width="1858"/>
+                <img src="9d8d0efde469b0e8a32f73b3514ea78338221b005a1212cf77b28a5b95b72950.png" title=" Estiven clicks on [By.xpath: //*[text()='Colchones sencillos']]" width="1858"/>
+                <img src="92dacd90d053489535e507861d8579269230b44918d5bfffaa9f155bb1bf87fc.png" title=" Estiven clicks on [By.xpath: //*[text()='Colchones sencillos']] (completed)" width="1858"/>
+                <img src="92dacd90d053489535e507861d8579269230b44918d5bfffaa9f155bb1bf87fc.png" title=" Estiven navegar menu (completed)" width="1858"/>
+                <img src="92dacd90d053489535e507861d8579269230b44918d5bfffaa9f155bb1bf87fc.png" title=" When selecciona una &quot;Dormitorio&quot; y una &quot;Colchones sencillos&quot; (completed)" width="1858"/>
+                <img src="92dacd90d053489535e507861d8579269230b44918d5bfffaa9f155bb1bf87fc.png" title=" And aniade cinco productos al carrito con sus respectivas cantidades" width="1858"/>
+                <img src="92dacd90d053489535e507861d8579269230b44918d5bfffaa9f155bb1bf87fc.png" title=" Estiven agregar productos" width="1858"/>
+                <img src="7c93a22bcbd7481864c7a4cec48f4178509ee54210d535f9a205f52a8fb9df6a.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[3]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]]" width="1858"/>
+                <img src="daf6cc33f2f02a75d13cea1acd0ce17794abf1f4f2b9be8729cb65bd12ccf05e.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[3]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]] (completed)" width="1858"/>
+                <img src="daf6cc33f2f02a75d13cea1acd0ce17794abf1f4f2b9be8729cb65bd12ccf05e.png" title=" Estiven clicks on Agrega un producto" width="1858"/>
+                <img src="79f750e55e0a790efdf623f0c52e88273790416c4c9d4356c203b1aa7a4a948a.png" title=" Estiven clicks on Agrega un producto (completed)" width="1858"/>
+                <img src="18f4db774128f9bd1fdbd33a35a28186dfa96183ba7e79a455ac8239e53a85be.png" title=" Estiven clicks on Suma una cantidad de un producto" width="1858"/>
+                <img src="33a42a61db909571b00318607d8bb0b2af1f7581a60b6c0913d21769e8f5058a.png" title=" Estiven clicks on Suma una cantidad de un producto (completed)" width="1858"/>
+                <img src="33a42a61db909571b00318607d8bb0b2af1f7581a60b6c0913d21769e8f5058a.png" title=" Estiven clicks on Seguir comprando" width="1858"/>
+                <img src="f478dbfaa768de06d2c3c36383ddacdc87beb9ad20ed1baefb3b713e464e2334.png" title=" Estiven clicks on Seguir comprando (completed)" width="1858"/>
+                <img src="307e712e24bde32a901deb0e8b1238db6af59052b22606e21daaa98a0660269b.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[3]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]]" width="1858"/>
+                <img src="9b2cb77bea31da728726a1eb21cde47334dd5afdffc80caeebcde3d913dbe432.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[3]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]] (completed)" width="1858"/>
+                <img src="9b2cb77bea31da728726a1eb21cde47334dd5afdffc80caeebcde3d913dbe432.png" title=" Estiven clicks on Seguir comprando" width="1858"/>
+                <img src="126cdb6dbc8e521bc38931e91889a0e48b85d9c6f05246b99863121cd6c8628d.png" title=" Estiven clicks on Seguir comprando (completed)" width="1858"/>
+                <img src="7b52f049858babe887faa71150fac535b1f8206f9c1f02e7506f43915ce2c315.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[5]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]]" width="1858"/>
+                <img src="1ae6b8a2b9d0c7ef7f661c31c0c91a0a5e6a099288eafed700fb008348dc5fdc.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[5]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]] (completed)" width="1858"/>
+                <img src="1ae6b8a2b9d0c7ef7f661c31c0c91a0a5e6a099288eafed700fb008348dc5fdc.png" title=" Estiven clicks on Agrega un producto" width="1858"/>
+                <img src="53affc66ce636fad9692bc96a287859e9f661d4f59f0c0e460e54e371301f45e.png" title=" Estiven clicks on Agrega un producto (completed)" width="1858"/>
+                <img src="53affc66ce636fad9692bc96a287859e9f661d4f59f0c0e460e54e371301f45e.png" title=" Estiven clicks on Suma una cantidad de un producto" width="1858"/>
+                <img src="e92a24b1ca29c4d4e5822043a542380cb26342166937be2849fc489ccc442136.png" title=" Estiven clicks on Suma una cantidad de un producto (completed)" width="1858"/>
+                <img src="e92a24b1ca29c4d4e5822043a542380cb26342166937be2849fc489ccc442136.png" title=" Estiven clicks on Seguir comprando" width="1858"/>
+                <img src="e92a24b1ca29c4d4e5822043a542380cb26342166937be2849fc489ccc442136.png" title=" Estiven clicks on Seguir comprando (completed)" width="1858"/>
+                <img src="5d917915fab2eb52a1d6dab703cd7dd7f8c7aa9a5678eef38865063b94bda82d.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[5]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]]" width="1858"/>
+                <img src="8f609bba0bff8468bbc4985d2d72636b0a8ab1381cee2e1036f1742792f927eb.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[5]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]] (completed)" width="1858"/>
+                <img src="8f609bba0bff8468bbc4985d2d72636b0a8ab1381cee2e1036f1742792f927eb.png" title=" Estiven clicks on Suma una cantidad de un producto" width="1858"/>
+                <img src="4df24d0d6199cd72b020170a0b4925c3828ef6b2d41edd7f495b8a097b7a9dc9.png" title=" Estiven clicks on Suma una cantidad de un producto (completed)" width="1858"/>
+                <img src="4df24d0d6199cd72b020170a0b4925c3828ef6b2d41edd7f495b8a097b7a9dc9.png" title=" Estiven clicks on Seguir comprando" width="1858"/>
+                <img src="4df24d0d6199cd72b020170a0b4925c3828ef6b2d41edd7f495b8a097b7a9dc9.png" title=" Estiven clicks on Seguir comprando (completed)" width="1858"/>
+                <img src="190e044385bfb01338c713269fc260639eaf082d1f01206da73fb781fab343ec.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[5]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]]" width="1858"/>
+                <img src="50cb980e850b87f201126bc078ff80aa47ee91b11a4176975906ac22caedfade.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[5]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]] (completed)" width="1858"/>
+                <img src="50cb980e850b87f201126bc078ff80aa47ee91b11a4176975906ac22caedfade.png" title=" Estiven clicks on Seguir comprando" width="1858"/>
+                <img src="4df24d0d6199cd72b020170a0b4925c3828ef6b2d41edd7f495b8a097b7a9dc9.png" title=" Estiven clicks on Seguir comprando (completed)" width="1858"/>
+                <img src="407b6087281dafdfaa1a4ca1e37dc9aa6bd490cf9b68600ab2af9f649450c15d.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[6]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]]" width="1858"/>
+                <img src="f96e8e1cac428163a16ee1fc151a6d9f88cda126205f46052d123ff6f986468e.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[6]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]] (completed)" width="1858"/>
+                <img src="f96e8e1cac428163a16ee1fc151a6d9f88cda126205f46052d123ff6f986468e.png" title=" Estiven clicks on Agrega un producto" width="1858"/>
+                <img src="e9a0dec934c71feac5ec1fa7dac7b3237b58fccab7a51019544fc7c4464a0a6d.png" title=" Estiven clicks on Agrega un producto (completed)" width="1858"/>
+                <img src="d5bad2bc7e859091dead4ad047f55557d61d94193fb9dde4ab2f4db0d06f64db.png" title=" Estiven clicks on Suma una cantidad de un producto" width="1858"/>
+                <img src="ae82c1f95c65db5b3f7f904be0b3ae625576049f2f7217e520a2790f71a79a3b.png" title=" Estiven clicks on Suma una cantidad de un producto (completed)" width="1858"/>
+                <img src="ae82c1f95c65db5b3f7f904be0b3ae625576049f2f7217e520a2790f71a79a3b.png" title=" Estiven clicks on Seguir comprando" width="1858"/>
+                <img src="ae82c1f95c65db5b3f7f904be0b3ae625576049f2f7217e520a2790f71a79a3b.png" title=" Estiven clicks on Seguir comprando (completed)" width="1858"/>
+                <img src="9c8b20a3a2a4a0cdbf98c1f4fd1b2d3b26e6436746e00c928d3ccaf6d28ac969.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[6]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]]" width="1858"/>
+                <img src="d310e77e7a7af2e16c0687d3fc10217bdaa0e1b1f028c347bac9af9d39bfd5dd.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[6]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]] (completed)" width="1858"/>
+                <img src="d310e77e7a7af2e16c0687d3fc10217bdaa0e1b1f028c347bac9af9d39bfd5dd.png" title=" Estiven clicks on Suma una cantidad de un producto" width="1858"/>
+                <img src="63f6ce7ef0c0168e63729ee5a87aec3171576d87ab482803d15c3aefd676b8aa.png" title=" Estiven clicks on Suma una cantidad de un producto (completed)" width="1858"/>
+                <img src="63f6ce7ef0c0168e63729ee5a87aec3171576d87ab482803d15c3aefd676b8aa.png" title=" Estiven clicks on Seguir comprando" width="1858"/>
+                <img src="63f6ce7ef0c0168e63729ee5a87aec3171576d87ab482803d15c3aefd676b8aa.png" title=" Estiven clicks on Seguir comprando (completed)" width="1858"/>
+                <img src="ff6851e80d29b5ba48e7744f9e30d91034ed9604fdccf69642da9c34861c7405.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[6]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]]" width="1858"/>
+                <img src="804ff5259112bce5079628696626a1ff3bbc1674e25a8560d283016e28a59625.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[6]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]] (completed)" width="1858"/>
+                <img src="804ff5259112bce5079628696626a1ff3bbc1674e25a8560d283016e28a59625.png" title=" Estiven clicks on Suma una cantidad de un producto" width="1858"/>
+                <img src="a5ddcf15efd22a06036c0c818d78c49210edfc1fc32631fadb9c0bfd442fc747.png" title=" Estiven clicks on Suma una cantidad de un producto (completed)" width="1858"/>
+                <img src="a5ddcf15efd22a06036c0c818d78c49210edfc1fc32631fadb9c0bfd442fc747.png" title=" Estiven clicks on Seguir comprando" width="1858"/>
+                <img src="a5ddcf15efd22a06036c0c818d78c49210edfc1fc32631fadb9c0bfd442fc747.png" title=" Estiven clicks on Seguir comprando (completed)" width="1858"/>
+                <img src="dd50c6cc0a08d600a7e0d423e8592417cbc697854c95e92ce4add622ca9090e9.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[6]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]]" width="1858"/>
+                <img src="d24c67503dc1835f4e33ddb84be18488911a2e8da4e6a09fedc60bdef74049d1.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[6]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]] (completed)" width="1858"/>
+                <img src="d24c67503dc1835f4e33ddb84be18488911a2e8da4e6a09fedc60bdef74049d1.png" title=" Estiven clicks on Suma una cantidad de un producto" width="1858"/>
+                <img src="4873e59bd9bfe38e40bbb7fa2ff6bf12cac3d4a68d28fe83b390c09fac45f3d3.png" title=" Estiven clicks on Suma una cantidad de un producto (completed)" width="1858"/>
+                <img src="4873e59bd9bfe38e40bbb7fa2ff6bf12cac3d4a68d28fe83b390c09fac45f3d3.png" title=" Estiven clicks on Seguir comprando" width="1858"/>
+                <img src="4873e59bd9bfe38e40bbb7fa2ff6bf12cac3d4a68d28fe83b390c09fac45f3d3.png" title=" Estiven clicks on Seguir comprando (completed)" width="1858"/>
+                <img src="52db0e358acd743b4583e45f7692ce195b11c5221e046f00d59de9e634307c19.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[6]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]]" width="1858"/>
+                <img src="a679655769287c62f89b1dc1562a4acd778709e5fd0fb9082f0568dd08c49b3c.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[6]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]] (completed)" width="1858"/>
+                <img src="a679655769287c62f89b1dc1562a4acd778709e5fd0fb9082f0568dd08c49b3c.png" title=" Estiven clicks on Suma una cantidad de un producto" width="1858"/>
+                <img src="0c85814a1ef7c4bf7115de690ac32281fe8e8f32fcc93965d76e1daa7a451c6c.png" title=" Estiven clicks on Suma una cantidad de un producto (completed)" width="1858"/>
+                <img src="0c85814a1ef7c4bf7115de690ac32281fe8e8f32fcc93965d76e1daa7a451c6c.png" title=" Estiven clicks on Seguir comprando" width="1858"/>
+                <img src="0c85814a1ef7c4bf7115de690ac32281fe8e8f32fcc93965d76e1daa7a451c6c.png" title=" Estiven clicks on Seguir comprando (completed)" width="1858"/>
+                <img src="b4383cb1bc7938a3c2ec005ba2dffaffd4852e2ba227a2af27d71fd33dc971f9.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[6]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]]" width="1858"/>
+                <img src="3f22c44b91e7061bebc231f564a99b5ef85a0d1e4faef47a3c4efd036c22a39c.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[6]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]] (completed)" width="1858"/>
+                <img src="3f22c44b91e7061bebc231f564a99b5ef85a0d1e4faef47a3c4efd036c22a39c.png" title=" Estiven clicks on Suma una cantidad de un producto" width="1858"/>
+                <img src="d4cc7e05d9a4b11ca9d8934daad5a265603ad7de477e3e261c3ea87fda278332.png" title=" Estiven clicks on Suma una cantidad de un producto (completed)" width="1858"/>
+                <img src="d4cc7e05d9a4b11ca9d8934daad5a265603ad7de477e3e261c3ea87fda278332.png" title=" Estiven clicks on Seguir comprando" width="1858"/>
+                <img src="d4cc7e05d9a4b11ca9d8934daad5a265603ad7de477e3e261c3ea87fda278332.png" title=" Estiven clicks on Seguir comprando (completed)" width="1858"/>
+                <img src="625292eff100933afae4ebf0cfb690ff2253fe6e7f38b5b60db08acb2882ba64.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[6]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]]" width="1858"/>
+                <img src="fcf509f7afc00e5d6f09fcd170d3052e40d33832704a6f31dbb19d57cb3091ef.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[6]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]] (completed)" width="1858"/>
+                <img src="fcf509f7afc00e5d6f09fcd170d3052e40d33832704a6f31dbb19d57cb3091ef.png" title=" Estiven clicks on Seguir comprando" width="1858"/>
+                <img src="d4cc7e05d9a4b11ca9d8934daad5a265603ad7de477e3e261c3ea87fda278332.png" title=" Estiven clicks on Seguir comprando (completed)" width="1858"/>
+                <img src="101685c666ce946f5c2d88df9a3fe23540fdea4d60e382eac4cfadb62ba0f614.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[13]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]]" width="1858"/>
+                <img src="93d40497a1b838185943341ce1131953595fc880bcc9deddbec7ac401954437e.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[13]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]] (completed)" width="1858"/>
+                <img src="93d40497a1b838185943341ce1131953595fc880bcc9deddbec7ac401954437e.png" title=" Estiven clicks on Agrega un producto" width="1858"/>
+                <img src="6eabf89e8ca05361b3380b632a86c9ef839beb819cb776e1ec91501753b65143.png" title=" Estiven clicks on Agrega un producto (completed)" width="1858"/>
+                <img src="6eabf89e8ca05361b3380b632a86c9ef839beb819cb776e1ec91501753b65143.png" title=" Estiven clicks on Suma una cantidad de un producto" width="1858"/>
+                <img src="d26f39075bd717f52637a4c5b019c64affebeecb514308bbc3b1367a5e982fff.png" title=" Estiven clicks on Suma una cantidad de un producto (completed)" width="1858"/>
+                <img src="d26f39075bd717f52637a4c5b019c64affebeecb514308bbc3b1367a5e982fff.png" title=" Estiven clicks on Seguir comprando" width="1858"/>
+                <img src="d26f39075bd717f52637a4c5b019c64affebeecb514308bbc3b1367a5e982fff.png" title=" Estiven clicks on Seguir comprando (completed)" width="1858"/>
+                <img src="ea13bf3844cf4a9b9a4bd53cbef415d4e0f41441b7c78ed6fb5492662607c6d4.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[13]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]]" width="1858"/>
+                <img src="2c19951f1b5e92b525502c3c4ec77d6af3026d2031a2dd0a3161bc69c6bed6c2.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[13]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]] (completed)" width="1858"/>
+                <img src="2c19951f1b5e92b525502c3c4ec77d6af3026d2031a2dd0a3161bc69c6bed6c2.png" title=" Estiven clicks on Suma una cantidad de un producto" width="1858"/>
+                <img src="0ae7906bf8621a192158ed8d256bf0c523715a78918480985f763ed111efe5cf.png" title=" Estiven clicks on Suma una cantidad de un producto (completed)" width="1858"/>
+                <img src="0ae7906bf8621a192158ed8d256bf0c523715a78918480985f763ed111efe5cf.png" title=" Estiven clicks on Seguir comprando" width="1858"/>
+                <img src="0ae7906bf8621a192158ed8d256bf0c523715a78918480985f763ed111efe5cf.png" title=" Estiven clicks on Seguir comprando (completed)" width="1858"/>
+                <img src="e250fb62fd9c50c1cb61bb535810bb95d00ba2ba87dd3ae8fab9f6acd03a301b.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[13]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]]" width="1858"/>
+                <img src="b1d26cd4ebee3fcdfacdfdf7b7aed97d12786331a892b2ae3781cfc992869367.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[13]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]] (completed)" width="1858"/>
+                <img src="b1d26cd4ebee3fcdfacdfdf7b7aed97d12786331a892b2ae3781cfc992869367.png" title=" Estiven clicks on Seguir comprando" width="1858"/>
+                <img src="0ae7906bf8621a192158ed8d256bf0c523715a78918480985f763ed111efe5cf.png" title=" Estiven clicks on Seguir comprando (completed)" width="1858"/>
+                <img src="cd621b5c5454f6ad94d8ca4884b95d8979282cfdc7e26e2cb4a835132e9bc597.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[15]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]]" width="1858"/>
+                <img src="16e6a686979513ec57eb04338647a41a9645ca29b4da198245b13e7753d4e039.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[15]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]] (completed)" width="1858"/>
+                <img src="16e6a686979513ec57eb04338647a41a9645ca29b4da198245b13e7753d4e039.png" title=" Estiven clicks on Agrega un producto" width="1858"/>
+                <img src="f3cf603b8f02c33c2896e3db0e58d572ae5a7f35d6ea9ab4fbe468ef8890354f.png" title=" Estiven clicks on Agrega un producto (completed)" width="1858"/>
+                <img src="8a32290d634208d527020550c938085825eb146a7782dbde02ed953d1b8cddb9.png" title=" Estiven clicks on Suma una cantidad de un producto" width="1858"/>
+                <img src="f58cf999950c995a48ee1009acfafb88acb766f7cbce5442e2ffb8d34b41f9d9.png" title=" Estiven clicks on Suma una cantidad de un producto (completed)" width="1858"/>
+                <img src="f58cf999950c995a48ee1009acfafb88acb766f7cbce5442e2ffb8d34b41f9d9.png" title=" Estiven clicks on Seguir comprando" width="1858"/>
+                <img src="f58cf999950c995a48ee1009acfafb88acb766f7cbce5442e2ffb8d34b41f9d9.png" title=" Estiven clicks on Seguir comprando (completed)" width="1858"/>
+                <img src="1920a9875ea8cb4beafa4c3390451d44c59f6c3077115acced4ada0c61ec7919.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[15]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]]" width="1858"/>
+                <img src="d5c329d0d3293113317d7611ce8b6218cc54550cdc2e93d0f1a08d8b24d970ff.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[15]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]] (completed)" width="1858"/>
+                <img src="d5c329d0d3293113317d7611ce8b6218cc54550cdc2e93d0f1a08d8b24d970ff.png" title=" Estiven clicks on Suma una cantidad de un producto" width="1858"/>
+                <img src="9179af2e8e7cd5d4eeff39d31c0304899e9bdad782e326711bc2db3668ff8fec.png" title=" Estiven clicks on Suma una cantidad de un producto (completed)" width="1858"/>
+                <img src="9179af2e8e7cd5d4eeff39d31c0304899e9bdad782e326711bc2db3668ff8fec.png" title=" Estiven clicks on Seguir comprando" width="1858"/>
+                <img src="9179af2e8e7cd5d4eeff39d31c0304899e9bdad782e326711bc2db3668ff8fec.png" title=" Estiven clicks on Seguir comprando (completed)" width="1858"/>
+                <img src="ce723f2f86a5e9b82e88e2f8714c514b6bb6ebb57cedbd8fd2f7bccfbcf8e5a2.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[15]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]]" width="1858"/>
+                <img src="b158c3395afe9168757070aab30d2a814d1ac37ea7ebafe1b333be080b7b124b.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[15]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]] (completed)" width="1858"/>
+                <img src="b158c3395afe9168757070aab30d2a814d1ac37ea7ebafe1b333be080b7b124b.png" title=" Estiven clicks on Suma una cantidad de un producto" width="1858"/>
+                <img src="c075f8af2528c6c07ba4056d974731e59778faf2bb4b55a53ac5922ca7f85d7e.png" title=" Estiven clicks on Suma una cantidad de un producto (completed)" width="1858"/>
+                <img src="c075f8af2528c6c07ba4056d974731e59778faf2bb4b55a53ac5922ca7f85d7e.png" title=" Estiven clicks on Seguir comprando" width="1858"/>
+                <img src="c075f8af2528c6c07ba4056d974731e59778faf2bb4b55a53ac5922ca7f85d7e.png" title=" Estiven clicks on Seguir comprando (completed)" width="1858"/>
+                <img src="f9d946b9c9dbb045d32df286610d713c9ac46221b07671ecae844addd50e8f9c.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[15]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]]" width="1858"/>
+                <img src="7a3c30971c2db87a27a2ddea6f29997c3dd1f172df751e1456e11c967c04b97e.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[15]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]] (completed)" width="1858"/>
+                <img src="7a3c30971c2db87a27a2ddea6f29997c3dd1f172df751e1456e11c967c04b97e.png" title=" Estiven clicks on Suma una cantidad de un producto" width="1858"/>
+                <img src="607d177310b452162d8b0cda74d7872f24503b7e89e5f1a8c545c6d6b638b372.png" title=" Estiven clicks on Suma una cantidad de un producto (completed)" width="1858"/>
+                <img src="607d177310b452162d8b0cda74d7872f24503b7e89e5f1a8c545c6d6b638b372.png" title=" Estiven clicks on Seguir comprando" width="1858"/>
+                <img src="607d177310b452162d8b0cda74d7872f24503b7e89e5f1a8c545c6d6b638b372.png" title=" Estiven clicks on Seguir comprando (completed)" width="1858"/>
+                <img src="54d8d3d5585085de0ab620b164c0f37a20f91f2a06fddc703bb917f678f79772.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[15]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]]" width="1858"/>
+                <img src="d750379289abb08ce3fec72018f36fc4f58902f2abb0111999b324d531fd07f1.png" title=" Estiven clicks on [By.xpath: //body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[15]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]] (completed)" width="1858"/>
+                <img src="d750379289abb08ce3fec72018f36fc4f58902f2abb0111999b324d531fd07f1.png" title=" Estiven clicks on Seguir comprando" width="1858"/>
+                <img src="607d177310b452162d8b0cda74d7872f24503b7e89e5f1a8c545c6d6b638b372.png" title=" Estiven clicks on Seguir comprando (completed)" width="1858"/>
+                <img src="6481ab08ea42c8306cf08e856cce1e723848cc522853055596247e1641c68c71.png" title=" Estiven agregar productos (completed)" width="1858"/>
+                <img src="6481ab08ea42c8306cf08e856cce1e723848cc522853055596247e1641c68c71.png" title=" And aniade cinco productos al carrito con sus respectivas cantidades (completed)" width="1858"/>
+                <img src="6481ab08ea42c8306cf08e856cce1e723848cc522853055596247e1641c68c71.png" title=" And entra al carrito de compras y registra un &quot;prueba@gmail.com&quot;" width="1858"/>
+                <img src="6481ab08ea42c8306cf08e856cce1e723848cc522853055596247e1641c68c71.png" title=" Estiven carrito" width="1858"/>
+                <img src="1e5f7fbb6ccb846e02a81a653c3b74b4d211d3cda26a8061f4a559496c0d45db.png" title=" Estiven clicks on Ir al carrito" width="1858"/>
+                <img src="ade5a955d984c37dcacf858eada0ade67d2cfb5ad1f679084b1d6df766a5be3e.png" title=" Estiven clicks on Ir al carrito (completed)" width="1858"/>
+                <img src="ade5a955d984c37dcacf858eada0ade67d2cfb5ad1f679084b1d6df766a5be3e.png" title=" Estiven enters 'prueba@gmail.com' into Campo del correo electronico" width="1858"/>
+                <img src="2d7dcb091bf512ebc2c04be2ce2f6d4e3c5b82ac56031a35a0a0f2e94581d89a.png" title=" Estiven enters 'prueba@gmail.com' into Campo del correo electronico (completed)" width="1858"/>
+                <img src="2d7dcb091bf512ebc2c04be2ce2f6d4e3c5b82ac56031a35a0a0f2e94581d89a.png" title=" Estiven clicks on " width="1858"/>
+                <img src="571c7e4ddd1081180f335f68810dd44eab623e4dbcfa4566de2ba6ede4a3952d.png" title=" Estiven clicks on  (completed)" width="1858"/>
+                <img src="3a584fac6bd7330ac457de569b93ef0638133f0c779b067617561c30dc9ea9a8.png" title=" Estiven carrito (completed)" width="1858"/>
+                <img src="3a584fac6bd7330ac457de569b93ef0638133f0c779b067617561c30dc9ea9a8.png" title=" And entra al carrito de compras y registra un &quot;prueba@gmail.com&quot; (completed)" width="1858"/>
+                <img src="3a584fac6bd7330ac457de569b93ef0638133f0c779b067617561c30dc9ea9a8.png" title=" Then visualiza toda la informacion de la compra" width="1858"/>
+                <img src="3a584fac6bd7330ac457de569b93ef0638133f0c779b067617561c30dc9ea9a8.png" title=" Then total compra should be (11387490)" width="1858"/>
+                <img src="3a584fac6bd7330ac457de569b93ef0638133f0c779b067617561c30dc9ea9a8.png" title=" Then total compra should be (11387490) (completed): <span class='failing-color'>FAILURE</span>" width="1858"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.2.9</span>
+</div>
+</body>
+</html>

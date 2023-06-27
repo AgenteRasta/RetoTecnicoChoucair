@@ -19,11 +19,6 @@ public class NavegarMenu implements Task {
                 Click.on(By.id(String.format(CATEGORIA,cate))),
                 Click.on(By.xpath(String.format(SUBCATEGORIA,subcate)))
         );
-       try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
     }
 
 

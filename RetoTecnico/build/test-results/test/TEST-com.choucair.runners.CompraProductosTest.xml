@@ -8,25 +8,25 @@
 
 3 Scenarios (?[31m2 failed?[0m, ?[32m1 passed?[0m)
 15 Steps (?[31m2 failed?[0m, ?[32m13 passed?[0m)
-8m10,319s
+6m43,820s
 
 
 java.lang.AssertionError: 
-Expected: <5832498>
-     but: was <5832495>
+Expected: <[Escritorio Axis Wengue Marfil, Escritorio Connie, Blanco, Diseño Moderno Con Dos Entrepaños, Escritorio Gamer Max Ancho: 150 cm Alto: 88 Profundidad: 52 Color: Wengue Neo, Escritorio en madera Lannister Escritorio Lannister Ancho: 110 Cm Alto: 85 Cm Profundo: 48 Cm Color: Duna, Escritorio ¡Wow! Rovere Blanco]>
+     but: was <[Escritorio Axis Wengue Marfil, Escritorio Connie, Blanco, Diseño Moderno Con Dos Entrepaños, Escritorio Gamer Max, Escritorio en madera Lannister, Escritorio ¡Wow! Rovere Blanco]>
 	at net.serenitybdd.screenplay.ErrorTally.throwSummaryExceptionFrom(ErrorTally.java:36)
 	at net.serenitybdd.screenplay.ErrorTally.reportAnyErrors(ErrorTally.java:30)
 	at net.serenitybdd.screenplay.Actor.should(Actor.java:316)
-	at com.choucair.stepdefinitions.CompraProductosStepDefinition.visualizoTodaLaInformacionDeLaCompra(CompraProductosStepDefinition.java:105)
+	at com.choucair.stepdefinitions.CompraProductosStepDefinition.visualizoTodaLaInformacionDeLaCompra(CompraProductosStepDefinition.java:98)
 	at ?.visualiza toda la informacion de la compra(file:///C:/Users/Rasta/Desktop/Prueba%20Choucair/RetoTecnico/src/test/resources/features/compraExito.feature:11)
 
 java.lang.AssertionError: 
-Expected: <17626682>
-     but: was <17626683>
+Expected: <11387490>
+     but: was <11387489>
 	at net.serenitybdd.screenplay.ErrorTally.throwSummaryExceptionFrom(ErrorTally.java:36)
 	at net.serenitybdd.screenplay.ErrorTally.reportAnyErrors(ErrorTally.java:30)
 	at net.serenitybdd.screenplay.Actor.should(Actor.java:316)
-	at com.choucair.stepdefinitions.CompraProductosStepDefinition.visualizoTodaLaInformacionDeLaCompra(CompraProductosStepDefinition.java:105)
+	at com.choucair.stepdefinitions.CompraProductosStepDefinition.visualizoTodaLaInformacionDeLaCompra(CompraProductosStepDefinition.java:98)
 	at ?.visualiza toda la informacion de la compra(file:///C:/Users/Rasta/Desktop/Prueba%20Choucair/RetoTecnico/src/test/resources/features/compraExito.feature:11)
 
 

@@ -6,7 +6,6 @@ import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.actions.Scroll;
 import net.serenitybdd.screenplay.targets.Target;
-import net.serenitybdd.screenplay.waits.Wait;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 import org.openqa.selenium.By;
 
@@ -16,7 +15,6 @@ import java.util.List;
 import static com.choucair.ui.PaginaCarrito.*;
 import static com.choucair.util.ObtenerNumero.obtenerEnteros;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isClickable;
-import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 
 
 public class Carrito implements Task {
@@ -25,7 +23,7 @@ public class Carrito implements Task {
     public static List<Integer> cantidadesCarrito = new ArrayList<>();
     public static String correo;
     public static int totalCompraCarrito;
-
+    String cantidadAux;
     @Override
     public <T extends Actor> void performAs(T actor) {
         totalCompraCarrito=0;
@@ -44,17 +42,13 @@ public class Carrito implements Task {
             }
             nombresCarrito.add(Target.the("Obtiene el nombre de los productos del carrito").
                     located(By.xpath(String.format(NOMBRE_CARRITO,String.valueOf(i)))).resolveFor(actor).getText());
-            String cantidadAux=(Target.the("").
-                    located(By.xpath("(//*[@class='exito-checkout-io-0-x-itemCartContent'])["+i+"]/descendant::div[13]")).resolveFor(actor).getText());
+            cantidadAux=(Target.the("Obtiene las cantidades de los productos en el carrito").
+                    located(By.xpath(String.format(CANTIDADES_CARRITO,i))).resolveFor(actor).getText());
             cantidadesCarrito.add(obtenerEnteros(cantidadAux));
             preciosCarrito.add(obtenerEnteros(Target.the("").
-                    located(By.xpath("(//*[@class='exito-checkout-io-0-x-itemCartContent'])["+i+"]/descendant::div[8]")).resolveFor(actor).getText()));
+                    located(By.xpath(String.format(PRECIOS_CARRITO,i))).resolveFor(actor).getText()));
         }
         totalCompraCarrito=obtenerEnteros(TOTAL_COMPRA.resolveFor(actor).getText());
-        System.out.println(nombresCarrito);
-        System.out.println(cantidadesCarrito);
-        System.out.println(preciosCarrito);
-        System.out.println(totalCompraCarrito);
     }
 
     public static Carrito carrito(){

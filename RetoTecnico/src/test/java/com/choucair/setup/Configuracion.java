@@ -6,7 +6,6 @@ import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 import net.thucydides.core.annotations.Managed;
 import org.apache.log4j.PropertyConfigurator;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -20,7 +19,6 @@ import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 public class Configuracion {
     private static final String SWITCHES = "--remote-allow-origins=*";
     private static final String ACTOR = "Estiven";
-    private static final int DIEZ_SEGUNDOS = 10;
 
     @Managed()
     protected WebDriver webDriver;

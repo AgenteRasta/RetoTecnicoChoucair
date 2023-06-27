@@ -31,25 +31,20 @@ public class AgregarProductos implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         if(CERRAR_REGISTRO.resolveFor(actor).isVisible()){
-            System.out.println("ES VISIBLE FUNCIONA");
             actor.attemptsTo(
                     Click.on(CERRAR_REGISTRO)
             );
         }
         productos=generateRandomNumbers(16);
         cantidades=generateRandomNumbersR(9);
-        System.out.println(productos);
-        System.out.println(cantidades);
         for(int i=0;i<5;i++){
             unidadesA=0;
             actor.attemptsTo(
                     Scroll.to(INICIO),
                     WaitUntil.the(INICIO, isVisible()).forNoMoreThan(10).seconds(),
                     WaitUntil.the(ESPERA_SCROLL, isVisible()).forNoMoreThan(10).seconds(),
-                    Scroll.to(By.xpath("//body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/" +
-                            "div["+productos.get(i)+"]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]")),
-                    Click.on(By.xpath("//body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/" +
-                            "div["+productos.get(i)+"]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]")),
+                    Scroll.to(By.xpath(String.format(BUSCAR_PRODUCTO,productos.get(i)))),
+                    Click.on(By.xpath(String.format(CLICK_PRODUCTO,productos.get(i)))),
                     Click.on(AGREGAR_PRODUCTO)
             );
             nombres.add(NOMBRE_PRODUCTO.resolveFor(actor).getText());
@@ -62,8 +57,6 @@ public class AgregarProductos implements Task {
                     int pUni=obtenerEnteros(UNIDADES_COMPRA.resolveFor(actor).getText());
                     unidadesA=unidadesA+1;
                     pUni=(pUni/100);
-                    System.out.println("UA:"+unidadesA);
-                    System.out.println("UP:"+pUni);
                     if(pUni==unidadesA){
                         cantidades.set(i,pUni-1);
                         break;
@@ -72,8 +65,7 @@ public class AgregarProductos implements Task {
                     actor.attemptsTo(
                             Click.on(CONTINUAR_COMPRA),
                             WaitUntil.the(CONTINUAR_COMPRA, isNotVisible()).forNoMoreThan(10).seconds(),
-                            Click.on(By.xpath("//body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[9]/section[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/" +
-                                    "div["+productos.get(i)+"]/section[1]/a[1]/article[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]"))
+                            Click.on(By.xpath(String.format(CLICK_PRODUCTO,productos.get(i))))
                     );
                 }
             }
@@ -85,10 +77,6 @@ public class AgregarProductos implements Task {
                     WaitUntil.the(ADD_PRODUCTO, isNotVisible()).forNoMoreThan(10).seconds()
             );
         }
-        System.out.println(cantidades);
-        System.out.println(nombres);
-        System.out.println(precios);
-        System.out.println(totalCompra);
 
     }
 
