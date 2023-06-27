@@ -24,7 +24,7 @@ public class Registro {
             .located(By.id("com.exito.appcompania:id/filled_exposed_dropdown_anio_registro"));
 
     public static final Target CAMPO_MES=Target.the("Campo para escribir el mes")
-            .located(By.id("com.exito.appcompania:id/filled_exposed_dropdown_anio_registro"));
+            .located(By.id("com.exito.appcompania:id/filled_exposed_dropdown_mes_registro"));
 
     public static final Target CAMPO_DIA=Target.the("Campo para escribir el dia")
             .located(By.id("com.exito.appcompania:id/filled_exposed_dropdown_dia_registro"));

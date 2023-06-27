@@ -1,41 +1,14 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="3" failures="0" name="Comprar varios productos" skipped="0" tests="3" time="45.01" timestamp="2023-06-26 11:09:29"><testcase name="compra de varios productos"><error message="no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#undefined\-nivel2\-Dormitorio&quot;}&#10;  (Session info: headless chrome=114.0.5735.199)&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.4.0', revision: 'e5c75ed026a'&#10;System info: host: 'DESKTOP-1MH7BUO', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.18'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [64c50f0ecff6a25f1fefd37d268a9eee, findElement {using=id, value=undefined-nivel2-Dormitorio}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\Rasta\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:52700}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52700/devtoo..., se:cdpVersion: 114.0.5735.199, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 64c50f0ecff6a25f1fefd37d268a9eee" type="org.openqa.selenium.NoSuchElementException">no such element: Unable to locate element: {"method":"css selector","selector":"#undefined\-nivel2\-Dormitorio"}
-  (Session info: headless chrome=114.0.5735.199)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.4.0', revision: 'e5c75ed026a'
-System info: host: 'DESKTOP-1MH7BUO', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.18'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [64c50f0ecff6a25f1fefd37d268a9eee, findElement {using=id, value=undefined-nivel2-Dormitorio}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\Rasta\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:52700}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52700/devtoo..., se:cdpVersion: 114.0.5735.199, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 64c50f0ecff6a25f1fefd37d268a9eee</error><system-err>no such element: Unable to locate element: {"method":"css selector","selector":"#undefined\-nivel2\-Dormitorio"}
-  (Session info: headless chrome=114.0.5735.199)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.4.0', revision: 'e5c75ed026a'
-System info: host: 'DESKTOP-1MH7BUO', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.18'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [64c50f0ecff6a25f1fefd37d268a9eee, findElement {using=id, value=undefined-nivel2-Dormitorio}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\Rasta\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:52700}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52700/devtoo..., se:cdpVersion: 114.0.5735.199, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 64c50f0ecff6a25f1fefd37d268a9eee&#13;
-com.choucair.tasks.NavegarMenu.performAs(NavegarMenu.java:18)&#13;
-com.choucair.stepdefinitions.CompraProductosStepDefinition.seleccionaUnaYUna(CompraProductosStepDefinition.java:58)&#13;
-io.cucumber.java.Invoker.doInvoke(Invoker.java:66)&#13;
-io.cucumber.java.Invoker.invoke(Invoker.java:24)&#13;
-io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)&#13;
-io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)&#13;
-io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)&#13;
-io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)&#13;
-io.cucumber.core.runner.TestStep.executeStep(TestStep.java:85)&#13;
-io.cucumber.core.runner.TestStep.run(TestStep.java:57)&#13;
-io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)&#13;
-io.cucumber.core.runner.TestCase.run(TestCase.java:84)&#13;
-io.cucumber.core.runner.Runner.runPickle(Runner.java:75)&#13;
-io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:129)&#13;
-io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)&#13;
-io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:129)&#13;
-io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)&#13;
-io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)&#13;
-io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)&#13;
-io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:259)&#13;
-io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:59)&#13;
-worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)&#13;
-worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)&#13;
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="1" failures="1" name="Comprar varios productos" skipped="0" tests="3" time="336.38" timestamp="2023-06-27 12:15:04"><testcase name="compra de varios productos"><error message="&#13;&#10;Expected: &lt;3937963&gt;&#13;&#10;     but: was &lt;3937962&gt;&#13;&#10;&#13;&#10;Expected: &lt;[ESCRITORIO DUBLIN (DUNA) RTA ELD 4865, ESCRITORIO ES9903 MIELBLANCO INVAL ES9903, Escritorio Dublin (Coñac) RTA ELC 4866, Escritorio Lisboa Arena FINLANDEK 5219T, Escritorio en madera Lannister Escritorio Lannister Ancho: 110 Cm Alto: 85 Cm Profundo: 48 Cm Color: Duna]&gt;&#13;&#10;     but: was &lt;[ESCRITORIO DUBLIN (DUNA) RTA ELD 4865, ESCRITORIO ES9903 MIELBLANCO INVAL ES9903, Escritorio Dublin (Coñac) RTA ELC 4866, Escritorio Lisboa Arena FINLANDEK 5219T, Escritorio en madera Lannister]&gt;" type="java.lang.AssertionError">&#13;
+Expected: &lt;3937963&gt;&#13;
+     but: was &lt;3937962&gt;&#13;
+&#13;
+Expected: &lt;[ESCRITORIO DUBLIN (DUNA) RTA ELD 4865, ESCRITORIO ES9903 MIELBLANCO INVAL ES9903, Escritorio Dublin (Coñac) RTA ELC 4866, Escritorio Lisboa Arena FINLANDEK 5219T, Escritorio en madera Lannister Escritorio Lannister Ancho: 110 Cm Alto: 85 Cm Profundo: 48 Cm Color: Duna]&gt;&#13;
+     but: was &lt;[ESCRITORIO DUBLIN (DUNA) RTA ELD 4865, ESCRITORIO ES9903 MIELBLANCO INVAL ES9903, Escritorio Dublin (Coñac) RTA ELC 4866, Escritorio Lisboa Arena FINLANDEK 5219T, Escritorio en madera Lannister]&gt;</error><system-err>&#13;
+Expected: &lt;3937963&gt;&#13;
+     but: was &lt;3937962&gt;&#13;
+&#13;
+Expected: &lt;[ESCRITORIO DUBLIN (DUNA) RTA ELD 4865, ESCRITORIO ES9903 MIELBLANCO INVAL ES9903, Escritorio Dublin (Coñac) RTA ELC 4866, Escritorio Lisboa Arena FINLANDEK 5219T, Escritorio en madera Lannister Escritorio Lannister Ancho: 110 Cm Alto: 85 Cm Profundo: 48 Cm Color: Duna]&gt;&#13;
+     but: was &lt;[ESCRITORIO DUBLIN (DUNA) RTA ELD 4865, ESCRITORIO ES9903 MIELBLANCO INVAL ES9903, Escritorio Dublin (Coñac) RTA ELC 4866, Escritorio Lisboa Arena FINLANDEK 5219T, Escritorio en madera Lannister]&gt;&#13;
+com.choucair.stepdefinitions.CompraProductosStepDefinition.visualizoTodaLaInformacionDeLaCompra(CompraProductosStepDefinition.java:109)&#13;
+✽.visualiza toda la informacion de la compra(file:///C:/Users/Rasta/Desktop/Prueba%20Choucair/RetoTecnico/src/test/resources/features/compraExito.feature:11)&#13;
 </system-err></testcase></testsuite>

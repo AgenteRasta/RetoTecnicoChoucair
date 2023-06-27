@@ -1,95 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Comprar varios productos" tests="3" skipped="0" failures="2" errors="0" timestamp="2023-06-27T04:09:29" hostname="DESKTOP-1MH7BUO" time="45.377">
+<testsuite name="Comprar varios productos" tests="3" skipped="0" failures="1" errors="0" timestamp="2023-06-27T05:15:04" hostname="DESKTOP-1MH7BUO" time="336.688">
   <properties/>
-  <testcase name="compra de varios productos #1" classname="Comprar varios productos" time="22.855"/>
-  <testcase name="compra de varios productos #2" classname="Comprar varios productos" time="12.087">
-    <failure message="java.lang.AssertionError: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[@class='exito-checkout-io-0-x-paymentButtonTextBold']&quot;}&#10;  (Session info: headless chrome=114.0.5735.199)&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.4.0', revision: 'e5c75ed026a'&#10;System info: host: 'DESKTOP-1MH7BUO', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.18'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [a442e70b5b51e7e170674830b1dd24a5, findElement {using=xpath, value=//span[@class='exito-checkout-io-0-x-paymentButtonTextBold']}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\Rasta\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:52980}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52980/devtoo..., se:cdpVersion: 114.0.5735.199, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Session ID: a442e70b5b51e7e170674830b1dd24a5" type="java.lang.AssertionError">java.lang.AssertionError: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[@class='exito-checkout-io-0-x-paymentButtonTextBold']&quot;}
-  (Session info: headless chrome=114.0.5735.199)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.4.0', revision: 'e5c75ed026a'
-System info: host: 'DESKTOP-1MH7BUO', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.18'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [a442e70b5b51e7e170674830b1dd24a5, findElement {using=xpath, value=//span[@class='exito-checkout-io-0-x-paymentButtonTextBold']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\Rasta\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:52980}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52980/devtoo..., se:cdpVersion: 114.0.5735.199, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: a442e70b5b51e7e170674830b1dd24a5
+  <testcase name="compra de varios productos #1" classname="Comprar varios productos" time="137.893"/>
+  <testcase name="compra de varios productos #2" classname="Comprar varios productos" time="97.884">
+    <failure message="java.lang.AssertionError: &#13;&#10;Expected: &lt;3937963&gt;&#13;&#10;     but: was &lt;3937962&gt;&#13;&#10;&#13;&#10;Expected: &lt;[ESCRITORIO DUBLIN (DUNA) RTA ELD 4865, ESCRITORIO ES9903 MIELBLANCO INVAL ES9903, Escritorio Dublin (Coñac) RTA ELC 4866, Escritorio Lisboa Arena FINLANDEK 5219T, Escritorio en madera Lannister Escritorio Lannister Ancho: 110 Cm Alto: 85 Cm Profundo: 48 Cm Color: Duna]&gt;&#13;&#10;     but: was &lt;[ESCRITORIO DUBLIN (DUNA) RTA ELD 4865, ESCRITORIO ES9903 MIELBLANCO INVAL ES9903, Escritorio Dublin (Coñac) RTA ELC 4866, Escritorio Lisboa Arena FINLANDEK 5219T, Escritorio en madera Lannister]&gt;" type="java.lang.AssertionError">java.lang.AssertionError: 
+Expected: &lt;3937963&gt;
+     but: was &lt;3937962&gt;
+
+Expected: &lt;[ESCRITORIO DUBLIN (DUNA) RTA ELD 4865, ESCRITORIO ES9903 MIELBLANCO INVAL ES9903, Escritorio Dublin (Coñac) RTA ELC 4866, Escritorio Lisboa Arena FINLANDEK 5219T, Escritorio en madera Lannister Escritorio Lannister Ancho: 110 Cm Alto: 85 Cm Profundo: 48 Cm Color: Duna]&gt;
+     but: was &lt;[ESCRITORIO DUBLIN (DUNA) RTA ELD 4865, ESCRITORIO ES9903 MIELBLANCO INVAL ES9903, Escritorio Dublin (Coñac) RTA ELC 4866, Escritorio Lisboa Arena FINLANDEK 5219T, Escritorio en madera Lannister]&gt;
 	at net.serenitybdd.screenplay.ErrorTally.throwSummaryExceptionFrom(ErrorTally.java:38)
 	at net.serenitybdd.screenplay.ErrorTally.reportAnyErrors(ErrorTally.java:32)
 	at net.serenitybdd.screenplay.Actor.should(Actor.java:353)
-	at com.choucair.stepdefinitions.CompraProductosStepDefinition.visualizoTodaLaInformacionDeLaCompra(CompraProductosStepDefinition.java:105)
+	at com.choucair.stepdefinitions.CompraProductosStepDefinition.visualizoTodaLaInformacionDeLaCompra(CompraProductosStepDefinition.java:109)
 	at ✽.visualiza toda la informacion de la compra(file:///C:/Users/Rasta/Desktop/Prueba%20Choucair/RetoTecnico/src/test/resources/features/compraExito.feature:11)
 </failure>
   </testcase>
-  <testcase name="compra de varios productos #3" classname="Comprar varios productos" time="10.435">
-    <failure message="java.lang.AssertionError: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[@class='exito-checkout-io-0-x-paymentButtonTextBold']&quot;}&#10;  (Session info: headless chrome=114.0.5735.199)&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.4.0', revision: 'e5c75ed026a'&#10;System info: host: 'DESKTOP-1MH7BUO', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.18'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [a442e70b5b51e7e170674830b1dd24a5, findElement {using=xpath, value=//span[@class='exito-checkout-io-0-x-paymentButtonTextBold']}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\Rasta\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:52980}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52980/devtoo..., se:cdpVersion: 114.0.5735.199, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Session ID: a442e70b5b51e7e170674830b1dd24a5" type="java.lang.AssertionError">java.lang.AssertionError: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[@class='exito-checkout-io-0-x-paymentButtonTextBold']&quot;}
-  (Session info: headless chrome=114.0.5735.199)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.4.0', revision: 'e5c75ed026a'
-System info: host: 'DESKTOP-1MH7BUO', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.18'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [a442e70b5b51e7e170674830b1dd24a5, findElement {using=xpath, value=//span[@class='exito-checkout-io-0-x-paymentButtonTextBold']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\Rasta\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:52980}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52980/devtoo..., se:cdpVersion: 114.0.5735.199, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: a442e70b5b51e7e170674830b1dd24a5
-	at net.serenitybdd.screenplay.ErrorTally.throwSummaryExceptionFrom(ErrorTally.java:38)
-	at net.serenitybdd.screenplay.ErrorTally.reportAnyErrors(ErrorTally.java:32)
-	at net.serenitybdd.screenplay.Actor.should(Actor.java:353)
-	at com.choucair.stepdefinitions.CompraProductosStepDefinition.visualizoTodaLaInformacionDeLaCompra(CompraProductosStepDefinition.java:105)
-	at ✽.visualiza toda la informacion de la compra(file:///C:/Users/Rasta/Desktop/Prueba%20Choucair/RetoTecnico/src/test/resources/features/compraExito.feature:11)
-</failure>
-  </testcase>
+  <testcase name="compra de varios productos #3" classname="Comprar varios productos" time="100.911"/>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[Starting ChromeDriver 114.0.5735.90 (386bc09e8f4f2e025eddae123f36f6263096ae49-refs/branch-heads/5735@{#1052}) on port 61046
+  <system-err><![CDATA[Starting ChromeDriver 114.0.5735.90 (386bc09e8f4f2e025eddae123f36f6263096ae49-refs/branch-heads/5735@{#1052}) on port 65094
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-jun. 26, 2023 11:09:33 P. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+jun. 27, 2023 12:15:10 A. M. org.openqa.selenium.remote.ProtocolHandshake createSession
 INFORMACIÓN: Detected upstream dialect: W3C
-jun. 26, 2023 11:09:33 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+jun. 27, 2023 12:15:10 A. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 ADVERTENCIA: Unable to find an exact match for CDP version 114, so returning the closest version found: a no-op implementation
-jun. 26, 2023 11:09:33 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+jun. 27, 2023 12:15:10 A. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 INFORMACIÓN: Unable to find CDP implementation matching 114.
-jun. 26, 2023 11:09:33 P. M. org.openqa.selenium.chromium.ChromiumDriver lambda$new$3
+jun. 27, 2023 12:15:10 A. M. org.openqa.selenium.chromium.ChromiumDriver lambda$new$3
 ADVERTENCIA: Unable to find version of CDP to use for . You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.4.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
-jun. 26, 2023 11:09:51 P. M. com.choucair.stepdefinitions.CompraProductosStepDefinition seleccionaUnaYUna
-ADVERTENCIA: no such element: Unable to locate element: {"method":"css selector","selector":"#undefined\-nivel2\-Dormitorio"}
-  (Session info: headless chrome=114.0.5735.199)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.4.0', revision: 'e5c75ed026a'
-System info: host: 'DESKTOP-1MH7BUO', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.18'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [64c50f0ecff6a25f1fefd37d268a9eee, findElement {using=id, value=undefined-nivel2-Dormitorio}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\Rasta\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:52700}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52700/devtoo..., se:cdpVersion: 114.0.5735.199, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 64c50f0ecff6a25f1fefd37d268a9eee
-jun. 26, 2023 11:09:52 P. M. com.choucair.stepdefinitions.CompraProductosStepDefinition aniadeCincoProductosAlCarritoConSusRespectivasCantidades
-ADVERTENCIA: no such element: Unable to locate element: {"method":"css selector","selector":"#undefined\-nivel2\-Dormitorio"}
-  (Session info: headless chrome=114.0.5735.199)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.4.0', revision: 'e5c75ed026a'
-System info: host: 'DESKTOP-1MH7BUO', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.18'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [64c50f0ecff6a25f1fefd37d268a9eee, findElement {using=id, value=undefined-nivel2-Dormitorio}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\Rasta\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:52700}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52700/devtoo..., se:cdpVersion: 114.0.5735.199, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 64c50f0ecff6a25f1fefd37d268a9eee
-jun. 26, 2023 11:09:52 P. M. com.choucair.stepdefinitions.CompraProductosStepDefinition entroAlCarritoDeComprasYRegistroUn
-ADVERTENCIA: no such element: Unable to locate element: {"method":"css selector","selector":"#undefined\-nivel2\-Dormitorio"}
-  (Session info: headless chrome=114.0.5735.199)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.4.0', revision: 'e5c75ed026a'
-System info: host: 'DESKTOP-1MH7BUO', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.18'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [64c50f0ecff6a25f1fefd37d268a9eee, findElement {using=id, value=undefined-nivel2-Dormitorio}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\Rasta\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:52700}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52700/devtoo..., se:cdpVersion: 114.0.5735.199, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 64c50f0ecff6a25f1fefd37d268a9eee
-Starting ChromeDriver 114.0.5735.90 (386bc09e8f4f2e025eddae123f36f6263096ae49-refs/branch-heads/5735@{#1052}) on port 58071
+jun. 27, 2023 12:15:17 A. M. com.choucair.stepdefinitions.CompraProductosStepDefinition queElUsuarioEstaEnLaPaginaDelExito
+INFORMACIÓN: Inician la automatizacion
+jun. 27, 2023 12:15:24 A. M. com.choucair.stepdefinitions.CompraProductosStepDefinition aniadeCincoProductosAlCarritoConSusRespectivasCantidades
+INFORMACIÓN: Compra de productos
+jun. 27, 2023 12:17:17 A. M. com.choucair.stepdefinitions.CompraProductosStepDefinition entroAlCarritoDeComprasYRegistroUn
+INFORMACIÓN: Obtener datos carrito de compras
+jun. 27, 2023 12:17:21 A. M. com.choucair.stepdefinitions.CompraProductosStepDefinition visualizoTodaLaInformacionDeLaCompra
+INFORMACIÓN: Inician los asserts
+Starting ChromeDriver 114.0.5735.90 (386bc09e8f4f2e025eddae123f36f6263096ae49-refs/branch-heads/5735@{#1052}) on port 60655
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-jun. 26, 2023 11:09:52 P. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+jun. 27, 2023 12:17:23 A. M. org.openqa.selenium.remote.ProtocolHandshake createSession
 INFORMACIÓN: Detected upstream dialect: W3C
-jun. 26, 2023 11:09:52 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+jun. 27, 2023 12:17:23 A. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 ADVERTENCIA: Unable to find an exact match for CDP version 114, so returning the closest version found: a no-op implementation
-jun. 26, 2023 11:09:52 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+jun. 27, 2023 12:17:23 A. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 INFORMACIÓN: Unable to find CDP implementation matching 114.
-jun. 26, 2023 11:09:52 P. M. org.openqa.selenium.chromium.ChromiumDriver lambda$new$3
+jun. 27, 2023 12:17:23 A. M. org.openqa.selenium.chromium.ChromiumDriver lambda$new$3
 ADVERTENCIA: Unable to find version of CDP to use for . You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.4.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+jun. 27, 2023 12:17:23 A. M. com.choucair.stepdefinitions.CompraProductosStepDefinition queElUsuarioEstaEnLaPaginaDelExito
+INFORMACIÓN: Inician la automatizacion
+jun. 27, 2023 12:17:28 A. M. com.choucair.stepdefinitions.CompraProductosStepDefinition aniadeCincoProductosAlCarritoConSusRespectivasCantidades
+INFORMACIÓN: Compra de productos
+jun. 27, 2023 12:18:54 A. M. com.choucair.stepdefinitions.CompraProductosStepDefinition entroAlCarritoDeComprasYRegistroUn
+INFORMACIÓN: Obtener datos carrito de compras
+jun. 27, 2023 12:18:58 A. M. com.choucair.stepdefinitions.CompraProductosStepDefinition visualizoTodaLaInformacionDeLaCompra
+INFORMACIÓN: Inician los asserts
+jun. 27, 2023 12:19:00 A. M. com.choucair.stepdefinitions.CompraProductosStepDefinition queElUsuarioEstaEnLaPaginaDelExito
+INFORMACIÓN: Inician la automatizacion
+jun. 27, 2023 12:19:04 A. M. com.choucair.stepdefinitions.CompraProductosStepDefinition aniadeCincoProductosAlCarritoConSusRespectivasCantidades
+INFORMACIÓN: Compra de productos
+jun. 27, 2023 12:20:35 A. M. com.choucair.stepdefinitions.CompraProductosStepDefinition entroAlCarritoDeComprasYRegistroUn
+INFORMACIÓN: Obtener datos carrito de compras
+jun. 27, 2023 12:20:40 A. M. com.choucair.stepdefinitions.CompraProductosStepDefinition entroAlCarritoDeComprasYRegistroUn
+ADVERTENCIA: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@placeholder='correo@email.com']"}
+  (Session info: chrome=114.0.5735.199)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.4.0', revision: 'e5c75ed026a'
+System info: host: 'DESKTOP-1MH7BUO', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.18'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ac2ddabbc9c74ab3957a09f9d7c98609, findElement {using=xpath, value=//input[@placeholder='correo@email.com']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\Rasta\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:60961}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:60961/devtoo..., se:cdpVersion: 114.0.5735.199, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ac2ddabbc9c74ab3957a09f9d7c98609
+jun. 27, 2023 12:20:41 A. M. com.choucair.stepdefinitions.CompraProductosStepDefinition visualizoTodaLaInformacionDeLaCompra
+INFORMACIÓN: Inician los asserts
 ]]></system-err>
 </testsuite>

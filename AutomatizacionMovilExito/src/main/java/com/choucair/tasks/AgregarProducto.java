@@ -17,7 +17,7 @@ public class AgregarProducto implements Task {
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
                 Click.on(ACEPTAR_PERMISOS),
-                Click.on(CERRAR_VENTANA),
+                //Click.on(CERRAR_VENTANA),
                 Click.on(CELU_MANIA),
                 Click.on(ENVIO_DOMICILIO),
                 Click.on(BOTON_CONTINUAR),

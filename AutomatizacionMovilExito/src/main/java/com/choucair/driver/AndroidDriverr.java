@@ -26,6 +26,8 @@ public class AndroidDriverr {
 
             caps.setCapability("app", "bs://210348e93c56c7d1203603cf8e0d717b698f6d61");
 
+
+
             // Specify device and os_version for testing
             caps.setCapability("device", "Xiaomi Redmi Note 11");
             caps.setCapability("os_version", "11.0");
