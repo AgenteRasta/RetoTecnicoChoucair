@@ -148,7 +148,7 @@
             $("#requirements-tabs").tabs();
             $("#test-tabs").tabs();
 
-            var requirementsTree = [{"text":"Comprar varios productos","type":"feature","href":"2050b1aa9d97e670c02640971f22c16bc4527855395605d23ccb457fb5346e25.html","nodes":[],"selectable":false,"tags":["","\u003cspan class\u003d\u0027feature-count\u0027\u003e1 scenario\u003c/span\u003e"]}];
+            var requirementsTree = [{"text":"Comprar varios productos","type":"feature","href":"2050b1aa9d97e670c02640971f22c16bc4527855395605d23ccb457fb5346e25.html","nodes":[],"selectable":false,"tags":["",""]}];
 
             $('#tree').treeview({
                 data: requirementsTree,
@@ -217,7 +217,7 @@
             <a href="#"><i class="fa fa-comments-o"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 26-06-2023 19:09</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated </span>
     <br style="clear:left"/>
 </div>
 
@@ -275,76 +275,11 @@ para comprar varios productos y cantidades
 
                                             <div id="toc">
                                                 <table class="table" id="toc-table">
-                                                        <tr>
-                                                            <td style="width:95%;" class="toc-title">
-                                                                <a href="#1fcf1c330640f5d49f8fddf877dd575d592390541a9508cb5caae84a6d8c3014" title="View scenario details" >Compra de varios productos</a>
-                                                                     (3 examples)
-
-                                                            </td>
-                                                            <td style="width:5%;">
-                                                                <table>
-                                                                    <tr>
-                                                                        <td>
-                                                                            <a style="margin-left:0.5em;padding-right: 1.5em;"
-                                                                               href="1b72342d6cf80183119b2e4c7349b8576c8ed60ffd345bfa56daaccce8e19596.html"
-                                                                               title="View test results">
-                                                                            <a href='##beforetable'><i class='fa fa-times-circle failure-icon ' title='FAILURE'></i></a>
-                                                                            </a>
-
-                                                                        
-                                                                        </td>
-                                                                        <td>
-                                                                            <a style="margin-left:0.5em;padding-right: 1.5em;"
-                                                                               href="1b72342d6cf80183119b2e4c7349b8576c8ed60ffd345bfa56daaccce8e19596.html"
-                                                                               title="View test results">
-                                                                                <i class="fas fa-search-plus"></i>
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
                                                 </table>
 
                                             </div>
 
                                             <h3>Scenario details</h3>
-
-                                                <div class="scenario-docs card" id="1fcf1c330640f5d49f8fddf877dd575d592390541a9508cb5caae84a6d8c3014">
-                                                    <div class="scenario-docs card-header failure" style="min-height:1.5em;">
-                                                        <div>
-                                                            <span class="scenario-heading">
-                                                                <a href="1b72342d6cf80183119b2e4c7349b8576c8ed60ffd345bfa56daaccce8e19596.html" title="View test results">compra de varios productos</a>
-                                                            </span>
-                                                            <span class="scenario-result-icon">
-                                                                
-
-                                                                    <a href='##beforetable'><i class='fa fa-times-circle failure-icon ' title='FAILURE'></i></a>
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="scenario-docs card-body">
-                                                            <p>Given que el usuario esta en la pagina del exito</p>
-                                                            <p>When selecciona una {categoria} y una {subcategoria}</p>
-                                                            <p>And aniade cinco productos al carrito con sus respectivas cantidades</p>
-                                                            <p>And entra al carrito de compras y registra un {correo}</p>
-                                                            <p>Then visualiza toda la informacion de la compra</p>
-                                                        <div class="examples">
-                                                            <p><p>Examples:</p>
-<div class='example-table-in-scenario'><table>
-<thead>
-<tr><th>categoria</th><th>subcategoria</th><th>correo</th><th></th></tr>
-</thead>
-<tbody>
-<tr><td>&quot;Dormitorio&quot;</td><td>&quot;Cabeceros&quot;</td><td>&quot;prueba@gmail.com&quot;</td><td> </td></tr>
-<tr><td>&quot;Hogar y muebles&quot;</td><td>&quot;Escritorios&quot;</td><td>&quot;prueba@gmail.com&quot;</td><td> </td></tr>
-<tr><td>&quot;Dormitorio&quot;</td><td>&quot;Colchones sencillos&quot;</td><td>&quot;prueba@gmail.com&quot;</td><td> </td></tr>
-</tbody>
-</table></div>
-</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
                                         </div>
                                     </div>
                                 </div>
@@ -353,41 +288,7 @@ para comprar varios productos y cantidades
                             <div id="results" class="tab-pane fade">
                                 <div class="container-fluid">
                                     <div class="row">
-                                        <div class="col-sm-4">
-
-                                            <div style="width:300px;" class="chart-container automated-and-manual-results">
-                                                <div class="ct-chart ct-square"></div>
-                                            </div>
-                                            <script>
-
-                                                var labels = ['33%', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '67%', ' ', ' ', ' ', ' ', ' '];
-                                                // Our series array that contains series objects or in this case series data arrays
-
-                                                var series = [{meta: 'Passing tests (automated)', value: 1}, {meta: 'Passing tests (manual)', value: 0}, {meta: 'Pending tests (automated)', value: 0}, {meta: 'Pending tests (manual)', value: 0}, {meta: 'Ignored tests (automated)', value: 0}, {meta: 'Ignored tests (manual)', value: 0}, {meta: 'Skipped tests (automated)', value: 0}, {meta: 'Skipped tests (manual)', value: 0}, {meta: 'Failing tests (automated)', value: 2}, {meta: 'Failing tests (manual)', value: 0}, {meta: 'Broken tests (automated)', value: 0}, {meta: 'Broken tests (manual)', value: 0}, {meta: 'Compromised tests (automated)', value: 0}, {meta: 'Compromised tests (manual)', value: 0}];
-
-                                                // As options we currently only set a static size of 300x200 px. We can also omit this and use aspect ratio containers
-                                                // as you saw in the previous example
-                                                var options = {
-                                                    width: 350,
-                                                    height: 300
-                                                };
-
-                                                $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-                                                    new Chartist.Pie('.ct-chart', {
-                                                        series: series,
-                                                        labels: labels,
-                                                    }, {
-                                                        donut: true,
-                                                        donutWidth: 60,
-                                                        donutSolid: true,
-                                                        startAngle: 270,
-                                                        showLabel: true
-                                                    }, options);
-                                                });
-
-                                            </script>
-                                        </div>
-                                        <div class="col-sm-8">
+                                        <div class="col-sm-12">
 
                                         <table class="table">
                                             <thead>
@@ -400,12 +301,11 @@ para comprar varios productos y cantidades
                                             </thead>
                                             <tbody>
                                             <tr>
-                                                                    <td class="aggregate-result-count">
-                                                                        <a href="f328160106be7d931a6b7a351c3aaf90cbd6a28bfcca6ab06447ad635d24dd36.html"><i
-                                                                                class='fa fa-check-circle-o success-icon'></i>&nbsp;Passing</a>
+                                                                    <td class="aggregate-result-count"><i
+                                                                            class='fa fa-check-circle-o success-icon'></i>&nbsp;Passing
                                                                     </td>
-                                                <td class="automated-stats">1</td>
-                                                <td class="automated-stats">33%</td>
+                                                <td class="automated-stats">0</td>
+                                                <td class="automated-stats"> </td>
                                             </tr>
                                             <tr>
                                                                     <td class="aggregate-result-count"><i
@@ -429,19 +329,19 @@ para comprar varios productos y cantidades
                                                 <td class="automated-stats"> </td>
                                             </tr>
                                             <tr>
-                                                                             <td colspan="3"><a href="764e8a057f88f86843a55a37c2431b84f61571389621990605c91d6cb9a114e4.html"><i
-                                                                                    class='fa fa-times failure-icon'></i>&nbsp;<em>Unsuccessful</em></a>
+                                                                            <td colspan="3"><i
+                                                                                class='fa fa-times failure-icon'></i>&nbsp;<em>Unsuccessful</em></a>
                                                                             </td>
 
                                             </tr>
 
                                             <tr>
-                                                                    <td class="aggregate-result-count indented-error-category">
-                                                                        <a href="51da1d1d7ca6193fb67bea63612c82f0e528ef5980a49125588ca7a094f6e636.html"><i
-                                                                                class='fa fa-times-circle failure-icon'></i>&nbsp;Failed</a>
-                                                                    </td>
-                                                <td class="automated-stats">2</td>
-                                                <td class="automated-stats">67%</td>
+                                                                <td class="aggregate-result-count indented-error-category">
+                                                                    <i
+                                                                            class='fa fa-times-circle failure-icon'></i>&nbsp;Failed
+                                                                </td>
+                                                <td class="automated-stats">0</td>
+                                                <td class="automated-stats"> </td>
                                             <tr>
                                                                 <td class="aggregate-result-count indented-error-category">
                                                                     <i
@@ -459,7 +359,7 @@ para comprar varios productos y cantidades
                                             </tr>
                                             <tr class="summary-stats">
                                                 <td class="aggregate-result-count">Total</td>
-                                                <td class="automated-stats">3</td>
+                                                <td class="automated-stats">0</td>
                                                 <td class="automated-stats"></td>
                                             </tr>
                                             </tbody>
@@ -481,11 +381,11 @@ para comprar varios productos y cantidades
                                                     </thead>
                                                     <tbody>
                                                     <tr>
-                                                        <td> 6m 43s</td>
-                                                        <td>403ms</td>
-                                                        <td> 1m 53s</td>
-                                                        <td> 2m 27s</td>
-                                                        <td> 6m 43s</td>
+                                                        <td>0ms</td>
+                                                        <td>0ms</td>
+                                                        <td>0ms</td>
+                                                        <td>0ms</td>
+                                                        <td>0ms</td>
                                                     </tr>
                                                     </tbody>
                                                 </table>
@@ -497,32 +397,7 @@ para comprar varios productos y cantidades
                                             <div class="col-sm-12">
                                                 <h3><i class="fas fa-cogs"></i> Automated Tests</h3>
 
-                                            <table class="scenario-result-table table" id="scenario-results">
-                                                <thead>
-                                                <tr>
-                                                    <th class="test-name-column">Scenario</th>
-                                                    <th>Steps</th>
-                                                    <th>Start Time</th>
-                                                    <th>Duration</th>
-                                                    <th>Result</th>
-                                                </tr>
-                                                </thead>
-                                                <tbody>
-                                                <tr class="scenario-result FAILURE">
-                                                    <td>
-                                                            <a href="1b72342d6cf80183119b2e4c7349b8576c8ed60ffd345bfa56daaccce8e19596.html">compra de varios productos</a>
-                                                               (3 examples)
-                                                    </td>
-                                                    <td>5</td>
-                                                    <td>19:09:25</td>
-                                                    <td>6m 43s</td>
-                                                    <td>
-                                                            <a href='##beforetable'><i class='fa fa-times-circle failure-icon ' title='FAILURE'></i></a> <span
-                                                                style="display:none">FAILURE</span>
-                                                    </td>
-                                                </tr>
-                                                </tbody>
-                                            </table>
+                                            No automated tests were executed
 
                                             </div>
                                         </div>
