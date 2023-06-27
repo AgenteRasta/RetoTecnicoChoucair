@@ -5,9 +5,12 @@ import com.choucair.tasks.AbrirPaginaInicial;
 import com.choucair.tasks.AgregarProductos;
 import com.choucair.tasks.Carrito;
 import com.choucair.tasks.NavegarMenu;
+import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import net.thucydides.core.annotations.Managed;
+import org.openqa.selenium.WebDriver;
 
 import java.util.Collections;
 import java.util.logging.Logger;
@@ -20,7 +23,13 @@ import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static org.hamcrest.CoreMatchers.equalTo;
 public class CompraProductosStepDefinition extends Configuracion {
+    @Managed(driver = "chrome")
+    public static WebDriver driver;
 
+    @Before
+    public void setUp() {
+        initialSetUpFront();
+    }
     public static java.util.logging.Logger LOGGER = Logger.getLogger(String.valueOf(CompraProductosStepDefinition.class));
     @Given("que el usuario esta en la pagina del exito")
     public void queElUsuarioEstaEnLaPaginaDelExito() {
@@ -31,8 +40,6 @@ public class CompraProductosStepDefinition extends Configuracion {
         Carrito.cantidadesCarrito.clear();
         Carrito.preciosCarrito.clear();
         totalCompra=0;
-        configurarNavegador();
-
         try {
             theActorInTheSpotlight().wasAbleTo(
                     new AbrirPaginaInicial()
