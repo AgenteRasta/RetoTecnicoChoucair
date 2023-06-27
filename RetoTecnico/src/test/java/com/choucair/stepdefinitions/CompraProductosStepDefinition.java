@@ -41,6 +41,7 @@ public class CompraProductosStepDefinition extends Configuracion {
         Carrito.preciosCarrito.clear();
         totalCompra=0;
         try {
+            LOGGER.info("Inician la automatizacion");
             theActorInTheSpotlight().wasAbleTo(
                     new AbrirPaginaInicial()
             );
@@ -68,6 +69,7 @@ public class CompraProductosStepDefinition extends Configuracion {
     @When("aniade cinco productos al carrito con sus respectivas cantidades")
     public void aniadeCincoProductosAlCarritoConSusRespectivasCantidades() {
         try {
+            LOGGER.info("Compra de productos");
             theActorInTheSpotlight().attemptsTo(
                     agregarProductos()
             );
@@ -82,6 +84,7 @@ public class CompraProductosStepDefinition extends Configuracion {
     public void entroAlCarritoDeComprasYRegistroUn(String correo) {
         Carrito.correo=correo;
         try {
+            LOGGER.info("Obtener datos carrito de compras");
             theActorInTheSpotlight().attemptsTo(
                     carrito()
             );
@@ -95,6 +98,7 @@ public class CompraProductosStepDefinition extends Configuracion {
     @Then("visualiza toda la informacion de la compra")
     public void visualizoTodaLaInformacionDeLaCompra() {
         try {
+            LOGGER.info("Inician los asserts");
             Collections.sort(AgregarProductos.nombres);
             Collections.sort(Carrito.nombresCarrito);
             Collections.sort(AgregarProductos.cantidades);
