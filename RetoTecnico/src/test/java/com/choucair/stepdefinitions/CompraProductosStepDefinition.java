@@ -23,16 +23,10 @@ import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static org.hamcrest.CoreMatchers.equalTo;
 public class CompraProductosStepDefinition extends Configuracion {
-    @Managed(driver = "chrome")
-    public static WebDriver driver;
-
-    @Before
-    public void setUp() {
-        initialSetUpFront();
-    }
     public static java.util.logging.Logger LOGGER = Logger.getLogger(String.valueOf(CompraProductosStepDefinition.class));
     @Given("que el usuario esta en la pagina del exito")
     public void queElUsuarioEstaEnLaPaginaDelExito() {
+        configurarNavegador();
         AgregarProductos.nombres.clear();
         AgregarProductos.cantidades.clear();
         AgregarProductos.precios.clear();

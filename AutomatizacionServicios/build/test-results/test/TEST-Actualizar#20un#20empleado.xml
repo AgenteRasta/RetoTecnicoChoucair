@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Actualizar un empleado" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-06-27T10:14:34" hostname="DESKTOP-1MH7BUO" time="63.487">
+  <properties/>
+  <testcase name="Actualizar empleado" classname="Actualizar un empleado" time="63.487"/>
+  <system-out><![CDATA[Request method:	PUT
+Request URI:	https://dummy.restapiexample.com/api/v1/update/1
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "salary": "123",
+    "age": "23"
+}
+HTTP/1.1 200 OK
+Date: Tue, 27 Jun 2023 10:15:37 GMT
+Server: Apache
+Cache-Control: no-cache, private
+X-RateLimit-Limit: 60
+X-RateLimit-Remaining: 58
+Upgrade: h2,h2c
+Connection: Upgrade
+Cache-Control: max-age=21600
+Expires: Tue, 27 Jun 2023 16:15:37 GMT
+Vary: Accept-Encoding
+Content-Encoding: gzip
+host-header: c2hhcmVkLmJsdWVob3N0LmNvbQ==
+X-Endurance-Cache-Level: 2
+X-nginx-cache: WordPress
+Content-Length: 107
+Content-Type: application/json
+
+{
+    "status": "success",
+    "data": {
+        "salary": "123",
+        "age": "23"
+    },
+    "message": "Successfully! Record has been updated."
+}
+]]></system-out>
+  <system-err><![CDATA[jun. 27, 2023 5:15:34 A. M. com.choucair.stepdefinitions.PutEmpleadoStepDefinition queEstoyApuntandoConUnEndpointALaApiPutDeEmpleadoDeRestApiExample
+INFORMACIÓN: Inicio de la automatizacion
+jun. 27, 2023 5:15:34 A. M. com.choucair.stepdefinitions.PutEmpleadoStepDefinition envioLaPeticionPutConElYLaInformacionDelEmpleadoMedianteSuEnLosDatosDePrueba
+INFORMACIÓN: Se selecciona el json que sera enviado para probar y se envia el recurso de la url
+jun. 27, 2023 5:15:37 A. M. com.choucair.stepdefinitions.PutEmpleadoStepDefinition reciboElDeRespuestaStatuscode
+INFORMACIÓN: Inician los asserts
+jun. 27, 2023 5:15:38 A. M. com.choucair.stepdefinitions.PutEmpleadoStepDefinition unDeConfirmacionJuntoConLaInformacionDelUsuarioActualizado
+INFORMACIÓN: Se revisa la respuesta de los codigos 200
+jun. 27, 2023 5:15:38 A. M. com.choucair.stepdefinitions.PutEmpleadoStepDefinition unDeConfirmacionJuntoConLaInformacionDelUsuarioActualizado
+INFORMACIÓN: FIN DE LA AUTOMATIZACION
+]]></system-err>
+</testsuite>

@@ -24,22 +24,11 @@ public class Configuracion {
     @Managed()
     protected WebDriver webDriver;
 
-/*
+
     private void setupUser( WebDriver webDriver) {
         configurarDriver();
         OnStage.setTheStage(new OnlineCast());
         theActorCalled(ACTOR).can(BrowseTheWeb.with(webDriver));
-        maximizar(webDriver);
-    }*/
-
-    private void setUpStageAndActor() {
-        OnStage.setTheStage(Cast.ofStandardActors());
-        OnStage.theActorCalled("Estiven");
-        OnStage.theActorInTheSpotlight().can(BrowseTheWeb.with(webDriver));
-    }
-
-    protected void initialSetUpFront() {
-        setUpStageAndActor();
         maximizar(webDriver);
     }
 
@@ -59,10 +48,10 @@ public class Configuracion {
         webDriver.quit();
     }
 
-    /*protected void configurarNavegador() {
+    protected void configurarNavegador() {
         setupUser(webDriver);
         setUplog4j();
-    }*/
+    }
 
     private void setUplog4j() {
         PropertyConfigurator.configure(USER_DIR.value() + LOG4J_PROPERTIES_FILE_PATH.getValue());

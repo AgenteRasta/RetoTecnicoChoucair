@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="1" failures="1" name="Comprar varios productos" skipped="0" tests="3" time="336.38" timestamp="2023-06-27 12:15:04"><testcase name="compra de varios productos"><error message="&#13;&#10;Expected: &lt;3937963&gt;&#13;&#10;     but: was &lt;3937962&gt;&#13;&#10;&#13;&#10;Expected: &lt;[ESCRITORIO DUBLIN (DUNA) RTA ELD 4865, ESCRITORIO ES9903 MIELBLANCO INVAL ES9903, Escritorio Dublin (Coñac) RTA ELC 4866, Escritorio Lisboa Arena FINLANDEK 5219T, Escritorio en madera Lannister Escritorio Lannister Ancho: 110 Cm Alto: 85 Cm Profundo: 48 Cm Color: Duna]&gt;&#13;&#10;     but: was &lt;[ESCRITORIO DUBLIN (DUNA) RTA ELD 4865, ESCRITORIO ES9903 MIELBLANCO INVAL ES9903, Escritorio Dublin (Coñac) RTA ELC 4866, Escritorio Lisboa Arena FINLANDEK 5219T, Escritorio en madera Lannister]&gt;" type="java.lang.AssertionError">&#13;
-Expected: &lt;3937963&gt;&#13;
-     but: was &lt;3937962&gt;&#13;
-&#13;
-Expected: &lt;[ESCRITORIO DUBLIN (DUNA) RTA ELD 4865, ESCRITORIO ES9903 MIELBLANCO INVAL ES9903, Escritorio Dublin (Coñac) RTA ELC 4866, Escritorio Lisboa Arena FINLANDEK 5219T, Escritorio en madera Lannister Escritorio Lannister Ancho: 110 Cm Alto: 85 Cm Profundo: 48 Cm Color: Duna]&gt;&#13;
-     but: was &lt;[ESCRITORIO DUBLIN (DUNA) RTA ELD 4865, ESCRITORIO ES9903 MIELBLANCO INVAL ES9903, Escritorio Dublin (Coñac) RTA ELC 4866, Escritorio Lisboa Arena FINLANDEK 5219T, Escritorio en madera Lannister]&gt;</error><system-err>&#13;
-Expected: &lt;3937963&gt;&#13;
-     but: was &lt;3937962&gt;&#13;
-&#13;
-Expected: &lt;[ESCRITORIO DUBLIN (DUNA) RTA ELD 4865, ESCRITORIO ES9903 MIELBLANCO INVAL ES9903, Escritorio Dublin (Coñac) RTA ELC 4866, Escritorio Lisboa Arena FINLANDEK 5219T, Escritorio en madera Lannister Escritorio Lannister Ancho: 110 Cm Alto: 85 Cm Profundo: 48 Cm Color: Duna]&gt;&#13;
-     but: was &lt;[ESCRITORIO DUBLIN (DUNA) RTA ELD 4865, ESCRITORIO ES9903 MIELBLANCO INVAL ES9903, Escritorio Dublin (Coñac) RTA ELC 4866, Escritorio Lisboa Arena FINLANDEK 5219T, Escritorio en madera Lannister]&gt;&#13;
-com.choucair.stepdefinitions.CompraProductosStepDefinition.visualizoTodaLaInformacionDeLaCompra(CompraProductosStepDefinition.java:109)&#13;
-✽.visualiza toda la informacion de la compra(file:///C:/Users/Rasta/Desktop/Prueba%20Choucair/RetoTecnico/src/test/resources/features/compraExito.feature:11)&#13;
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="3" failures="0" name="Comprar varios productos" skipped="0" tests="3" time="3.83" timestamp="2023-06-27 04:04:12"><testcase name="compra de varios productos"><error message="Unable to establish websocket connection to http://localhost:57817/devtools/browser/e3c8a5ac-8721-4fd5-80bb-ce0478524cb5&#10;Build info: version: '4.4.0', revision: 'e5c75ed026a'&#10;System info: host: 'DESKTOP-1MH7BUO', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.18'&#10;Driver info: driver.version: ChromeDriver&#10;Build info: version: '4.4.0', revision: 'e5c75ed026a'&#10;System info: host: 'DESKTOP-1MH7BUO', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.18'&#10;Driver info: driver.version: unknown" type="org.openqa.selenium.remote.http.ConnectionFailedException">Unable to establish websocket connection to http://localhost:57817/devtools/browser/e3c8a5ac-8721-4fd5-80bb-ce0478524cb5
+Build info: version: '4.4.0', revision: 'e5c75ed026a'
+System info: host: 'DESKTOP-1MH7BUO', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.18'
+Driver info: driver.version: ChromeDriver
+Build info: version: '4.4.0', revision: 'e5c75ed026a'
+System info: host: 'DESKTOP-1MH7BUO', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.18'
+Driver info: driver.version: unknown</error><system-err>Unable to establish websocket connection to http://localhost:57817/devtools/browser/e3c8a5ac-8721-4fd5-80bb-ce0478524cb5
+Build info: version: '4.4.0', revision: 'e5c75ed026a'
+System info: host: 'DESKTOP-1MH7BUO', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.18'
+Driver info: driver.version: ChromeDriver
+Build info: version: '4.4.0', revision: 'e5c75ed026a'
+System info: host: 'DESKTOP-1MH7BUO', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.18'
+Driver info: driver.version: unknown&#13;
+com.choucair.setup.Configuracion.configurarDriver(Configuracion.java:51)&#13;
+com.choucair.setup.Configuracion.setUpStageAndActor(Configuracion.java:39)&#13;
+com.choucair.setup.Configuracion.initialSetUpFront(Configuracion.java:43)&#13;
+com.choucair.stepdefinitions.CompraProductosStepDefinition.setUp(CompraProductosStepDefinition.java:31)&#13;
 </system-err></testcase></testsuite>

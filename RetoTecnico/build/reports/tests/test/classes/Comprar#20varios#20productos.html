@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">5m36.69s</div>
+<div class="counter">5m19.49s</div>
 <p>duration</p>
 </div>
 </td>
@@ -73,19 +73,16 @@
 <div id="tab0" class="tab">
 <h2>Failed tests</h2>
 <div class="test">
-<a name="compra de varios productos #2"></a>
-<h3 class="failures">compra de varios productos #2</h3>
+<a name="compra de varios productos"></a>
+<h3 class="failures">compra de varios productos</h3>
 <span class="code">
 <pre>java.lang.AssertionError: 
-Expected: &lt;3937963&gt;
-     but: was &lt;3937962&gt;
-
-Expected: &lt;[ESCRITORIO DUBLIN (DUNA) RTA ELD 4865, ESCRITORIO ES9903 MIELBLANCO INVAL ES9903, Escritorio Dublin (Coñac) RTA ELC 4866, Escritorio Lisboa Arena FINLANDEK 5219T, Escritorio en madera Lannister Escritorio Lannister Ancho: 110 Cm Alto: 85 Cm Profundo: 48 Cm Color: Duna]&gt;
-     but: was &lt;[ESCRITORIO DUBLIN (DUNA) RTA ELD 4865, ESCRITORIO ES9903 MIELBLANCO INVAL ES9903, Escritorio Dublin (Coñac) RTA ELC 4866, Escritorio Lisboa Arena FINLANDEK 5219T, Escritorio en madera Lannister]&gt;
-	at net.serenitybdd.screenplay.ErrorTally.throwSummaryExceptionFrom(ErrorTally.java:38)
-	at net.serenitybdd.screenplay.ErrorTally.reportAnyErrors(ErrorTally.java:32)
-	at net.serenitybdd.screenplay.Actor.should(Actor.java:353)
-	at com.choucair.stepdefinitions.CompraProductosStepDefinition.visualizoTodaLaInformacionDeLaCompra(CompraProductosStepDefinition.java:109)
+Expected: &lt;[ESCRITORIO TABACO INVAL ES11903, Escritorio Gamer Max Ancho: 150 cm Alto: 88 Profundidad: 52 Color: Wengue Neo, Escritorio Lisboa Arena FINLANDEK 5219T, Escritorio Lisboa Tabacochic FINLANDEK 5219T, Escritorio ¡Wow! Rovere Blanco]&gt;
+     but: was &lt;[ESCRITORIO TABACO INVAL ES11903, Escritorio Gamer Max, Escritorio Lisboa Arena FINLANDEK 5219T, Escritorio Lisboa Tabacochic FINLANDEK 5219T, Escritorio ¡Wow! Rovere Blanco]&gt;
+	at net.serenitybdd.screenplay.ErrorTally.throwSummaryExceptionFrom(ErrorTally.java:36)
+	at net.serenitybdd.screenplay.ErrorTally.reportAnyErrors(ErrorTally.java:30)
+	at net.serenitybdd.screenplay.Actor.should(Actor.java:316)
+	at com.choucair.stepdefinitions.CompraProductosStepDefinition.visualizoTodaLaInformacionDeLaCompra(CompraProductosStepDefinition.java:103)
 	at ✽.visualiza toda la informacion de la compra(file:///C:/Users/Rasta/Desktop/Prueba%20Choucair/RetoTecnico/src/test/resources/features/compraExito.feature:11)
 </pre>
 </span>
@@ -102,18 +99,18 @@ Expected: &lt;[ESCRITORIO DUBLIN (DUNA) RTA ELD 4865, ESCRITORIO ES9903 MIELBLAN
 </tr>
 </thead>
 <tr>
-<td class="success">compra de varios productos #1</td>
-<td class="success">2m17.89s</td>
+<td class="success">compra de varios productos</td>
+<td class="success">1m37.37s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="failures">compra de varios productos #2</td>
-<td class="failures">1m37.88s</td>
+<td class="failures">compra de varios productos</td>
+<td class="failures">1m36.60s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
-<td class="success">compra de varios productos #3</td>
-<td class="success">1m40.91s</td>
+<td class="success">compra de varios productos</td>
+<td class="success">2m5.52s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -121,63 +118,71 @@ Expected: &lt;[ESCRITORIO DUBLIN (DUNA) RTA ELD 4865, ESCRITORIO ES9903 MIELBLAN
 <div id="tab2" class="tab">
 <h2>Standard error</h2>
 <span class="code">
-<pre>Starting ChromeDriver 114.0.5735.90 (386bc09e8f4f2e025eddae123f36f6263096ae49-refs/branch-heads/5735@{#1052}) on port 65094
+<pre>Starting ChromeDriver 114.0.5735.90 (386bc09e8f4f2e025eddae123f36f6263096ae49-refs/branch-heads/5735@{#1052}) on port 9400
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-jun. 27, 2023 12:15:10 A. M. org.openqa.selenium.remote.ProtocolHandshake createSession
-INFORMACIÓN: Detected upstream dialect: W3C
-jun. 27, 2023 12:15:10 A. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-ADVERTENCIA: Unable to find an exact match for CDP version 114, so returning the closest version found: a no-op implementation
-jun. 27, 2023 12:15:10 A. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-INFORMACIÓN: Unable to find CDP implementation matching 114.
-jun. 27, 2023 12:15:10 A. M. org.openqa.selenium.chromium.ChromiumDriver lambda$new$3
-ADVERTENCIA: Unable to find version of CDP to use for . You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.4.0` where the version (&quot;v86&quot;) matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
-jun. 27, 2023 12:15:17 A. M. com.choucair.stepdefinitions.CompraProductosStepDefinition queElUsuarioEstaEnLaPaginaDelExito
-INFORMACIÓN: Inician la automatizacion
-jun. 27, 2023 12:15:24 A. M. com.choucair.stepdefinitions.CompraProductosStepDefinition aniadeCincoProductosAlCarritoConSusRespectivasCantidades
-INFORMACIÓN: Compra de productos
-jun. 27, 2023 12:17:17 A. M. com.choucair.stepdefinitions.CompraProductosStepDefinition entroAlCarritoDeComprasYRegistroUn
-INFORMACIÓN: Obtener datos carrito de compras
-jun. 27, 2023 12:17:21 A. M. com.choucair.stepdefinitions.CompraProductosStepDefinition visualizoTodaLaInformacionDeLaCompra
-INFORMACIÓN: Inician los asserts
-Starting ChromeDriver 114.0.5735.90 (386bc09e8f4f2e025eddae123f36f6263096ae49-refs/branch-heads/5735@{#1052}) on port 60655
+jun. 27, 2023 4:31:55 A. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+INFORMACIÓN: Detected dialect: W3C
+jun. 27, 2023 4:31:55 A. M. org.openqa.selenium.remote.DesiredCapabilities chrome
+INFORMACIÓN: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
+Starting ChromeDriver 114.0.5735.90 (386bc09e8f4f2e025eddae123f36f6263096ae49-refs/branch-heads/5735@{#1052}) on port 27826
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-jun. 27, 2023 12:17:23 A. M. org.openqa.selenium.remote.ProtocolHandshake createSession
-INFORMACIÓN: Detected upstream dialect: W3C
-jun. 27, 2023 12:17:23 A. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-ADVERTENCIA: Unable to find an exact match for CDP version 114, so returning the closest version found: a no-op implementation
-jun. 27, 2023 12:17:23 A. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-INFORMACIÓN: Unable to find CDP implementation matching 114.
-jun. 27, 2023 12:17:23 A. M. org.openqa.selenium.chromium.ChromiumDriver lambda$new$3
-ADVERTENCIA: Unable to find version of CDP to use for . You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.4.0` where the version (&quot;v86&quot;) matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
-jun. 27, 2023 12:17:23 A. M. com.choucair.stepdefinitions.CompraProductosStepDefinition queElUsuarioEstaEnLaPaginaDelExito
+jun. 27, 2023 4:31:57 A. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+INFORMACIÓN: Detected dialect: W3C
+jun. 27, 2023 4:31:57 A. M. com.choucair.stepdefinitions.CompraProductosStepDefinition queElUsuarioEstaEnLaPaginaDelExito
 INFORMACIÓN: Inician la automatizacion
-jun. 27, 2023 12:17:28 A. M. com.choucair.stepdefinitions.CompraProductosStepDefinition aniadeCincoProductosAlCarritoConSusRespectivasCantidades
+jun. 27, 2023 4:32:06 A. M. com.choucair.stepdefinitions.CompraProductosStepDefinition aniadeCincoProductosAlCarritoConSusRespectivasCantidades
 INFORMACIÓN: Compra de productos
-jun. 27, 2023 12:18:54 A. M. com.choucair.stepdefinitions.CompraProductosStepDefinition entroAlCarritoDeComprasYRegistroUn
+jun. 27, 2023 4:33:21 A. M. com.choucair.stepdefinitions.CompraProductosStepDefinition entroAlCarritoDeComprasYRegistroUn
 INFORMACIÓN: Obtener datos carrito de compras
-jun. 27, 2023 12:18:58 A. M. com.choucair.stepdefinitions.CompraProductosStepDefinition visualizoTodaLaInformacionDeLaCompra
+jun. 27, 2023 4:33:30 A. M. com.choucair.stepdefinitions.CompraProductosStepDefinition visualizoTodaLaInformacionDeLaCompra
 INFORMACIÓN: Inician los asserts
-jun. 27, 2023 12:19:00 A. M. com.choucair.stepdefinitions.CompraProductosStepDefinition queElUsuarioEstaEnLaPaginaDelExito
+Starting ChromeDriver 114.0.5735.90 (386bc09e8f4f2e025eddae123f36f6263096ae49-refs/branch-heads/5735@{#1052}) on port 43130
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+jun. 27, 2023 4:33:31 A. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+INFORMACIÓN: Detected dialect: W3C
+jun. 27, 2023 4:33:31 A. M. org.openqa.selenium.remote.DesiredCapabilities chrome
+INFORMACIÓN: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
+Starting ChromeDriver 114.0.5735.90 (386bc09e8f4f2e025eddae123f36f6263096ae49-refs/branch-heads/5735@{#1052}) on port 38473
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+jun. 27, 2023 4:33:32 A. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+INFORMACIÓN: Detected dialect: W3C
+jun. 27, 2023 4:33:32 A. M. com.choucair.stepdefinitions.CompraProductosStepDefinition queElUsuarioEstaEnLaPaginaDelExito
 INFORMACIÓN: Inician la automatizacion
-jun. 27, 2023 12:19:04 A. M. com.choucair.stepdefinitions.CompraProductosStepDefinition aniadeCincoProductosAlCarritoConSusRespectivasCantidades
+jun. 27, 2023 4:33:39 A. M. com.choucair.stepdefinitions.CompraProductosStepDefinition aniadeCincoProductosAlCarritoConSusRespectivasCantidades
 INFORMACIÓN: Compra de productos
-jun. 27, 2023 12:20:35 A. M. com.choucair.stepdefinitions.CompraProductosStepDefinition entroAlCarritoDeComprasYRegistroUn
+jun. 27, 2023 4:34:58 A. M. com.choucair.stepdefinitions.CompraProductosStepDefinition entroAlCarritoDeComprasYRegistroUn
 INFORMACIÓN: Obtener datos carrito de compras
-jun. 27, 2023 12:20:40 A. M. com.choucair.stepdefinitions.CompraProductosStepDefinition entroAlCarritoDeComprasYRegistroUn
-ADVERTENCIA: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@placeholder='correo@email.com']&quot;}
-  (Session info: chrome=114.0.5735.199)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.4.0', revision: 'e5c75ed026a'
-System info: host: 'DESKTOP-1MH7BUO', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.18'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [ac2ddabbc9c74ab3957a09f9d7c98609, findElement {using=xpath, value=//input[@placeholder='correo@email.com']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\Rasta\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:60961}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:60961/devtoo..., se:cdpVersion: 114.0.5735.199, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: ac2ddabbc9c74ab3957a09f9d7c98609
-jun. 27, 2023 12:20:41 A. M. com.choucair.stepdefinitions.CompraProductosStepDefinition visualizoTodaLaInformacionDeLaCompra
+jun. 27, 2023 4:35:06 A. M. com.choucair.stepdefinitions.CompraProductosStepDefinition visualizoTodaLaInformacionDeLaCompra
+INFORMACIÓN: Inician los asserts
+Starting ChromeDriver 114.0.5735.90 (386bc09e8f4f2e025eddae123f36f6263096ae49-refs/branch-heads/5735@{#1052}) on port 20892
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+jun. 27, 2023 4:35:08 A. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+INFORMACIÓN: Detected dialect: W3C
+jun. 27, 2023 4:35:08 A. M. org.openqa.selenium.remote.DesiredCapabilities chrome
+INFORMACIÓN: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
+Starting ChromeDriver 114.0.5735.90 (386bc09e8f4f2e025eddae123f36f6263096ae49-refs/branch-heads/5735@{#1052}) on port 34779
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+jun. 27, 2023 4:35:09 A. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+INFORMACIÓN: Detected dialect: W3C
+jun. 27, 2023 4:35:09 A. M. com.choucair.stepdefinitions.CompraProductosStepDefinition queElUsuarioEstaEnLaPaginaDelExito
+INFORMACIÓN: Inician la automatizacion
+jun. 27, 2023 4:35:16 A. M. com.choucair.stepdefinitions.CompraProductosStepDefinition aniadeCincoProductosAlCarritoConSusRespectivasCantidades
+INFORMACIÓN: Compra de productos
+jun. 27, 2023 4:37:03 A. M. com.choucair.stepdefinitions.CompraProductosStepDefinition entroAlCarritoDeComprasYRegistroUn
+INFORMACIÓN: Obtener datos carrito de compras
+jun. 27, 2023 4:37:12 A. M. com.choucair.stepdefinitions.CompraProductosStepDefinition visualizoTodaLaInformacionDeLaCompra
 INFORMACIÓN: Inician los asserts
 </pre>
 </span>
@@ -190,7 +195,7 @@ INFORMACIÓN: Inician los asserts
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.4.2</a> at 27/06/2023, 12:21:36 a. m.</p>
+<a href="http://www.gradle.org">Gradle 7.4.2</a> at 27/06/2023, 4:38:13 a. m.</p>
 </div>
 </div>
 </body>

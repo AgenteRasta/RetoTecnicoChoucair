@@ -4,7 +4,7 @@
   <system-out><![CDATA[
 1 Scenarios (?[32m1 passed?[0m)
 5 Steps (?[32m5 passed?[0m)
-5m13,104s
+4m52,067s
 
 
 ]]></system-out>
@@ -26,8 +26,8 @@
 -------------------------------------------------------------------------------------
 
 [Test worker] INFO  - Test Suite Started: Registro login y compra
-[pool-1-thread-1] INFO net.thucydides.core.reports.ReportService - net.thucydides.core.reports.json.JSONTestOutcomeReporter@72f35a31: Generating report for test outcome: Registro login y compra:registro login y carrito
-[pool-2-thread-1] INFO net.thucydides.core.reports.ReportService - net.thucydides.core.reports.html.HtmlAcceptanceTestReporter@17f41739: Generating report for test outcome: Registro login y compra:registro login y carrito
+[pool-1-thread-1] INFO net.thucydides.core.reports.ReportService - net.thucydides.core.reports.json.JSONTestOutcomeReporter@7434ee13: Generating report for test outcome: Registro login y compra:registro login y carrito
+[pool-2-thread-1] INFO net.thucydides.core.reports.ReportService - net.thucydides.core.reports.html.HtmlAcceptanceTestReporter@3b347439: Generating report for test outcome: Registro login y compra:registro login y carrito
 [Test worker] INFO io.cucumber.core.plugin.SerenityReporter - Cleanup test resources for URI file:///C:/Users/Rasta/Desktop/Prueba%20Choucair/AutomatizacionMovilExito/src/test/resources/features/registroLoginCompra.feature
 ]]></system-err>
 </testsuite>

@@ -11,5 +11,3 @@ Feature: Eliminar un empleado
     Examples:
       | id  | codigo | mensaje                                 |
       | 1   | 200    | "Successfully! Record has been deleted" |
-      | 2   | 200    | "Successfully! Record has been deleted" |
-      | 100 | 200    | "Successfully! Record has been deleted" |

@@ -1,3 +1,2 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
-"Comprar varios productos","compra de varios productos","ERROR","2023-06-26T22:08:40.3581703-05:00[America/Bogota]","0.0","6.53"
-"Comprar varios productos","compra de varios productos","ERROR","2023-06-27T00:15:04.8062188-05:00[America/Bogota]","0.0","336.38"
+"Comprar varios productos","compra de varios productos","FAILURE","2023-06-27T04:31:54.1388522-05:00[America/Bogota]","0.0","319.31"

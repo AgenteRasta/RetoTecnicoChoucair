@@ -22,19 +22,31 @@
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
-<link rel="stylesheet" href="bootstrap-icons/font/bootstrap-icons.css"><!-- JQuery -->
-<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
 <link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
 
 <!-- Required Javascript -->
 <script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
-<link type="text/css" href="datatables/1.11.3/datatables.min.css" rel="stylesheet" />
-<script type="text/javascript" src="datatables/1.11.3/datatables.min.js"></script>
-<script type="text/javascript" src="datatables/1.11.3/time-elapsed-dhms.js"></script>
+<link type="text/css" href="datatables/1.10.20/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.20/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.20/time-elapsed-dhms.js"></script>
 
 <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <script src="bootstrap/js/bootstrap.min.js"></script>
 
+<script type="text/javascript" src="datatables/1.10.20/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.20/datatables.bootstrap4.min.css" rel="stylesheet" />
 
 <script>
     jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
@@ -58,25 +70,18 @@
 </script>
 <link rel="stylesheet" href="css/core.css"/>
 <link rel="stylesheet" href="css/link.css"/>
-<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
-<!--CHART.JS-->
-<script src="chartjs/chart.js"></script>
-<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
-<script src="chartjs/patternomaly.min.js"></script>
-<script>
-    // Register the plugin to all charts:
-    Chart.register(ChartDataLabels);
-</script>
-<!-- JQuery-UI -->
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- JQuery-UI -->
 <link type="text/css" href="jqueryui/1.11.2-start/jquery-ui.min.css" rel="Stylesheet" />
 <script type="text/javascript" src="jqueryui/1.11.2-start/jquery-ui.min.js"></script><!-- DataTables -->
-<link type="text/css" href="datatables/1.11.3/datatables.min.css" rel="stylesheet" />
-<script type="text/javascript" src="datatables/1.11.3/datatables.min.js"></script>
-<script type="text/javascript" src="datatables/1.11.3/time-elapsed-dhms.js"></script>
+<link type="text/css" href="datatables/1.10.20/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.20/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.20/time-elapsed-dhms.js"></script>
 
 <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <script src="bootstrap/js/bootstrap.min.js"></script>
 
+<script type="text/javascript" src="datatables/1.10.20/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.20/datatables.bootstrap4.min.css" rel="stylesheet" />
 
 <script>
     jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
@@ -98,7 +103,6 @@
         };
     };
 </script>
-
 
 
 
@@ -130,12 +134,12 @@
             });
 
             $('#evidence-table').DataTable(
-                {
-                    searching: false,
-                    ordering: false,
-                    paging: false,
-                    info: false
-                }
+                    {
+                        searching: false,
+                        ordering: false,
+                        paging: false,
+                        info: false
+                    }
             );
 
 
@@ -144,16 +148,15 @@
             $("#requirements-tabs").tabs();
             $("#test-tabs").tabs();
 
-            var requirementsTree = [{"text":"Comprar varios productos","type":"feature","href":"2050b1aa9d97e670c02640971f22c16bc4527855395605d23ccb457fb5346e25.html","nodes":[],"selectable":false,"tags":["\u003ca href\u003d\u0027##beforetable\u0027\u003e\u003ci class\u003d\u0027bi bi-exclamation-triangle-fill error-icon \u0027 title\u003d\u0027ERROR\u0027\u003e\u003c/i\u003e\u003c/a\u003e","\u003cspan class\u003d\u0027feature-count\u0027\u003e3 scenarios\u003c/span\u003e"]}];
+            var requirementsTree = [{"text":"Comprar varios productos","type":"feature","href":"2050b1aa9d97e670c02640971f22c16bc4527855395605d23ccb457fb5346e25.html","nodes":[],"selectable":false,"tags":["","\u003cspan class\u003d\u0027feature-count\u0027\u003e2 scenarios\u003c/span\u003e"]}];
 
             $('#tree').treeview({
                 data: requirementsTree,
                 enableLinks: true,
-                levels: 10,
                 showTags: true,
-                expandIcon: "bi bi-journal-plus",
-                collapseIcon: "bi bi-journal-minus",
-                emptyIcon: "bi bi-journal"
+                expandIcon: "glyphicon glyphicon-folder-close",
+                collapseIcon: "glyphicon glyphicon-folder-open",
+                emptyIcon: "glyphicon glyphicon-book"
             });
 
         });
@@ -170,14 +173,13 @@
     </script>
 </head>
 
-
 <body class="results-page">
 <div id="topheader">
     <div id="topbanner">
         <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
         <div id="projectname-banner" style="float:right">
             <span class="projectname">
-                <span class="projecttitle">Serenity BDD Report</span>
+                <span class="projecttitle"></span>
                 <span class="projectsubtitle"></span>
             </span>
         </div>
@@ -193,7 +195,7 @@
 
 
 
-                    > <span class="truncate-40">Comprar Varios Productos</span>
+                > <span class="truncate-40">Comprar Varios Productos</span>
 
             </span>
         </div>
@@ -206,16 +208,16 @@
 <div>
     <ul class="nav nav-tabs" role="tablist">
         <li >
-            <a href="index.html"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+            <a href="index.html"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
         </li>
         <li >
-            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
         </li>
         <li class="active">
-            <a href="#"><i class="bi bi-chat-text"></i> Features</a>
+            <a href="#"><i class="fa fa-comments-o"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 26-06-2023 22:08</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 27-06-2023 04:06</span>
     <br style="clear:left"/>
 </div>
 
@@ -224,214 +226,390 @@
     <div id="beforetable"></div>
     <div id="results-dashboard">
         <div class="table">
-            <div class=row">
-                <div class="col-sm-12">
-                    <div>
-                        <div clas="table">
-                            <div class="row">
-
+                <div class=row">
+                    <div class="col-sm-12">
+                        <div>
+                            <div clas="table">
+                                <div class="row">
                                     <div class="col-sm-12">
-                                        <span>
-                                            <h2><i class="bi bi-book"></i> Feature: Comprar Varios Productos</h2>
+                                    <span>
+                                            <h2><i class="fa fa-book"></i> Feature:  Comprar Varios Productos</h2>
                                         </span>
-                                    </div>
+                                </div>
+                                </div>
                                 </div>
                             </div>
-                        </div>
                             <div class="requirementNarrativeTitle">
                                 yo como usuario que ingresa a la pagina del exito<br />
 quiero elegir un categoria y subcategoria<br />
 para comprar varios productos y cantidades
                             </div>
 
+                        </div>
                     </div>
-                </div>
 
 
-                <div class="row">
-                    <div class="col-sm-12">
+            <div class="row">
+                <div class="col-sm-12">
 
-                        <!-- Requirements result tabs -->
-                        <ul class="nav nav-tabs">
-                            <li class="active">
-                                <a data-toggle="tab" href="#specs"><i class="bi bi-journal-text"></i> Specifications</a>
-                            </li>
-                            <li>
-                                <a data-toggle="tab" href="#results"><i class="bi bi-speedometer"></i> Test Results</a>
-                            </li>
-                        </ul>
+                    <!-- Requirements result tabs -->
+                    <ul class="nav nav-tabs">
+                        <li class="active">
+                            <a data-toggle="tab" href="#specs"><i class="fas fa-comments"></i> Specifications</a>
+                        </li>
+                        <li>
+                            <a data-toggle="tab" href="#results"><i class="fas fa-tachometer-alt"></i> Test Results</a>
+                        </li>
+                    </ul>
 
-                        <!-- Specifications and Results tabs -->
-                        <div class="card border">
-                            <div class="tab-content" id="pills-tabContent">
-                                <div id="specs" class="tab-pane fade in active">
-                                    <div class="container-fluid">
-                                        <div class="row">
-                                            <div class="col-sm-4">
-                                                <h3>Feature Coverage By Scenario</h3>
+                    <!-- Specifications and Results tabs -->
+                    <div class="card border">
+                        <div class="tab-content" id="pills-tabContent">
+                            <div id="specs" class="tab-pane fade in active">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-sm-12">
 
-                                                <!-- REQUIREMENTS PIE CHART -->
-                                                    <div class="chart-container" style="position: relative; width:30vw">
-                                                        <canvas id="requirementChart" width="300" height="300"></canvas>
-                                                    </div>
 
-                                            </div>
-                                            <div class="col-sm-8">
-                                                <!--- TOC --->
-                                                <div id="toc">
-                                                    <h3>Overview</h3>
-                                                    <table class="table" id="toc-table">
+                                            <h3>Scenarios</h3>
+
+                                            <div id="toc">
+                                                <table class="table" id="toc-table">
+                                                        <tr>
+                                                            <td style="width:95%;" class="toc-title">
+                                                                <a href="#1fcf1c330640f5d49f8fddf877dd575d592390541a9508cb5caae84a6d8c3014" title="View scenario details" >Compra de varios productos</a>
+                                                                     (3 examples)
+
+                                                            </td>
+                                                            <td style="width:5%;">
+                                                                <table>
                                                                     <tr>
-                                                                        <td style="width:95%;" class="toc-title">
-                                                                            <span class="orphan-scenario-toc-entry">
-                                                                                    <a href="#1fcf1c330640f5d49f8fddf877dd575d592390541a9508cb5caae84a6d8c3014"
-                                                                                       title="View scenario details">
-                                                                                        <i class="bi bi-chat-dots"></i> Scenario: compra de varios productos
-                                                                                    </a>
-                                                                                        (3 examples)
-                                                                                </span>
+                                                                        <td>
+                                                                            <a style="margin-left:0.5em;padding-right: 1.5em;"
+                                                                               href="1b72342d6cf80183119b2e4c7349b8576c8ed60ffd345bfa56daaccce8e19596.html"
+                                                                               title="View test results">
+                                                                            <a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
+                                                                            </a>
+
+                                                                        
                                                                         </td>
                                                                         <td>
-
-                                                                        </td>
-                                                                        <td style="width:5%;">
-                                                                            <table>
-                                                                                <tr>
-                                                                                    <td class="icons-bar">
-                                                                                        <a style="margin-left:0.5em;padding-right: 1.5em;"
-                                                                                           href="1b72342d6cf80183119b2e4c7349b8576c8ed60ffd345bfa56daaccce8e19596.html"
-                                                                                           title="View test results">
-                                                                                            <a href='##beforetable'><i class='bi bi-exclamation-triangle-fill error-icon ' title='ERROR'></i></a>
-                                                                                            </a>
-
-
-                                                                                            <a style="margin-left:0.5em;padding-right: 1.5em;"
-                                                                                               href="1b72342d6cf80183119b2e4c7349b8576c8ed60ffd345bfa56daaccce8e19596.html"
-                                                                                               title="View test results">
-                                                                                                <i class="bi bi-eyeglasses"></i>
-                                                                                            </a>
-                                                                                    </td>
-                                                                                </tr>
-                                                                            </table>
+                                                                            <a style="margin-left:0.5em;padding-right: 1.5em;"
+                                                                               href="1b72342d6cf80183119b2e4c7349b8576c8ed60ffd345bfa56daaccce8e19596.html"
+                                                                               title="View test results">
+                                                                                <i class="fas fa-search-plus"></i>
+                                                                            </a>
                                                                         </td>
                                                                     </tr>
-                                                    </table>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="width:95%;" class="toc-title">
+                                                                <a href="#1fcf1c330640f5d49f8fddf877dd575d592390541a9508cb5caae84a6d8c3014" title="View scenario details" >Compra de varios productos</a>
+                                                                     (3 examples)
+
+                                                            </td>
+                                                            <td style="width:5%;">
+                                                                <table>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <a style="margin-left:0.5em;padding-right: 1.5em;"
+                                                                               href="1b72342d6cf80183119b2e4c7349b8576c8ed60ffd345bfa56daaccce8e19596.html"
+                                                                               title="View test results">
+                                                                            <a href='##beforetable'><i class='fa fa-times-circle failure-icon ' title='FAILURE'></i></a>
+                                                                            </a>
+
+                                                                        
+                                                                        </td>
+                                                                        <td>
+                                                                            <a style="margin-left:0.5em;padding-right: 1.5em;"
+                                                                               href="1b72342d6cf80183119b2e4c7349b8576c8ed60ffd345bfa56daaccce8e19596.html"
+                                                                               title="View test results">
+                                                                                <i class="fas fa-search-plus"></i>
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                </table>
+
+                                            </div>
+
+                                            <h3>Scenario details</h3>
+
+                                                <div class="scenario-docs card" id="1fcf1c330640f5d49f8fddf877dd575d592390541a9508cb5caae84a6d8c3014">
+                                                    <div class="scenario-docs card-header success" style="min-height:1.5em;">
+                                                        <div>
+                                                            <span class="scenario-heading">
+                                                                <a href="1b72342d6cf80183119b2e4c7349b8576c8ed60ffd345bfa56daaccce8e19596.html" title="View test results">compra de varios productos</a>
+                                                            </span>
+                                                            <span class="scenario-result-icon">
+                                                                
+
+                                                                    <a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="scenario-docs card-body">
+                                                            <p>Given que el usuario esta en la pagina del exito</p>
+                                                            <p>When selecciona una {categoria} y una {subcategoria}</p>
+                                                            <p>And aniade cinco productos al carrito con sus respectivas cantidades</p>
+                                                            <p>And entra al carrito de compras y registra un {correo}</p>
+                                                            <p>Then visualiza toda la informacion de la compra</p>
+                                                        <div class="examples">
+                                                            <p><p>Examples:</p>
+<div class='example-table-in-scenario'><table>
+<thead>
+<tr><th>categoria</th><th>subcategoria</th><th>correo</th><th></th></tr>
+</thead>
+<tbody>
+<tr><td>&quot;Dormitorio&quot;</td><td>&quot;Cabeceros&quot;</td><td>&quot;prueba@gmail.com&quot;</td><td> </td></tr>
+<tr><td>&quot;Hogar y muebles&quot;</td><td>&quot;Escritorios&quot;</td><td>&quot;prueba@gmail.com&quot;</td><td> </td></tr>
+<tr><td>&quot;Dormitorio&quot;</td><td>&quot;Colchones sencillos&quot;</td><td>&quot;prueba@gmail.com&quot;</td><td> </td></tr>
+</tbody>
+</table></div>
+</p>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <!--- END OF TOC --->
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm-12">
-                                                    <h3>Scenarios</h3>
 
-                                                        <a name="1a067cce-dad6-4380-b512-bc5dd42c7766"></a>
-                                                        <p class="rule-tags inline-tag">
-                                                        </p>
+                                                <div class="scenario-docs card" id="1fcf1c330640f5d49f8fddf877dd575d592390541a9508cb5caae84a6d8c3014">
+                                                    <div class="scenario-docs card-header failure" style="min-height:1.5em;">
+                                                        <div>
+                                                            <span class="scenario-heading">
+                                                                <a href="1b72342d6cf80183119b2e4c7349b8576c8ed60ffd345bfa56daaccce8e19596.html" title="View test results">compra de varios productos</a>
+                                                            </span>
+                                                            <span class="scenario-result-icon">
+                                                                
 
-
-                                                            <div class="scenario-docs card" id="1fcf1c330640f5d49f8fddf877dd575d592390541a9508cb5caae84a6d8c3014">
-                                                                <div class="scenario-docs card-header error" style="min-height:1.5em;">
-                                                                    <div>
-                                                                        <span class="scenario-heading">
-                                                                            <a href="1b72342d6cf80183119b2e4c7349b8576c8ed60ffd345bfa56daaccce8e19596.html"
-                                                                               title="View test results">Scenario: compra de varios productos</a>
-                                                                        </span>
-
-                                                                        <span class="example-tags inline-tag">
-                                                                        </span>
-
-                                                                        <span class="scenario-result-icon">
-                                                                    
-
-                                                                                <a href='##beforetable'><i class='bi bi-exclamation-triangle-fill error-icon ' title='ERROR'></i></a>
-                                                                        </span>
-                                                                    </div>
-
-                                                                </div>
-                                                                <div class="scenario-docs card-body">
-                                                                        <p>Given que el usuario esta en la pagina del exito</p>
-                                                                        <p>When selecciona una {categoria} y una {subcategoria}</p>
-                                                                        <p>And aniade cinco productos al carrito con sus respectivas cantidades</p>
-                                                                        <p>And entra al carrito de compras y registra un {correo}</p>
-                                                                        <p>Then visualiza toda la informacion de la compra</p>
-                                                                    <div class="examples">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                            </div>
+                                                                    <a href='##beforetable'><i class='fa fa-times-circle failure-icon ' title='FAILURE'></i></a>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="scenario-docs card-body">
+                                                            <p>Given que el usuario esta en la pagina del exito</p>
+                                                            <p>When selecciona una {categoria} y una {subcategoria}</p>
+                                                            <p>And aniade cinco productos al carrito con sus respectivas cantidades</p>
+                                                            <p>And entra al carrito de compras y registra un {correo}</p>
+                                                            <p>Then visualiza toda la informacion de la compra</p>
+                                                        <div class="examples">
+                                                            <p><p>Examples:</p>
+<div class='example-table-in-scenario'><table>
+<thead>
+<tr><th>categoria</th><th>subcategoria</th><th>correo</th><th></th></tr>
+</thead>
+<tbody>
+<tr><td>&quot;Dormitorio&quot;</td><td>&quot;Cabeceros&quot;</td><td>&quot;prueba@gmail.com&quot;</td><td> </td></tr>
+<tr><td>&quot;Hogar y muebles&quot;</td><td>&quot;Escritorios&quot;</td><td>&quot;prueba@gmail.com&quot;</td><td> </td></tr>
+<tr><td>&quot;Dormitorio&quot;</td><td>&quot;Colchones sencillos&quot;</td><td>&quot;prueba@gmail.com&quot;</td><td> </td></tr>
+</tbody>
+</table></div>
+</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                         </div>
                                     </div>
                                 </div>
+                            </div>
 
-                                <div id="results" class="tab-pane fade">
-                                    <div class="container-fluid">
-                                        <div class="row">
-                                            <div class="col-sm-4">
-                                                <h3>Feature Coverage By Scenario</h3>
-                                                <!-- TEST RESULT PIE CHART -->
-                                                    <div class="chart-container" style="position: relative; width:30vw">
-                                                        <canvas id="resultChart" width="300" height="300"></canvas>
-                                                    </div>
-                                            </div>
-                                            <div class="col-sm-4">
-                                                <h4><i class="bi bi-check-square"></i> Test Outcomes</h4>
-                                                <!-- Severity bar chart -->
-                                                <div class="chart-container" style="position: relative; width:30vw">
-                                                    <canvas id="severityChart" width="300" height="300"></canvas>
-                                                </div>
-                                            </div>
+                            <div id="results" class="tab-pane fade">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-sm-4">
 
-                                            <div class="col-sm-4">
-                                                <h4><i class="bi bi-graph-up"></i> Test Performance</h4>
-
-                                                <!-- Duration bar chart -->
-                                                <div class="chart-container" style="position: relative; width:30vw">
-                                                    <canvas id="durationChart" width="300" height="300"></canvas>
-                                                </div>
+                                            <div style="width:300px;" class="chart-container automated-and-manual-results">
+                                                <div class="ct-chart ct-square"></div>
                                             </div>
+                                            <script>
+
+                                                var labels = ['67%', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '17%', ' ', ' ', ' ', ' ', ' '];
+                                                // Our series array that contains series objects or in this case series data arrays
+
+                                                var series = [{meta: 'Passing tests (automated)', value: 4}, {meta: 'Passing tests (manual)', value: 0}, {meta: 'Pending tests (automated)', value: 0}, {meta: 'Pending tests (manual)', value: 0}, {meta: 'Ignored tests (automated)', value: 0}, {meta: 'Ignored tests (manual)', value: 0}, {meta: 'Skipped tests (automated)', value: 0}, {meta: 'Skipped tests (manual)', value: 0}, {meta: 'Failing tests (automated)', value: 1}, {meta: 'Failing tests (manual)', value: 0}, {meta: 'Broken tests (automated)', value: 0}, {meta: 'Broken tests (manual)', value: 0}, {meta: 'Compromised tests (automated)', value: 0}, {meta: 'Compromised tests (manual)', value: 0}];
+
+                                                // As options we currently only set a static size of 300x200 px. We can also omit this and use aspect ratio containers
+                                                // as you saw in the previous example
+                                                var options = {
+                                                    width: 350,
+                                                    height: 300
+                                                };
+
+                                                $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+                                                    new Chartist.Pie('.ct-chart', {
+                                                        series: series,
+                                                        labels: labels,
+                                                    }, {
+                                                        donut: true,
+                                                        donutWidth: 60,
+                                                        donutSolid: true,
+                                                        startAngle: 270,
+                                                        showLabel: true
+                                                    }, options);
+                                                });
+
+                                            </script>
                                         </div>
-                                    </div>
-                                    <div class="container-fluid">
-                                        <div class="row">
-                                            <div class="col-sm-12">
-                                                <h3><i class="bi bi-gear"></i> Automated Tests</h3>
+                                        <div class="col-sm-8">
 
-                                                    <table class="scenario-result-table table"
-                                                           id="scenario-results">
-                                                        <thead>
-                                                        <tr>
-                                                            <th class="test-name-column">Scenario</th>
-                                                            <th>Steps</th>
-                                                            <th>Started</th>
-                                                            <th>Duration</th>
-                                                            <th>Result</th>
-                                                        </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr class="scenario-result ERROR">
-                                                                <td>
-                                                                        <a href="1b72342d6cf80183119b2e4c7349b8576c8ed60ffd345bfa56daaccce8e19596.html">compra de varios productos</a>
-                                                                        (3 examples)
+                                        <table class="table">
+                                            <thead>
+                                            <tr>
+                                                <th scope="col">Scenario Results (including rows of test data)</th>
+                                                <th scope="col" colspan="2" class="automated-stats">
+                                                    Automated
+                                                </th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                                    <td class="aggregate-result-count">
+                                                                        <a href="f328160106be7d931a6b7a351c3aaf90cbd6a28bfcca6ab06447ad635d24dd36.html"><i
+                                                                                class='fa fa-check-circle-o success-icon'></i>&nbsp;Passing</a>
+                                                                    </td>
+                                                <td class="automated-stats">4</td>
+                                                <td class="automated-stats">67%</td>
+                                            </tr>
+                                            <tr>
+                                                                    <td class="aggregate-result-count"><i
+                                                                            class='fa fa-stop-circle-o pending-icon'></i>&nbsp;Pending
+                                                                    </td>
+                                                <td class="automated-stats">0</td>
+                                                <td class="automated-stats"> </td>
+                                            </tr>
+                                            <tr>
+                                                                <td class="aggregate-result-count"><i
+                                                                        class='fa fa-ban ignored-icon'></i>&nbsp;Ignored
                                                                 </td>
-                                                                <td>5</td>
-                                                                <td>22:08:40</td>
-                                                                <td>6s 531ms</td>
-                                                                <td>
-                                                                        <a href='##beforetable'><i class='bi bi-exclamation-triangle-fill error-icon ' title='ERROR'></i></a> <span
-                                                                            style="display:none">ERROR</span>
-                                                                                                                                    </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
+                                                <td class="automated-stats">0</td>
+                                                <td class="automated-stats"> </td>
+                                            </tr>
+                                            <tr>
+                                                                <td class="aggregate-result-count"><i
+                                                                        class='fa fa-fast-forward skip-icon'></i>&nbsp;Skipped
+                                                                </td>
+                                                <td class="automated-stats">0</td>
+                                                <td class="automated-stats"> </td>
+                                            </tr>
+                                            <tr>
+                                                                             <td colspan="3"><a href="764e8a057f88f86843a55a37c2431b84f61571389621990605c91d6cb9a114e4.html"><i
+                                                                                    class='fa fa-times failure-icon'></i>&nbsp;<em>Unsuccessful</em></a>
+                                                                            </td>
+
+                                            </tr>
+
+                                            <tr>
+                                                                    <td class="aggregate-result-count indented-error-category">
+                                                                        <a href="51da1d1d7ca6193fb67bea63612c82f0e528ef5980a49125588ca7a094f6e636.html"><i
+                                                                                class='fa fa-times-circle failure-icon'></i>&nbsp;Failed</a>
+                                                                    </td>
+                                                <td class="automated-stats">1</td>
+                                                <td class="automated-stats">17%</td>
+                                            <tr>
+                                                                <td class="aggregate-result-count indented-error-category">
+                                                                    <i
+                                                                            class='fa fa-exclamation-triangle error-icon'></i>&nbsp;Broken
+                                                                </td>
+                                                <td class="automated-stats">0</td>
+                                                <td class="automated-stats"> </td>
+                                            <tr>
+                                                                <td class="aggregate-result-count indented-error-category">
+                                                                    <i
+                                                                            class='fa fa-chain-broken compromised-icon'></i>&nbsp;Compromised
+                                                                </td>
+                                                <td class="automated-stats">0</td>
+                                                <td class="automated-stats"> </td>
+                                            </tr>
+                                            <tr class="summary-stats">
+                                                <td class="aggregate-result-count">Total</td>
+                                                <td class="automated-stats">6</td>
+                                                <td class="automated-stats"></td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    </div>
+
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <table class="table">
+                                                    <thead>
+                                                    <tr>
+                                                        <th>Execution Time</th>
+                                                        <th>Clock Time</th>
+                                                        <th>Fastest Test</th>
+                                                        <th>Slowest Test</th>
+                                                        <th>Average Execution Time</th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr>
+                                                        <td> 7m 2s</td>
+                                                        <td> 25m 11s</td>
+                                                        <td>0ms</td>
+                                                        <td> 2m 5s</td>
+                                                        <td> 3m 31s</td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <h3><i class="fas fa-cogs"></i> Automated Tests</h3>
+
+                                            <table class="scenario-result-table table" id="scenario-results">
+                                                <thead>
+                                                <tr>
+                                                    <th class="test-name-column">Scenario</th>
+                                                    <th>Steps</th>
+                                                    <th>Start Time</th>
+                                                    <th>Duration</th>
+                                                    <th>Result</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr class="scenario-result SUCCESS">
+                                                    <td>
+                                                            <a href="1b72342d6cf80183119b2e4c7349b8576c8ed60ffd345bfa56daaccce8e19596.html">compra de varios productos</a>
+                                                               (3 examples)
+                                                    </td>
+                                                    <td>5</td>
+                                                    <td>04:06:43</td>
+                                                    <td>1m 44s</td>
+                                                    <td>
+                                                            <a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a> <span
+                                                                style="display:none">SUCCESS</span>
+                                                    </td>
+                                                </tr>
+                                                <tr class="scenario-result FAILURE">
+                                                    <td>
+                                                            <a href="1b72342d6cf80183119b2e4c7349b8576c8ed60ffd345bfa56daaccce8e19596.html">compra de varios productos</a>
+                                                               (3 examples)
+                                                    </td>
+                                                    <td>5</td>
+                                                    <td>04:31:54</td>
+                                                    <td>5m 19s</td>
+                                                    <td>
+                                                            <a href='##beforetable'><i class='fa fa-times-circle failure-icon ' title='FAILURE'></i></a> <span
+                                                                style="display:none">FAILURE</span>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
 
                                             </div>
                                         </div>
 
                                         <div class="row">
                                             <div class="col-sm-12">
-                                                <h3><i class="bi bi-hand-index-thumb"></i> Manual Tests</h3>
+                                                <h3><i class="fas fa-edit"></i> Manual Tests</h3>
 
-                                                    No manual tests were recorded
+                                                No manual tests were recorded
 
                                             </div>
                                         </div>
@@ -444,361 +622,12 @@ para comprar varios productos y cantidades
                 </div>
             </div>
         </div>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-sm-12">
-                    <span class="version">Serenity BDD version 3.3.2</span>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <span class="version">Serenity BDD version 2.2.12</span>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
-<!-- Chart data -->
-    <!-- PIE CHART -->
-    <script>
-
-        // The results pie chart
-        const outcomeChartCtx = document.getElementById('resultChart');
-
-        // Options define for display value on top of bars
-        const outcomeDetailsReports = [
-            { title: 'Passing Scenarios', link: "f328160106be7d931a6b7a351c3aaf90cbd6a28bfcca6ab06447ad635d24dd36.html" },
-            { title: 'Pending Scenarios', link: "24ae61ed24375dc75052d48bb3ceffa4a45a8358bc5d77f5e43ce1ca58516750.html" },
-            { title: 'Ignored Scenarios', link: "b65c61f0ee3a60769d097dfd7ee51499c63c072cb2fd89a2dd5ead973719b5b1.html" },
-            { title: 'Skipped Scenarios', link: "f2d48e5a34b06c8b751b3967c0a0a6be5680d6c0befd0d26fe0b1a5cdc83da6f.html" },
-            { title: 'Aborted Scenarios',  link: "4db4beffa24463555798e8065c648564240ba925f63714a8d8824c6f160fb426.html"},
-            { title: 'Failed Scenarios', link: "51da1d1d7ca6193fb67bea63612c82f0e528ef5980a49125588ca7a094f6e636.html"  },
-            { title: 'Broken Scenarios', link: "5fa02b38aa539ba636ec79e514ee39ad9aeedcda3dabbdcb43223f4bd4a99bc9.html"    },
-            { title: 'Compromised Scenarios',  link: "407ea949d554c21aedb9dca4add4605484bd42cb8695e7da40787635002db9d2.html" },
-        ]
-        const outcomeData = {
-            labels: ['Passing Scenarios', 'Pending Scenarios', 'Ignored Scenarios', 'Skipped Scenarios', 'Aborted Scenarios', 'Failed Scenarios', 'Broken Scenarios', 'Compromised Scenarios','Undefined Scenarios'],
-            datasets: [{
-                label: 'Test Results',
-                fill: false,
-                data: [{meta: 'Passing tests', value: 0}, {meta: 'Pending tests', value: 0}, {meta: 'Ignored tests', value: 0}, {meta: 'Skipped tests', value: 0}, {meta: 'Aborted tests', value: 0}, {meta: 'Failing tests', value: 0}, {meta: 'Broken tests', value: 3}, {meta: 'Compromised tests', value: 0}],
-                backgroundColor: ['rgba(153,204,51,0.5)','rgba(165, 199, 238, 0.5)','rgba(168, 168, 168, 0.5)','rgba(238, 224, 152, 0.75)','rgba(255, 153, 102, 0.5)','rgba(255, 22, 49, 0.5)','rgba(255, 97, 8, 0.5)','rgba(255, 104, 255, 0.5)','rgba(83, 50, 168, 0.5)'],
-                borderColor: ['rgba(153,204,51,1)','rgba(165, 199, 238, 1)','rgba(168, 168, 168, 1)','rgba(238, 224, 152, 1)','rgba(255, 153, 102, 1)','rgba(255, 22, 49, 1)','rgba(255, 97, 8, 1)','rgba(255, 104, 255, 1)','rgba(83, 50, 168, 1)'],
-                borderWidth: 1,
-            }]
-        }
-        const outcomeOptions = {
-            responsive: true,
-            plugins: {
-                legend: {
-                    display: true,
-                    position: 'bottom'
-                },
-                // Change options for ALL labels of THIS CHART
-                datalabels: {
-                    color: '#444444',
-                    'font.weight': 'bold',
-                    formatter: (value, ctx) => {
-                        let sum = 0;
-                        let dataArr = ctx.chart.data.datasets[0].data;
-                        dataArr.map(data => {
-                            sum += data;
-                        });
-                        let percentage = (value * 100 / sum).toFixed(0) + "%";
-                        if (percentage === '0%' || percentage === 'NaN%') {
-                            return '';
-                        } else {
-                            return percentage;
-                        }
-                    },
-                },
-            }
-        }
-
-        const outcomeChart = new Chart(outcomeChartCtx, {
-            type: 'doughnut',
-            data: outcomeData,
-            options: outcomeOptions,
-            plugins: [
-                {
-                    id: 'text',
-                    beforeDraw: function (chart, a, b) {
-                        var width = chart.width,
-                            height = chart.height,
-                            ctx = chart.ctx;
-
-                        ctx.restore();
-                        var fontSize = (height / 200).toFixed(1);
-                        ctx.font = fontSize + "em sans-serif";
-                        ctx.textBaseline = "middle";
-
-                        var text = " "
-                        textX = 10 + Math.round((width - ctx.measureText(text).width) / 2);
-                        textY = (height / 2) - 40;
-
-                        ctx.fillText(text, textX, textY);
-                        ctx.save();
-                    }
-                }]
-        });
-
-        function clickHandler(click) {
-            const points = outcomeChart.getElementsAtEventForMode(click, 'nearest', {intersect: true}, true);
-            if (points.length) {
-                const firstPoint = points[0];
-                window.open(outcomeDetailsReports[firstPoint.index].link, "_self")
-
-            }
-        }
-        outcomeChartCtx.onclick = clickHandler;
-    </script>
-    <!-- END PIE CHART -->
-    <!-- PIE CHART -->
-    <script>
-
-        // The results pie chart
-        const requirementsChartCtx = document.getElementById('requirementChart');
-
-        // Options define for display value on top of bars
-        const requirementsOutcomeDetailsReports = [
-            { title: 'Passing Scenarios', link: "f328160106be7d931a6b7a351c3aaf90cbd6a28bfcca6ab06447ad635d24dd36.html" },
-            { title: 'Pending Scenarios', link: "24ae61ed24375dc75052d48bb3ceffa4a45a8358bc5d77f5e43ce1ca58516750.html" },
-            { title: 'Ignored Scenarios', link: "b65c61f0ee3a60769d097dfd7ee51499c63c072cb2fd89a2dd5ead973719b5b1.html" },
-            { title: 'Skipped Scenarios', link: "f2d48e5a34b06c8b751b3967c0a0a6be5680d6c0befd0d26fe0b1a5cdc83da6f.html" },
-            { title: 'Aborted Scenarios',  link: "4db4beffa24463555798e8065c648564240ba925f63714a8d8824c6f160fb426.html"},
-            { title: 'Failed Scenarios', link: "51da1d1d7ca6193fb67bea63612c82f0e528ef5980a49125588ca7a094f6e636.html"  },
-            { title: 'Broken Scenarios', link: "5fa02b38aa539ba636ec79e514ee39ad9aeedcda3dabbdcb43223f4bd4a99bc9.html"    },
-            { title: 'Compromised Scenarios',  link: "407ea949d554c21aedb9dca4add4605484bd42cb8695e7da40787635002db9d2.html" },
-            { title: 'Undefined Scenarios',  link: "" },
-        ]
-        const requirementsOutcomeData = {
-            labels: ['Passing Scenarios', 'Pending Scenarios', 'Ignored Scenarios', 'Skipped Scenarios', 'Aborted Scenarios', 'Failed Scenarios', 'Broken Scenarios', 'Compromised Scenarios','Undefined Scenarios'],
-            datasets: [{
-                label: 'Feature Coverage',
-                fill: false,
-                data: [{meta: 'Passing tests', value: 0}, {meta: 'Pending tests', value: 0}, {meta: 'Ignored tests', value: 0}, {meta: 'Skipped tests', value: 0}, {meta: 'Aborted tests', value: 0}, {meta: 'Failing tests', value: 0}, {meta: 'Broken tests', value: 3}, {meta: 'Compromised tests', value: 0}],
-                backgroundColor: ['rgba(153,204,51,0.5)','rgba(165, 199, 238, 0.5)','rgba(168, 168, 168, 0.5)','rgba(238, 224, 152, 0.75)','rgba(255, 153, 102, 0.5)','rgba(255, 22, 49, 0.5)','rgba(255, 97, 8, 0.5)','rgba(255, 104, 255, 0.5)','rgba(83, 50, 168, 0.5)'],
-                borderColor: ['rgba(153,204,51,1)','rgba(165, 199, 238, 1)','rgba(168, 168, 168, 1)','rgba(238, 224, 152, 1)','rgba(255, 153, 102, 1)','rgba(255, 22, 49, 1)','rgba(255, 97, 8, 1)','rgba(255, 104, 255, 1)','rgba(83, 50, 168, 1)'],
-                borderWidth: 1,
-            }]
-        }
-        const requirementsOutcomeOptions = {
-            responsive: true,
-            plugins: {
-                legend: {
-                    display: true,
-                    position: 'bottom'
-                },
-                // Change options for ALL labels of THIS CHART
-                datalabels: {
-                    color: '#444444',
-                    'font.weight': 'bold',
-                    formatter: (value, ctx) => {
-                        let sum = 0;
-                        let dataArr = ctx.chart.data.datasets[0].data;
-                        dataArr.map(data => {
-                            sum += data;
-                        });
-                        let percentage = (value * 100 / sum).toFixed(0) + "%";
-                        if (percentage === '0%' || percentage === 'NaN%') {
-                            return '';
-                        } else {
-                            return percentage;
-                        }
-                    },
-                },
-            }
-        }
-
-        const requirementsChart = new Chart(requirementsChartCtx, {
-            type: 'doughnut',
-            data: requirementsOutcomeData,
-            options: requirementsOutcomeOptions,
-            plugins: [
-                {
-                    id: 'text',
-                    beforeDraw: function (chart, a, b) {
-                        var width = chart.width,
-                            height = chart.height,
-                            ctx = chart.ctx;
-
-                        ctx.restore();
-                        var fontSize = (height / 200).toFixed(1);
-                        ctx.font = fontSize + "em sans-serif";
-                        ctx.textBaseline = "middle";
-
-                        var text = " "
-                        textX = 10 + Math.round((width - ctx.measureText(text).width) / 2);
-                        textY = (height / 2) - 40;
-
-                        ctx.fillText(text, textX, textY);
-                        ctx.save();
-                    }
-                }]
-        });
-
-        function reqsClickHandler(click) {
-            const points = requirementsChart.getElementsAtEventForMode(click, 'nearest', {intersect: true}, true);
-            if (points.length && requirementsOutcomeDetailsReports[firstPoint.index].link) {
-                const firstPoint = points[0];
-                window.open(requirementsOutcomeDetailsReports[firstPoint.index].link, "_self")
-
-            }
-        }
-        requirementsChartCtx.onclick = reqsClickHandler;
-    </script>
-    <!-- END PIE CHART -->
-
-    <!-- SUMMARY BAR CHART -->
-    <script>
-
-        // The Severity bar chart
-        const severityChartCtx = document.getElementById('severityChart');
-
-        // Options define for display value on top of bars
-
-        const severityDetailsReports = [
-            { title: 'Passing Scenarios', link: "f328160106be7d931a6b7a351c3aaf90cbd6a28bfcca6ab06447ad635d24dd36.html" },
-            { title: 'Pending Scenarios', link: "24ae61ed24375dc75052d48bb3ceffa4a45a8358bc5d77f5e43ce1ca58516750.html" },
-            { title: 'Ignored Scenarios', link: "b65c61f0ee3a60769d097dfd7ee51499c63c072cb2fd89a2dd5ead973719b5b1.html" },
-            { title: 'Skipped Scenarios', link: "f2d48e5a34b06c8b751b3967c0a0a6be5680d6c0befd0d26fe0b1a5cdc83da6f.html" },
-            { title: 'Aborted Scenarios',  link: "4db4beffa24463555798e8065c648564240ba925f63714a8d8824c6f160fb426.html"},
-            { title: 'Failed Scenarios', link: "51da1d1d7ca6193fb67bea63612c82f0e528ef5980a49125588ca7a094f6e636.html"  },
-            { title: 'Broken Scenarios', link: "5fa02b38aa539ba636ec79e514ee39ad9aeedcda3dabbdcb43223f4bd4a99bc9.html"    },
-            { title: 'Compromised Scenarios',  link: "407ea949d554c21aedb9dca4add4605484bd42cb8695e7da40787635002db9d2.html" },
-        ]
-        const severityData = {
-            labels: ['Passing', 'Pending', 'Ignored', 'Skipped', 'Aborted', 'Failed', 'Broken', 'Compromised'],
-            datasets: [
-                {
-                    label: 'Automated',
-                    data: [0,0,0,0,0,0,3,0],
-                    backgroundColor: ['rgba(153,204,51,0.5)','rgba(165, 199, 238, 0.5)','rgba(168, 168, 168, 0.5)','rgba(238, 224, 152, 0.75)','rgba(255, 153, 102, 0.5)','rgba(255, 22, 49, 0.5)','rgba(255, 97, 8, 0.5)','rgba(255, 104, 255, 0.5)','rgba(83, 50, 168, 0.5)'],
-                    borderColor: ['rgba(153,204,51,1)','rgba(165, 199, 238, 1)','rgba(168, 168, 168, 1)','rgba(238, 224, 152, 1)','rgba(255, 153, 102, 1)','rgba(255, 22, 49, 1)','rgba(255, 97, 8, 1)','rgba(255, 104, 255, 1)','rgba(83, 50, 168, 1)'],
-                    borderWidth: 1
-                },
-                {
-                    label: 'Manual',
-                    data: [0,0,0,0,0,0,0,0],
-                    backgroundColor: ['rgba(153,204,51,0.25)','rgba(165, 199, 238, 0.25)','rgba(168, 168, 168, 0.25)','rgba(238, 224, 152, 0.375)','rgba(255, 153, 102, 0.25)','rgba(255, 22, 49, 0.25)','rgba(255, 97, 8, 0.25)','rgba(255, 104, 255, 0.25)','rgba(83, 50, 168, 0.25)'],
-                    borderColor: ['rgba(153,204,51,1)','rgba(165, 199, 238, 1)','rgba(168, 168, 168, 1)','rgba(238, 224, 152, 1)','rgba(255, 153, 102, 1)','rgba(255, 22, 49, 1)','rgba(255, 97, 8, 1)','rgba(255, 104, 255, 1)','rgba(83, 50, 168, 1)'],
-                    borderWidth: 1
-                },
-
-            ]
-        }
-        const severityOptions = {
-            responsive: true,
-            skipNull: true,
-            scales: {
-                x: {
-                    stacked: true,
-                },
-                y: {
-                    stacked: true,
-                }
-            },
-            plugins: {
-                // Change options for ALL labels of THIS CHART
-                datalabels: {
-                    color: '#444444',
-                    'font.weight': 'bold',
-                    formatter: (value, ctx) => {
-                        if (value === 0) {
-                            return '';
-                        } else {
-                            return value;
-                        }
-                    },
-                }
-            }
-        }
-        const severityChart = new Chart(severityChartCtx, {
-            type: 'bar',
-            data: severityData,
-            options: severityOptions
-        });
-
-        function clickHandler(click) {
-            const points = severityChart.getElementsAtEventForMode(click, 'nearest', {intersect: true}, true);
-            if (points.length) {
-                const firstPoint = points[0];
-                window.open(severityDetailsReports[firstPoint.index].link, "_self")
-
-            }
-        }
-        severityChartCtx.onclick = clickHandler;
-    </script>
-    <!-- END SUMMARY CHART -->
-
-    <!-- DURATION CHART -->
-    <script>
-
-        // Options define for display value on top of bars
-        const durationDetailsReports = [
-                {title: "Under 1 second", link: "6fd6a2f75782dc08ea23c9d8935f4cbcaa6f5050227b5d8926396dd6f46d44ed.html"},
-                {title: "1 to 10 seconds", link: "8272e3057f677b5ad800c61bfd17887355119db572f6716b931e4bfbd75882e7.html"},
-                {title: "10 to 30 seconds", link: "a7f5103d725bda01777fb7e01435eb8cac151393bd5eaea39cb60a98cef01a18.html"},
-                {title: "30 to 60 seconds", link: "f6a7bcf9c860ad0604b91e4d0a63e5b7b9a3c30b940738a8fa64a63093ba5158.html"},
-                {title: "1 to 2 minutes", link: "371500177f882559d8790393a59be9db05dacb9e02e586ac43ecbf924d37f1e1.html"},
-                {title: "2 to 5 minutes", link: "b0f1de13e7437e8730051c7a5e560b2e206ac29755d574c3db298fb0ba2cd378.html"},
-                {title: "5 to 10 minutes", link: "c59cd92feeb8f5e6f51793c1151b474c11765de99ba7101d5b7cba5dc82430f3.html"},
-                {title: "10 minutes or over", link: "4b98b71732748b940995f2840b40b3046f4ebd570619c78e7446cf8e9aa85a84.html"},
-        ]
-        // The Severity bar chart
-        const durationChartCtx = document.getElementById('durationChart');
-
-        // Options define for display value on top of bars
-
-        const durationData = {
-            labels: ['Under 1 second','1 to 10 seconds','10 to 30 seconds','30 to 60 seconds','1 to 2 minutes','2 to 5 minutes','5 to 10 minutes','10 minutes or over'],
-            datasets: [{
-                label: 'Number of tests per duration',
-                fill: false,
-                data: ['0','3','0','0','0','0','0','0'],
-                backgroundColor: 'rgba(83, 146, 255,0.5)',
-                borderColor: 'rgba(83, 146, 255, 1)',
-            }]
-        }
-        const durationOptions = {
-            responsive: true,
-            plugins: {
-                // Change options for ALL labels of THIS CHART
-                datalabels: {
-                    color: '#444444',
-                    'font.weight': 'bold',
-                    formatter: (value, ctx) => {
-                        if (value > 0) {
-                            return value;
-                        } else {
-                            return '';
-                        }
-                    },
-                },
-                tooltip: {
-                    enabled: true,
-                    usePointStyle: true,
-                    callbacks: {
-                        label: (data) => {
-                            return data.parsed.y + ' tests'
-                        }
-                    },
-                },
-            },
-        }
-
-        const durationChart = new Chart(durationChartCtx, {
-            type: 'bar',
-            data: durationData,
-            options: durationOptions
-        });
-
-        function durationClickHandler(click) {
-            const points = durationChart.getElementsAtEventForMode(click, 'nearest', {intersect: true}, true);
-            if (points.length) {
-                const firstPoint = points[0];
-                window.open(durationDetailsReports[firstPoint.index].link, "_self")
-
-            }
-        }
-
-        durationChartCtx.onclick = durationClickHandler;
-    </script>
-    <!-- END DURATION CHART -->
 </body>
 </html>

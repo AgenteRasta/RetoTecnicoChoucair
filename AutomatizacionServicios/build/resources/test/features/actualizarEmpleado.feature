@@ -11,5 +11,3 @@ Feature: Actualizar un empleado
     Examples:
       | index | id | codigo | mensaje                                  |
       | 1     | 1  | 200    | "Successfully! Record has been updated." |
-      | 2     | 2  | 200    | "Successfully! Record has been updated." |
-      | 3     | 3  | 200    | "Successfully! Record has been updated." |

@@ -14,7 +14,7 @@ import java.util.List;
 
 import static com.choucair.ui.PaginaCarrito.*;
 import static com.choucair.util.ObtenerNumero.obtenerEnteros;
-import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isClickable;
+import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.*;
 
 
 public class Carrito implements Task {
@@ -28,10 +28,13 @@ public class Carrito implements Task {
     public <T extends Actor> void performAs(T actor) {
         totalCompraCarrito=0;
         actor.attemptsTo(
+                WaitUntil.the(CARRITO, isVisible()).forNoMoreThan(20).seconds(),
                 WaitUntil.the(CARRITO, isClickable()).forNoMoreThan(15).seconds(),
                 Click.on(CARRITO),
+                WaitUntil.the(CONFIRMAR_CORREO, isVisible()).forNoMoreThan(10).seconds(),
                 Enter.theValue(correo).into(CAMPO_CORREO),
-                Click.on(CONFIRMAR_CORREO)
+                Click.on(CONFIRMAR_CORREO),
+                WaitUntil.the(CONFIRMAR_CORREO, isNotVisible()).forNoMoreThan(10).seconds()
 
         );
         for(int i=1;i<=5;i++){
